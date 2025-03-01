@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import AnimatedText from '@/components/AnimatedText'
 
@@ -26,7 +27,7 @@ export default function Home() {
         </div>
         
         <motion.div 
-          className="text-center space-y-8 z-10 px-4"
+          className="text-center space-y-2 z-10 px-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
@@ -37,16 +38,18 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="text-white font-display text-3xl md:text-4xl font-bold">
-              <span className="text-accent">Little</span> Branch
-            </div>
-            
-            <div className="mt-2 mb-8">
-              <AnimatedText
-                text="a theater company"
-                className="font-display text-2xl md:text-3xl text-gray-300"
+            {/* Large centered SVG logo */}
+            <div className="flex justify-center mb-4"> {/* Changed mb-8 to mb-4 to reduce spacing */}
+              <Image 
+                src="/images/logo.svg"
+                alt="Little Branch Theater"
+                width={1000}    // Increased from 650 to 845 (30% larger)
+                height={600}   // Increased from 325 to 423 (30% larger)
+                className="w-auto h-auto max-w-[98%]"  // Slightly increased max-width
+                priority
               />
             </div>
+
           </motion.div>
           
           <motion.div
@@ -104,6 +107,7 @@ export default function Home() {
         </motion.div>
       </section>
 
+      {/* Rest of the code remains unchanged */}
       {/* Mission Preview */}
       <section className="py-24 bg-gray-900">
         <div className="container mx-auto px-4">

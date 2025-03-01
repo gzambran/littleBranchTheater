@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        accent: '#4ADE80', // Softer green accent color
+        accent: '#a6e22e',
       },
       fontFamily: {
         sans: ['var(--font-inter)'],
