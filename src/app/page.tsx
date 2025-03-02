@@ -9,102 +9,46 @@ import AnimatedText from '@/components/AnimatedText'
 export const revalidate = 3600 // Revalidate this page every hour
 
 export default function Home() {
-  // For Docker demo, we'll use placeholder data
-  const upcomingShow = {
-    title: "Honey Brown Eyes",
-    startDate: "2025-05-22T19:00:00Z",
-    venue: "Visual Arts Collective",
-    description: "Bosnia 1992: In two kitchens, two soldiers recover a little of what they have lost during the war."
-  }
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center justify-center">
-        <div className="absolute inset-0 z-0">
-          {/* Optional: Add a background image here */}
-          <div className="absolute inset-0 bg-black/70"></div>
-        </div>
-        
-        <motion.div 
-          className="text-center space-y-2 z-10 px-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-        >
+      <section className="relative py-10 flex flex-col items-center">
+        <div className="w-full max-w-6xl mx-auto">
           <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
+            className="rounded-xl overflow-hidden shadow-[0_0_30px_rgba(217,119,6,0.2)] relative"
           >
-            {/* Large centered SVG logo */}
-            <div className="flex justify-center mb-4"> {/* Changed mb-8 to mb-4 to reduce spacing */}
-              <Image 
-                src="/images/logo.svg"
-                alt="Little Branch Theater"
-                width={1000}    // Increased from 650 to 845 (30% larger)
-                height={600}   // Increased from 325 to 423 (30% larger)
-                className="w-auto h-auto max-w-[98%]"  // Slightly increased max-width
-                priority
-              />
-            </div>
-
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.5, delay: 1 }}
-            className="inline-block"
-          >
-            <Link
-              href="/shows/upcoming"
-              className="inline-block bg-accent hover:bg-accent/80 
-                text-white px-8 py-3 rounded-md transition-all duration-200"
-            >
-              View Upcoming Show
+            <Link href="/shows/upcoming" className="block relative aspect-[16/9] w-full group">
+              <div className="relative w-full h-full">
+                {/* Show poster as link to upcoming show page */}
+                <Image 
+                  src="/images/honeybrowneyes.png"
+                  alt="Honey Brown Eyes"
+                  fill
+                  className="object-contain object-center"
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1536px"
+                />
+                
+                {/* Minimal info overlay at the bottom of the poster */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent pt-16 pb-6 px-6">
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className="text-center"
+                  >
+                    <p className="text-white text-lg md:text-xl">
+                      <span className="text-accent font-medium">May 22 - June 1, 2025</span> • Visual Arts Collective, Garden City
+                    </p>
+                  </motion.div>
+                </div>
+              </div>
             </Link>
           </motion.div>
-          
-          {/* Scroll indicator */}
-          <motion.div 
-            className="absolute bottom-8 left-0 right-0 flex justify-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5 }}
-          >
-            <motion.div
-              className="flex flex-col items-center cursor-pointer"
-              onClick={() => window.scrollTo({top: window.innerHeight, behavior: 'smooth'})}
-              whileHover={{ scale: 1.1 }}
-              animate={{ y: [0, 10, 0] }}
-              transition={{ 
-                y: { repeat: Infinity, duration: 1.5, ease: "easeInOut" },
-                scale: { duration: 0.2 }
-              }}
-            >
-              <p className="text-sm text-gray-400 mb-2">Scroll</p>
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                width="24" 
-                height="24" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                className="text-accent"
-              >
-                <path d="M7 13l5 5 5-5"></path>
-                <path d="M7 6l5 5 5-5"></path>
-              </svg>
-            </motion.div>
-          </motion.div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Rest of the code remains unchanged */}
@@ -116,57 +60,34 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="flex flex-col items-center"
           >
             <h2 className="font-display text-4xl mb-8 text-center">Our Mission</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto text-center">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto text-center mb-10">
               Little Branch Theater connects communities through bold storytelling and the celebration of diverse voices. 
               We are dedicated to providing opportunities for local artists, engaging with underrepresented communities, 
               and creating work that inspires meaningful conversation. We aim to build a new audience filled with curiosity 
               and the courage to challenge their perspectives.
             </p>
+            
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block"
+            >
+              <Link
+                href="/vision"
+                className="inline-block bg-accent hover:bg-accent/80 
+                  text-white px-8 py-3 rounded-md transition-all duration-200 text-lg font-medium"
+              >
+                Learn More
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Upcoming Show Teaser */}
-      {upcomingShow && (
-        <section className="py-24">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="bg-accent/10 p-8 rounded-lg max-w-3xl mx-auto text-center"
-            >
-              <h2 className="font-display text-3xl mb-4">Coming Soon</h2>
-              <h3 className="font-display text-4xl mb-2">{upcomingShow.title}</h3>
-              <p className="text-xl text-gray-300 mb-4">
-                {new Date(upcomingShow.startDate).toLocaleDateString('en-US', {
-                  month: 'long',
-                  year: 'numeric'
-                })}
-                {' • '}
-                {upcomingShow.venue}
-              </p>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-block mt-4"
-              >
-                <Link
-                  href="/shows/upcoming"
-                  className="inline-block bg-accent hover:bg-accent/80 
-                    text-white px-6 py-2 rounded-md transition-all duration-200"
-                  aria-label="Learn more about our upcoming show"
-                >
-                  Learn More
-                </Link>
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
-      )}
+      {/* Removed Coming Soon section as requested */}
     </div>
   )
 }

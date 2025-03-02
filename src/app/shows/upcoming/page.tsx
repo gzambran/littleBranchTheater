@@ -1,75 +1,70 @@
 "use client"
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import AnimatedText from '@/components/AnimatedText'
-
-// Metadata needs to be in a separate file when using client components
-// Using static values inline instead
 
 export const revalidate = 3600 // Revalidate this page every hour
 
 export default function UpcomingShow() {
+
   return (
-    <div className="min-h-screen">
-      {/* Show Hero Section */}
-      <section className="relative h-[60vh] bg-black">
-        {/* Background Image - Repositioned and lightened */}
-        <div className="absolute inset-0 z-0 overflow-hidden flex items-center">
-          <div className="relative w-[200%] md:w-[180%] h-[200%] md:h-[180%] ml-[25%] md:ml-[35%]">
-            <Image 
-              src="/images/honeybrowneyes.png"
-              alt="Honey Brown Eyes production artwork"
-              fill
-              quality={100}
-              priority
-              className="scale-50 opacity-80 brightness-110 contrast-110"
-              sizes="100vw"
-            />
+    <div className="min-h-screen bg-black">
+      {/* Hero Section with properly sized poster image */}
+      <section className="bg-black pt-10">
+        <div className="container mx-auto px-4">
+          <div className="relative w-full max-w-6xl mx-auto"> {/* Increased to 6xl (1536px) */}
+            {/* Container with the aspect ratio of the poster (16:9) */}
+            <div className="relative aspect-[16/9] w-full">
+              <Image 
+                src="/images/honeybrowneyes.png"
+                alt="Honey Brown Eyes - Theatrical Poster"
+                fill
+                quality={100}
+                priority
+                className="object-contain object-center"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1536px" /* Updated max size */
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAFAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIRAAAgEDAwUAAAAAAAAAAAAAAQIDAAQFEQYSIQcTMUH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABkRAAMAAwAAAAAAAAAAAAAAAAABAgMEIf/aAAwDAQACEQMRAD8AoOh9Fy6timiuIRFdQSlBIpIYkrn5sryD8Gq7ZwG3gWPJIUYyST+nNFFOT2hOnP/Z"
+              />
+              
+              {/* Minimal info overlay at the bottom of the poster */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent pt-16 pb-4 px-6">
+                <motion.div 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="text-center"
+                >
+                  <p className="text-white text-lg md:text-xl">
+                    <span className="text-accent font-medium">May 22 - June 1, 2025</span> • Visual Arts Collective, Garden City
+                  </p>
+                </motion.div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60 z-10" />
-        <div className="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center">
-          <motion.div 
-            className="max-w-3xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <AnimatedText
-              text="Honey Brown Eyes"
-              className="font-display text-5xl md:text-7xl mb-6 leading-tight"
-            />
-            <motion.p 
-              className="text-2xl text-gray-300 mb-2"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              By Stefanie Zadravec
-            </motion.p>
-            <motion.p 
-              className="text-xl text-gray-300 mb-6"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              May 22 - June 1, 2025
-            </motion.p>
-            <motion.p 
-              className="text-xl text-accent font-medium"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+          
+          {/* Ticket button */}
+          <div className="mt-8 mb-12 flex justify-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              Visual Arts Collective • Garden City, Idaho
-            </motion.p>
-          </motion.div>
+              <a 
+                href="https://alleyreptheater.thundertix.com/events/236398"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-accent hover:bg-accent/90 text-white py-3 px-12 rounded-md text-center transition-all duration-200 transform hover:scale-[1.02] text-lg font-medium"
+              >
+                Get Tickets
+              </a>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Content Section */}
       <section className="py-16 bg-black">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-12">
@@ -118,7 +113,7 @@ export default function UpcomingShow() {
               </motion.div>
             </div>
 
-            {/* Ticket Info Sidebar */}
+            {/* Performance Details Sidebar */}
             <div>
               <motion.div 
                 className="bg-gray-900 p-8 rounded-lg sticky top-24"
@@ -154,19 +149,11 @@ export default function UpcomingShow() {
                     <p>Visual Arts Collective</p>
                     <p className="text-sm">Garden City, Idaho</p>
                   </div>
-                  <div className="pt-4 space-y-4">
-                    <a 
-                      href="https://alleyreptheater.thundertix.com/events/236398"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block w-full bg-accent hover:bg-accent/80 text-white py-3 px-6 rounded-md text-center transition-all duration-200 transform hover:scale-[1.02]"
-                    >
-                      Get Tickets
-                    </a>
-                    
-                    {/* Social Sharing */}
-                    <div className="flex justify-center items-center space-x-4 pt-2">
-                      <p className="text-sm text-gray-400">Share:</p>
+                  
+                  {/* Social Sharing */}
+                  <div className="pt-4">
+                    <p className="text-sm text-gray-400 mb-2">Share:</p>
+                    <div className="flex items-center space-x-4">
                       <motion.a
                         href={`https://www.instagram.com/`}
                         target="_blank"

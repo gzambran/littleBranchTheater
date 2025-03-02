@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${playfair.variable} 
         font-sans bg-black text-white min-h-screen`}>
         <Header />
-        <main>{children}</main>
+        <main className="pt-28">{children}</main>
         <Footer />
       </body>
     </html>
