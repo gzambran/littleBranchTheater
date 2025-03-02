@@ -150,35 +150,6 @@ export default function Team() {
         </motion.div>
       </section>
 
-      {/* Join Our Team Section */}
-      <motion.section 
-        className="py-24 bg-gray-900"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-      >
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="font-display text-4xl mb-6">Join Our Team</h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-            We're always looking for passionate individuals to join our creative community.
-            Whether you're an actor, designer, technician, or arts administrator, we'd love to hear from you.
-          </p>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Link 
-              href="mailto:info@littlebranch.theater"
-              className="inline-block bg-accent hover:bg-accent/80 text-white px-8 py-3 rounded-md transition-all duration-200"
-              aria-label="Email us to join our team"
-            >
-              Get in Touch
-            </Link>
-          </motion.div>
-        </div>
-      </motion.section>
-
       {/* Team Member Modal */}
       <AnimatePresence>
         {selectedMember && (
