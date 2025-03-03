@@ -10,59 +10,64 @@ export default function UpcomingShow() {
 
   return (
     <div className="min-h-screen bg-black">
-      {/* Hero Section with properly sized poster image */}
-      <section className="bg-black pt-10">
-        <div className="container mx-auto px-4">
-          <div className="relative w-full max-w-6xl mx-auto"> {/* Increased to 6xl (1536px) */}
-            {/* Container with the aspect ratio of the poster (16:9) */}
-            <div className="relative aspect-[16/9] w-full">
-              <Image 
-                src="/images/honeybrowneyes.png"
-                alt="Honey Brown Eyes - Theatrical Poster"
-                fill
-                quality={100}
-                priority
-                className="object-contain object-center"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1536px" /* Updated max size */
-                placeholder="blur"
-                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAFAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIRAAAgEDAwUAAAAAAAAAAAAAAQIDAAQFEQYSIQcTMUH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABkRAAMAAwAAAAAAAAAAAAAAAAABAgMEIf/aAAwDAQACEQMRAD8AoOh9Fy6timiuIRFdQSlBIpIYkrn5sryD8Gq7ZwG3gWPJIUYyST+nNFFOT2hOnP/Z"
-              />
-              
-              {/* Minimal info overlay at the bottom of the poster */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent pt-16 pb-4 px-6">
-                <motion.div 
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  className="text-center"
-                >
-                  <p className="text-white text-lg md:text-xl">
-                    <span className="text-accent font-medium">May 22 - June 1, 2025</span> • Visual Arts Collective, Garden City
-                  </p>
-                </motion.div>
+      {/* Hero Section - exactly matching homepage structure */}
+      <section className="relative pt-10 flex flex-col items-center">
+        <div className="w-full max-w-6xl mx-auto">
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
+            className="rounded-xl overflow-hidden shadow-[0_0_30px_rgba(217,119,6,0.2)] relative"
+          >
+            <div className="block relative group">
+              <div className="relative w-full flex justify-center bg-black/30 py-8">
+                <Image 
+                  src="/images/honeybrowneyes.png"
+                  alt="Honey Brown Eyes"
+                  width={500}
+                  height={750}
+                  className="object-contain h-[45vh] md:h-[55vh] w-auto"
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1536px"
+                />
+                
+                {/* Minimal info overlay at the bottom of the container */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent pt-16 pb-6 px-6">
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className="text-center"
+                  >
+                    <p className="text-white text-lg md:text-xl">
+                      <span className="text-accent font-medium">May 22 - June 1, 2025</span> • Visual Arts Collective, Garden City
+                    </p>
+                  </motion.div>
+                </div>
               </div>
             </div>
-          </div>
-          
-          {/* Ticket button */}
-          <div className="mt-8 mb-12 flex justify-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-            >
-              <a 
-                href="https://alleyreptheater.thundertix.com/events/236398"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-accent hover:bg-accent/90 text-white py-3 px-12 rounded-md text-center transition-all duration-200 transform hover:scale-[1.02] text-lg font-medium"
-              >
-                Get Tickets
-              </a>
-            </motion.div>
-          </div>
+          </motion.div>
         </div>
       </section>
+      
+      {/* Ticket button */}
+      <div className="container mx-auto px-4">
+        <div className="mt-8 mb-12 flex justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
+            <a 
+              href="https://alleyreptheater.thundertix.com/events/236398"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-accent hover:bg-accent/90 text-white py-3 px-12 rounded-md text-center transition-all duration-200 transform hover:scale-[1.02] text-lg font-medium"
+            >
+              Get Tickets
+            </a>
+          </motion.div>
+        </div>
+      </div>
 
       {/* Content Section */}
       <section className="py-16 bg-black">
