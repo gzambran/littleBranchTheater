@@ -92,7 +92,7 @@ export default function Gallery() {
     <div className="min-h-screen">
       {/* Gallery Hero */}
       <motion.section 
-        className="relative py-32 bg-black"
+        className="relative py-16 bg-black"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}

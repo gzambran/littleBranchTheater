@@ -76,7 +76,7 @@ export default function Team() {
   return (
     <div className="min-h-screen">
       {/* Team Hero */}
-      <section className="relative py-32 bg-black">
+      <section className="relative py-16 bg-black">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
