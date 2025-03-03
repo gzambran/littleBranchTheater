@@ -35,8 +35,9 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Contact</h4>
             <p className="text-gray-400">
-              Email: info@littlebranch.theater<br />
-              Location: [Your City], [State]
+              <a href="mailto:info@littlebranchtheater.org">info@littlebranchtheater.org</a>
+              <br />
+              Garden City, Idaho
             </p>
           </div>
         </div>
