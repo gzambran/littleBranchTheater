@@ -28,6 +28,38 @@ main > div {
   width: 100%;
 }
 
+/* src/app/globals.css */
+/* Base focus style */
+:focus-visible {
+  outline: 2px solid #ffb74d; /* Theater-appropriate accent color - adjust to match your brand */
+  outline-offset: 3px;
+}
+
+/* For dark mode buttons or links where the outline might not be visible */
+.dark button:focus-visible, 
+.dark a:focus-visible {
+  outline-color: #ffb74d;
+  box-shadow: 0 0 0 3px rgba(255, 183, 77, 0.4);
+}
+
+/* Ensure interactive elements have proper focus indication */
+.interactive-element:focus-visible {
+  outline: 2px solid #ffb74d;
+  outline-offset: 3px;
+}
+
+.sr-only:focus-visible {
+  position: absolute;
+  z-index: 100;
+  top: 1rem;
+  left: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  clip: auto;
+  white-space: normal;
+}
+
 /* Custom utility classes */
 @layer components {
   .container-padding {
