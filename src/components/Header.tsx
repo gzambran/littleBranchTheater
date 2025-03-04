@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
+import MobileNav from './MobileNav'
 
 export default function Header() {
   return (
@@ -10,7 +10,9 @@ export default function Header() {
           <Link href="/" className="inline-block font-display text-2xl font-bold tracking-wide text-accent"> 
             Little Branch Theater
           </Link>
-          <div className="space-x-6">
+          
+          {/* Desktop Navigation - Hidden on mobile */}
+          <div className="hidden md:flex space-x-6">
             <Link href="/shows/upcoming" className="text-base hover:text-accent transition font-medium">
               Upcoming Show
             </Link>
@@ -23,6 +25,11 @@ export default function Header() {
             <Link href="/gallery" className="text-base hover:text-accent transition font-medium">
               Gallery
             </Link>
+          </div>
+          
+          {/* Mobile Navigation - Shown only on mobile */}
+          <div className="md:hidden">
+            <MobileNav />
           </div>
         </div>
       </nav>
