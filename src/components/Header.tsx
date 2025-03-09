@@ -17,7 +17,7 @@ export default function Header() {
               <span 
                 className="font-display text-sm text-accent -mt-1"
                 style={{ 
-                  letterSpacing: '0.15em', // Reduced from 0.2em to 0.15em
+                  letterSpacing: '0.15em',
                   fontStretch: 'expanded',
                   width: '100%',
                   display: 'inline-block'
@@ -30,14 +30,14 @@ export default function Header() {
           
           {/* Desktop Navigation - Hidden on mobile */}
           <div className="hidden md:flex space-x-6">
+            <Link href="/who-we-are" className="text-base hover:text-accent transition font-medium">
+              Who We Are
+            </Link>
             <Link href="/shows/upcoming" className="text-base hover:text-accent transition font-medium">
               Upcoming Show
             </Link>
-            <Link href="/team" className="text-base hover:text-accent transition font-medium">
-              Team
-            </Link>
-            <Link href="/vision" className="text-base hover:text-accent transition font-medium">
-              Vision
+            <Link href="/ensemble" className="text-base hover:text-accent transition font-medium">
+              Ensemble
             </Link>
             <Link href="/gallery" className="text-base hover:text-accent transition font-medium">
               Gallery

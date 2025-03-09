@@ -59,7 +59,7 @@ export default function Home() {
           >
             <h2 className="font-display text-4xl mb-8 text-center">Our Mission</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto text-center mb-10">
-              Little Branch Theater connects communities through bold storytelling and the celebration of diverse voices. 
+              Little Branch connects communities through bold storytelling and the celebration of diverse voices. 
               We are dedicated to providing opportunities for local artists, engaging with underrepresented communities, 
               and creating work that inspires meaningful conversation. We aim to build a new audience filled with curiosity 
               and the courage to challenge their perspectives.
@@ -71,11 +71,11 @@ export default function Home() {
               className="inline-block"
             >
               <Link
-                href="/vision"
+                href="/who-we-are"
                 className="inline-block bg-accent hover:bg-accent/80 
                   text-white px-8 py-3 rounded-md transition-all duration-200 text-lg font-medium"
               >
-                Learn More
+                Who We Are
               </Link>
             </motion.div>
           </motion.div>

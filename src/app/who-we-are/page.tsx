@@ -4,7 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import AnimatedText from '@/components/AnimatedText'
 
-export const revalidate = 3600 // Revalidate this page every hour
+export const revalidate = 3600
 
 export default function Vision() {
   return (
@@ -24,7 +24,7 @@ export default function Vision() {
             className="text-center"
           >
             <AnimatedText
-              text="Our Vision"
+              text="Who We Are"
               className="font-display text-5xl md:text-7xl mb-6"
             />
             <motion.p 
@@ -164,18 +164,6 @@ export default function Vision() {
                 <span>Emerging artists develop their craft alongside seasoned professionals</span>
               </motion.li>
             </ul>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <a 
-                href="mailto:info@littlebranch.theater"
-                className="inline-block bg-accent hover:bg-accent/80 text-white px-8 py-3 rounded-md transition-all duration-200"
-                aria-label="Send us an email to connect"
-              >
-                Connect With Us
-              </a>
-            </motion.div>
           </div>
         </div>
       </motion.section>

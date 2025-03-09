@@ -77,8 +77,8 @@ export default function UpcomingShow() {
                 <h2 className="font-display text-3xl mb-6">About the Show</h2>
                 <div className="text-gray-300 text-lg leading-relaxed space-y-4">
                   <p>
-                    In partnership with Alley Repertory Theater, Little Branch Company, a new theater company 
-                    founded by Amela Karadza and Jovani Zambrano, brings you <em>Honey Brown Eyes</em>.
+                    In partnership with Alley Repertory Theater, Little Branch, a new theater company 
+                    founded by Amela Karadza and Jovani Zambrano, brings you <em>Honey Brown Eyes</em> by <em>Stefanie Zadravec</em>.
                   </p>
                   <p>
                     Bosnia 1992: In two kitchens, two soldiers recover a little of what they've lost during 
@@ -99,13 +99,11 @@ export default function UpcomingShow() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <h2 className="font-display text-3xl mb-6">Creative Team</h2>
+                <h2 className="font-display text-3xl mb-6">Our Supporters</h2>
                 <ul className="space-y-4 text-gray-300">
                   <li>
-                    <span className="font-medium">Director:</span> Amela Karadza
                   </li>
                   <li>
-                    <span className="font-medium">Assistant Director:</span> John Wicks
                   </li>
                 </ul>
               </motion.div>

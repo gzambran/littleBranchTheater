@@ -1,19 +1,34 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
     <footer className="bg-gray-900 py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="font-display text-xl mb-4">Little Branch Theater</h3>
-            <p className="text-gray-400">
-              Bringing fresh perspectives to the stage
-            </p>
+        {/* Different layout for mobile vs desktop */}
+        <div className="block md:grid md:grid-cols-3 md:gap-8">
+          {/* First column (Logo) */}
+          <div className="mb-8 md:mb-0">
+            {/* For desktop - position the logo with negative margin */}
+            <div className="hidden md:flex md:flex-col md:items-center" style={{ marginTop: '-24px' }}>
+              <Image 
+                src="/images/logo.svg" 
+                alt="Little Branch Theater Logo" 
+                width={160}
+                height={160}
+                className="w-40 h-40" 
+                priority
+              />
+              <p className="text-gray-400 mt-2 text-center">
+                Rooted in storytelling, reaching for change.
+              </p>
+            </div>
           </div>
-          <div>
-            <h4 className="font-bold mb-4">Quick Links</h4>
+          
+          {/* Quick Links - shows on both mobile and desktop */}
+          <div className="mb-8 md:mb-0">
+            <h4 className="font-bold mb-4 text-left">Quick Links</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/shows/upcoming" className="text-gray-400 hover:text-accent">
@@ -22,18 +37,20 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/team" className="text-gray-400 hover:text-accent">
-                  Meet the Team
+                  Meet the Ensemble
                 </Link>
               </li>
               <li>
                 <Link href="/vision" className="text-gray-400 hover:text-accent">
-                  Our Vision
+                  Who We Are
                 </Link>
               </li>
             </ul>
           </div>
-          <div>
-            <h4 className="font-bold mb-4">Contact</h4>
+          
+          {/* Contact - shows on both mobile and desktop */}
+          <div className="mb-8 md:mb-0">
+            <h4 className="font-bold mb-4 text-left">Contact</h4>
             <p className="text-gray-400">
               <a href="mailto:info@littlebranchtheater.org">info@littlebranchtheater.org</a>
               <br />
@@ -41,6 +58,22 @@ export default function Footer() {
             </p>
           </div>
         </div>
+        
+        {/* Mobile-only logo section - positioned between sections */}
+        <div className="flex flex-col items-center my-8 md:hidden">
+          <Image 
+            src="/images/logo.svg" 
+            alt="Little Branch Theater Logo" 
+            width={160}
+            height={160}
+            className="w-40 h-40" 
+            priority
+          />
+          <p className="text-gray-400 mt-2 text-center">
+            Rooted in storytelling, reaching for change.
+          </p>
+        </div>
+        
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
           &copy; {new Date().getFullYear()} Little Branch Theater. All rights reserved.
         </div>
