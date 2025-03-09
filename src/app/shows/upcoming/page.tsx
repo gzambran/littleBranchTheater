@@ -4,20 +4,15 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-export const revalidate = 3600 // Revalidate this page every hour
+export const revalidate = 3600
 
 export default function UpcomingShow() {
 
   return (
     <div className="min-h-screen bg-black">
-      {/* Hero Section - exactly matching homepage structure */}
       <section className="relative pt-10 flex flex-col items-center">
         <div className="w-full max-w-6xl mx-auto">
-          <motion.div
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.3 }}
-            className="rounded-xl overflow-hidden shadow-[0_0_30px_rgba(217,119,6,0.2)] relative"
-          >
+          <div className="rounded-xl overflow-hidden shadow-[0_0_30px_rgba(217,119,6,0.2)] relative">
             <div className="block relative group">
               <div className="relative w-full flex justify-center bg-black/30 py-8">
                 <Image 
@@ -30,7 +25,6 @@ export default function UpcomingShow() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1536px"
                 />
                 
-                {/* Minimal info overlay at the bottom of the container */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent pt-16 pb-6 px-6">
                   <motion.div 
                     initial={{ opacity: 0, y: 10 }}
@@ -45,7 +39,7 @@ export default function UpcomingShow() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
       
@@ -69,7 +63,6 @@ export default function UpcomingShow() {
         </div>
       </div>
 
-      {/* Content Section */}
       <section className="py-16 bg-black">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-12">

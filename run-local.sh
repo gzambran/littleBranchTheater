@@ -22,13 +22,6 @@ docker-compose up -d
 # Check if container started successfully
 if [ $? -eq 0 ]; then
   echo -e "${GREEN}Container is running!${NC}"
-  echo -e "${GREEN}Open http://localhost:3000 in your browser to see the website.${NC}"
-  echo ""
-  echo -e "${YELLOW}Note:${NC} The first load might take a few moments as Next.js starts up."
-  echo -e "${YELLOW}The site uses placeholder data since no Sanity project is connected.${NC}"
-  echo ""
-  echo -e "To stop the container, run: ${BLUE}docker-compose down${NC}"
-  echo -e "To view logs, run: ${BLUE}docker-compose logs -f${NC}"
 else
   echo -e "${RED}Failed to start container. Check the logs for errors.${NC}"
   exit 1

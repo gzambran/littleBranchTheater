@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import Link from 'next/link'
 import MobileNav from './MobileNav'
@@ -7,8 +9,23 @@ export default function Header() {
     <header className="fixed w-full top-0 z-50 bg-black/80 backdrop-blur-sm">
       <nav className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
-          <Link href="/" className="inline-block font-display text-2xl font-bold tracking-wide text-accent"> 
-            Little Branch Theater
+          <Link href="/" className="inline-block"> 
+            <div className="flex flex-col">
+              <span className="font-display text-2xl font-bold tracking-wide text-white">
+                Little Branch
+              </span>
+              <span 
+                className="font-display text-sm text-accent -mt-1"
+                style={{ 
+                  letterSpacing: '0.15em', // Reduced from 0.2em to 0.15em
+                  fontStretch: 'expanded',
+                  width: '100%',
+                  display: 'inline-block'
+                }}
+              >
+                a theater company
+              </span>
+            </div>
           </Link>
           
           {/* Desktop Navigation - Hidden on mobile */}
