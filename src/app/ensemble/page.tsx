@@ -23,35 +23,13 @@ interface TeamMember {
 export default function Team() {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
 
-  const teamMembers = [
+  const teamMembers: TeamMember[] = [
     {
-      "name": "Wendy Fox",
-      "role": "Costume Designer",
+      "name": "Terri Dillon",
+      "role": "Jovanka",
       "image": "/images/placeholder.jpg",
-      "bio": "Creating costumes that enhance character and storytelling.",
-      "extendedBio": "Wendy brings characters to life through her thoughtful costume designs, ensuring authenticity and visual appeal on stage.",
-      "socials": {
-        "instagram": "#",
-        "website": "#"
-      }
-    },
-    {
-      "name": "Trevor Ferguson",
-      "role": "Dragan",
-      "image": "/images/placeholder.jpg",
-      "bio": "Bringing depth and emotion to the role of Dragan.",
-      "extendedBio": "Trevor embodies the complexities of his character, delivering a performance that captivates and moves audiences.",
-      "socials": {
-        "instagram": "#",
-        "website": "#"
-      }
-    },
-    {
-      "name": "Chaz Gentry",
-      "role": "Lighting Designer",
-      "image": "/images/placeholder.jpg",
-      "bio": "Shaping the visual atmosphere through dynamic lighting design.",
-      "extendedBio": "Chaz uses lighting to enhance mood, create tension, and immerse the audience in the world of the play.",
+      "bio": "Bringing compassion and strength to the character of Jovanka.",
+      "extendedBio": "Terri's thoughtful portrayal captures the resilience and humanity of her character, adding emotional depth to every scene she inhabits.",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -80,11 +58,33 @@ export default function Team() {
       }
     },
     {
-      "name": "Majda Zahič",
-      "role": "Radio Broadcaster",
+      "name": "Trevor Ferguson",
+      "role": "Dragan",
       "image": "/images/placeholder.jpg",
-      "bio": "Bringing key narrative elements to life through voice and sound.",
-      "extendedBio": "Majda provides a compelling voice that enhances the storytelling and atmosphere of the production.",
+      "bio": "Bringing depth and emotion to the role of Dragan.",
+      "extendedBio": "Trevor embodies the complexities of his character, delivering a performance that captivates and moves audiences.",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
+      }
+    },
+    {
+      "name": "Wendy Fox",
+      "role": "Costume Designer",
+      "image": "/images/placeholder.jpg",
+      "bio": "Creating costumes that enhance character and storytelling.",
+      "extendedBio": "Wendy brings characters to life through her thoughtful costume designs, ensuring authenticity and visual appeal on stage.",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
+      }
+    },
+    {
+      "name": "Chaz Gentry",
+      "role": "Lighting Designer",
+      "image": "/images/placeholder.jpg",
+      "bio": "Shaping the visual atmosphere through dynamic lighting design.",
+      "extendedBio": "Chaz uses lighting to enhance mood, create tension, and immerse the audience in the world of the play.",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -162,6 +162,28 @@ export default function Team() {
       "image": "/images/placeholder.jpg",
       "bio": "Supporting the creative vision and ensuring smooth execution behind the scenes.",
       "extendedBio": "John works closely with the director to refine performances and maintain the artistic integrity of Honey Brown Eyes.",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
+      }
+    },
+    {
+      "name": "Ellie Wirth",
+      "role": "Prop Designer/Assistant Stage Manager",
+      "image": "/images/placeholder.jpg",
+      "bio": "Sourcing and creating detailed props while providing essential production support.",
+      "extendedBio": "Ellie brings attention to detail in both her prop design and stage management assistance, ensuring that every object on stage enhances the authenticity of the world while helping to keep the production running smoothly.",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
+      }
+    },
+    {
+      "name": "Majda Zahič",
+      "role": "Radio Broadcaster",
+      "image": "/images/placeholder.jpg",
+      "bio": "Bringing key narrative elements to life through voice and sound.",
+      "extendedBio": "Majda provides a compelling voice that enhances the storytelling and atmosphere of the production.",
       "socials": {
         "instagram": "#",
         "website": "#"
