@@ -86,7 +86,7 @@ export default function Vision() {
             >
               <div className="w-40 h-40 mx-auto mb-6 relative rounded-full overflow-hidden">
                 <Image
-                  src="/images/placeholder.jpg"
+                  src="/images/zambrano.jpg"
                   alt="Jovani - Artistic Director"
                   fill
                   className="object-cover"

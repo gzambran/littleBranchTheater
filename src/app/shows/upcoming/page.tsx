@@ -67,7 +67,7 @@ export default function UpcomingShow() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-12">
             {/* Show Details */}
-            <div className="md:col-span-2 space-y-8">
+            <div className="md:col-span-2 space-y-16">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -100,12 +100,48 @@ export default function UpcomingShow() {
                 viewport={{ once: true }}
               >
                 <h2 className="font-display text-3xl mb-6">Our Supporters</h2>
-                <ul className="space-y-4 text-gray-300">
-                  <li>
-                  </li>
-                  <li>
-                  </li>
-                </ul>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                  <a href="https://alleyrep.org" target="_blank" rel="noopener noreferrer" 
+                    className="flex items-center justify-center h-32 bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-colors duration-300">
+                    <Image 
+                      src="/images/sponsors/alley-rep-logo.svg"
+                      alt="Alley Rep"
+                      width={200}
+                      height={100}
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </a>
+                  <a href="https://visualartscollective.com" target="_blank" rel="noopener noreferrer" 
+                    className="flex items-center justify-center h-32 bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-colors duration-300">
+                    <Image 
+                      src="/images/sponsors/visual-arts-collective-logo.svg"
+                      alt="Visual Arts Collective"
+                      width={200}
+                      height={100}
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </a>
+                  <a href="https://arts.idaho.gov" target="_blank" rel="noopener noreferrer" 
+                    className="flex items-center justify-center h-32 bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-colors duration-300">
+                    <Image 
+                      src="/images/sponsors/arts-idaho-logo.jpg"
+                      alt="Arts Idaho"
+                      width={200}
+                      height={100}
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </a>
+                  <a href="https://www.puffinfoundation.org" target="_blank" rel="noopener noreferrer" 
+                    className="flex items-center justify-center h-32 bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-colors duration-300">
+                    <Image 
+                      src="/images/sponsors/puffin-foundation-logo.jpeg"
+                      alt="Puffin Foundation"
+                      width={200}
+                      height={100}
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </a>
+                </div>
               </motion.div>
             </div>
 

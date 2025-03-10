@@ -170,7 +170,7 @@ export default function Team() {
     {
       "name": "Jovani Zambrano",
       "role": "Sound Designer/Branko/Milenko",
-      "image": "/images/placeholder.jpg",
+      "image": "/images/zambrano.jpg",
       "bio": "Designing immersive soundscapes while bringing characters to life on stage.",
       "extendedBio": "Jovani blends technical expertise with creative performance, crafting a rich auditory world while portraying key roles in Honey Brown Eyes.",
       "socials": {
