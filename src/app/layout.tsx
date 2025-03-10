@@ -3,14 +3,14 @@ import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import PageTransition from '@/components/PageTransition' // Assuming this component exists
+import PageTransition from '@/components/PageTransition'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair-display' })
 
 export const metadata = {
-  title: 'Little Branch Theater',
-  description: 'A new theater company bringing fresh perspectives to the stage',
+  title: 'Little Branch',
+  description: 'A theater company bringing fresh perspectives to the stage',
 }
 
 export default function RootLayout({
@@ -20,17 +20,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
+      <head>
+        {/* Add these explicit link tags */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      </head>
       <body className={`${inter.variable} ${playfair.variable} 
         font-sans bg-black text-white min-h-screen`}>
-        {/* Add skip link here */}
-        <a 
-          href="#main-content" 
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-black focus:text-white focus:border focus:border-white"
-        >
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-black focus:text-white focus:border focus:border-white">
           Skip to main content
         </a>
         <Header />
-        {/* Add id to main */}
         <main id="main-content" className="pt-16">
           {children}
         </main>
