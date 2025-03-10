@@ -48,7 +48,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 bg-gray-900">
+      <section className="py-24 bg-black">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 40 }}

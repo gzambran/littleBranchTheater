@@ -11,6 +11,7 @@ export const revalidate = 3600
 interface TeamMember {
   name: string;
   role: string;
+  image: string;
   bio: string;
   extendedBio: string;
   socials: {
@@ -24,183 +25,157 @@ export default function Team() {
 
   const teamMembers = [
     {
-      name: 'Amela Karadza',
-      role: 'Co-Founder, Director',
-      bio: 'A passionate theater director with a vision for bringing unique perspectives to the stage. Currently directing Honey Brown Eyes.',
-      extendedBio: `As co-founder and artistic director of Little Branch Theater, Amela brings her unique vision and passion for storytelling to every production. With Honey Brown Eyes, she continues her dedication to bringing powerful, thought-provoking theater to the stage.`,
-      socials: {
-        instagram: '#',
-        website: '#'
+      "name": "Wendy Fox",
+      "role": "Costume Designer",
+      "image": "/images/placeholder.jpg",
+      "bio": "Creating costumes that enhance character and storytelling.",
+      "extendedBio": "Wendy brings characters to life through her thoughtful costume designs, ensuring authenticity and visual appeal on stage.",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
       }
     },
     {
-      name: 'Jovani Zambrano',
-      role: 'Co-Founder',
-      bio: 'Dedicated to creating meaningful theatrical experiences that challenge and inspire audiences.',
-      extendedBio: `As co-founder of Little Branch Theater, Jovani focuses on creating meaningful connections between performers and audiences. His vision helps shape the company's artistic direction and community engagement.`,
-      socials: {
-        instagram: '#',
-        website: '#'
+      "name": "Trevor Ferguson",
+      "role": "Dragan",
+      "image": "/images/placeholder.jpg",
+      "bio": "Bringing depth and emotion to the role of Dragan.",
+      "extendedBio": "Trevor embodies the complexities of his character, delivering a performance that captivates and moves audiences.",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
       }
     },
     {
-      name: 'John Wicks',
-      role: 'Assistant Director',
-      bio: 'Assistant Director for Honey Brown Eyes, bringing fresh insights to the production process.',
-      extendedBio: `John's attention to detail and creative insights help bring additional depth to Little Branch Theater's productions. As Assistant Director for Honey Brown Eyes, he works closely with the creative team to realize the show's vision.`,
-      socials: {
-        instagram: '#',
-        website: '#'
+      "name": "Chaz Gentry",
+      "role": "Lighting Designer",
+      "image": "/images/placeholder.jpg",
+      "bio": "Shaping the visual atmosphere through dynamic lighting design.",
+      "extendedBio": "Chaz uses lighting to enhance mood, create tension, and immerse the audience in the world of the play.",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
       }
     },
     {
-      name: 'Emily Carter',
-      role: 'Stage Manager',
-      bio: 'Ensuring seamless performances behind the scenes at Little Branch Theater.',
-      extendedBio: `Emily's organizational skills and keen eye for detail keep every production running smoothly. As Stage Manager, she coordinates rehearsals, manages schedules, and ensures every show goes off without a hitch.`,
-      socials: {
-        instagram: '#',
-        website: '#'
+      "name": "Amber Ellis",
+      "role": "Scenic Assistant/Scenic Charge Assist",
+      "image": "/images/placeholder.jpg",
+      "bio": "Supporting scenic design and set construction with precision and creativity.",
+      "extendedBio": "Amber contributes to the scenic design process, ensuring that every set element is executed to perfection and enhances the production.",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
       }
     },
     {
-      name: 'Michael Sanders',
-      role: 'Lighting Designer',
-      bio: 'Creating immersive lighting designs to set the mood for each performance.',
-      extendedBio: `Michael's passion for lighting design helps craft the visual storytelling of each production. He experiments with color and intensity to enhance the emotions on stage.`,
-      socials: {
-        instagram: '#',
-        website: '#'
+      "name": "Edin Ferkic",
+      "role": "Denis",
+      "image": "/images/placeholder.jpg",
+      "bio": "Portraying Denis with nuance and intensity.",
+      "extendedBio": "Edin brings authenticity and power to his performance, helping to shape the emotional core of the production.",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
       }
     },
     {
-      name: 'Sophia Reynolds',
-      role: 'Costume Designer',
-      bio: 'Bringing characters to life through thoughtful costume design.',
-      extendedBio: `Sophia blends historical accuracy with creative flair, designing costumes that reflect each character's journey. She ensures actors feel comfortable and confident in their roles.`,
-      socials: {
-        instagram: '#',
-        website: '#'
+      "name": "Majda Zahič",
+      "role": "Radio Broadcaster",
+      "image": "/images/placeholder.jpg",
+      "bio": "Bringing key narrative elements to life through voice and sound.",
+      "extendedBio": "Majda provides a compelling voice that enhances the storytelling and atmosphere of the production.",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
       }
     },
     {
-      name: 'Nathan Brooks',
-      role: 'Set Designer',
-      bio: 'Transforming blank spaces into immersive theatrical worlds.',
-      extendedBio: `Nathan's innovative set designs transport audiences into the heart of the story. He collaborates closely with directors and lighting designers to create dynamic stage environments.`,
-      socials: {
-        instagram: '#',
-        website: '#'
+      "name": "Lexi Johns",
+      "role": "Stage Manager",
+      "image": "/images/placeholder.jpg",
+      "bio": "Coordinating all aspects of production to keep everything running smoothly.",
+      "extendedBio": "Lexi ensures that rehearsals, technical cues, and performances flow seamlessly, making sure every detail is in place for a successful show.",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
       }
     },
     {
-      name: 'Ava Mitchell',
-      role: 'Choreographer',
-      bio: 'Bringing movement and expression to life through choreography.',
-      extendedBio: `Ava infuses productions with dynamic and expressive movement. Whether subtle gestures or large ensemble pieces, her choreography enhances storytelling on stage.`,
-      socials: {
-        instagram: '#',
-        website: '#'
+      "name": "Amela Karadza",
+      "role": "Director/Alma",
+      "image": "/images/placeholder.jpg",
+      "bio": "Bringing a bold vision to the stage as director and performer in Honey Brown Eyes.",
+      "extendedBio": "As director and performer, Amela leads the production with a deep commitment to storytelling and theatrical excellence. Her work brings nuance and authenticity to every performance.",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
       }
     },
     {
-      name: 'Ryan Fisher',
-      role: 'Sound Designer',
-      bio: 'Crafting the perfect auditory landscape for each production.',
-      extendedBio: `Ryan designs immersive soundscapes that complement the story and setting of each play. He ensures seamless audio transitions and a balanced mix for live performances.`,
-      socials: {
-        instagram: '#',
-        website: '#'
+      "name": "Jessica Nebeker",
+      "role": "Set Designer",
+      "image": "/images/placeholder.jpg",
+      "bio": "Transforming the stage into a compelling and immersive environment.",
+      "extendedBio": "Jessica crafts the physical world of the production, ensuring that every element supports the story being told.",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
       }
     },
     {
-      name: 'Isabella Moore',
-      role: 'Props Master',
-      bio: 'Bringing authenticity to every production with meticulously crafted props.',
-      extendedBio: `Isabella is dedicated to the details, creating and sourcing props that add depth and realism to each performance. Her keen eye ensures every piece fits seamlessly into the world of the play.`,
-      socials: {
-        instagram: '#',
-        website: '#'
+      "name": "Anthony Parry",
+      "role": "Musician/Composer",
+      "image": "/images/placeholder.jpg",
+      "bio": "Crafting the musical backdrop that enhances the emotional landscape of the play.",
+      "extendedBio": "Anthony's compositions set the tone for each scene, providing an evocative auditory experience that complements the story.",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
       }
     },
     {
-      name: 'David Collins',
-      role: 'Technical Director',
-      bio: 'Overseeing the technical elements to ensure a smooth performance.',
-      extendedBio: `David manages the behind-the-scenes logistics of each production, from lighting and sound to set construction. His expertise keeps everything running seamlessly.`,
-      socials: {
-        instagram: '#',
-        website: '#'
+      "name": "Mirza Suman",
+      "role": "Zlata",
+      "image": "/images/placeholder.jpg",
+      "bio": "Delivering a heartfelt performance as Zlata.",
+      "extendedBio": "Mirza brings emotional depth and sincerity to her role, helping to drive the narrative forward.",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
       }
     },
     {
-      name: 'Grace Thompson',
-      role: 'Dramaturg',
-      bio: 'Providing research and context to deepen each production’s impact.',
-      extendedBio: `Grace delves into historical, cultural, and thematic research to support directors and actors in their storytelling. Her work helps bring authenticity and depth to every play.`,
-      socials: {
-        instagram: '#',
-        website: '#'
+      "name": "Mike Ward",
+      "role": "Musician/Composer",
+      "image": "/images/placeholder.jpg",
+      "bio": "Creating evocative musical compositions to accompany the narrative.",
+      "extendedBio": "Mike's music serves as an emotional undercurrent throughout the play, reinforcing the themes and tensions of each scene.",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
       }
     },
     {
-      name: 'Ethan Rivera',
-      role: 'Production Manager',
-      bio: 'Ensuring productions stay on schedule and within budget.',
-      extendedBio: `Ethan oversees production logistics, from rehearsals to opening night. His ability to balance creative needs with practical constraints makes each show a success.`,
-      socials: {
-        instagram: '#',
-        website: '#'
+      "name": "John Wicks",
+      "role": "Assistant Director",
+      "image": "/images/placeholder.jpg",
+      "bio": "Supporting the creative vision and ensuring smooth execution behind the scenes.",
+      "extendedBio": "John works closely with the director to refine performances and maintain the artistic integrity of Honey Brown Eyes.",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
       }
     },
     {
-      name: 'Chloe Harrison',
-      role: 'Marketing Coordinator',
-      bio: 'Connecting audiences with the magic of live theater.',
-      extendedBio: `Chloe leads marketing efforts to engage and grow Little Branch’s audience. Through social media, press, and community outreach, she ensures every production gets the attention it deserves.`,
-      socials: {
-        instagram: '#',
-        website: '#'
-      }
-    },
-    {
-      name: 'Liam Bennett',
-      role: 'Fight Choreographer',
-      bio: 'Designing realistic and safe stage combat sequences.',
-      extendedBio: `Liam specializes in stage combat, ensuring that fight scenes look thrilling while keeping actors safe. His work adds intensity and realism to dramatic moments on stage.`,
-      socials: {
-        instagram: '#',
-        website: '#'
-      }
-    },
-    {
-      name: 'Olivia Scott',
-      role: 'Assistant Director',
-      bio: 'Supporting the director in bringing each vision to life.',
-      extendedBio: `Olivia collaborates with directors to fine-tune performances, provide actor feedback, and ensure the production's vision stays intact. She’s an invaluable creative partner behind the scenes.`,
-      socials: {
-        instagram: '#',
-        website: '#'
-      }
-    },
-    {
-      name: 'Benjamin Carter',
-      role: 'Playwright-in-Residence',
-      bio: 'Developing original works for Little Branch’s stage.',
-      extendedBio: `Benjamin crafts compelling stories and characters, writing new works and adapting existing pieces for the company. His voice helps shape the identity of Little Branch’s productions.`,
-      socials: {
-        instagram: '#',
-        website: '#'
-      }
-    },
-    {
-      name: 'Emma Sullivan',
-      role: 'House Manager',
-      bio: 'Ensuring audiences have a great experience from the moment they arrive.',
-      extendedBio: `Emma oversees front-of-house operations, greeting guests, coordinating ushers, and ensuring smooth audience flow. Her work creates a welcoming environment for theatergoers.`,
-      socials: {
-        instagram: '#',
-        website: '#'
+      "name": "Jovani Zambrano",
+      "role": "Sound Designer/Branko/Milenko",
+      "image": "/images/placeholder.jpg",
+      "bio": "Designing immersive soundscapes while bringing characters to life on stage.",
+      "extendedBio": "Jovani blends technical expertise with creative performance, crafting a rich auditory world while portraying key roles in Honey Brown Eyes.",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
       }
     }
   ];
@@ -265,7 +240,13 @@ export default function Team() {
                 onClick={() => setSelectedMember(member)}
               >
                 {/* Image Container */}
-                <div className="aspect-square relative bg-gray-800">
+                <div className="aspect-square relative">
+                  <Image
+                    src={member.image || '/images/placeholder.jpg'}
+                    alt={`${member.name} - ${member.role}`}
+                    fill
+                    className="object-cover"
+                  />
                   <div className="absolute inset-0 bg-accent/10" />
                 </div>
                 
@@ -275,7 +256,6 @@ export default function Team() {
                     {member.name}
                   </h2>
                   <p className="text-accent mb-4">{member.role}</p>
-
                 </div>
               </motion.div>
             ))}
@@ -307,25 +287,37 @@ export default function Team() {
                 </svg>
               </button>
 
-              <div className="mb-6">
-                <h2 className="font-display text-3xl mb-2">{selectedMember.name}</h2>
-                <p className="text-accent">{selectedMember.role}</p>
-              </div>
+              <div className="flex flex-col md:flex-row gap-6">
+                {/* Add image to modal */}
+                <div className="w-32 h-32 rounded-full overflow-hidden relative mx-auto md:mx-0">
+                  <Image
+                    src={selectedMember.image || '/images/placeholder.jpg'}
+                    alt={`${selectedMember.name} - ${selectedMember.role}`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
 
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                {selectedMember.extendedBio}
-              </p>
+                <div className="flex-1">
+                  <h2 className="font-display text-3xl mb-2">{selectedMember.name}</h2>
+                  <p className="text-accent mb-4">{selectedMember.role}</p>
+                  
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {selectedMember.extendedBio}
+                  </p>
 
-              <div className="flex space-x-4">
-                {Object.entries(selectedMember.socials).map(([platform, url]) => (
-                  <Link
-                    key={platform}
-                    href={url}
-                    className="text-gray-400 hover:text-accent transition-colors"
-                  >
-                    {platform.charAt(0).toUpperCase() + platform.slice(1)}
-                  </Link>
-                ))}
+                  <div className="flex space-x-4">
+                    {Object.entries(selectedMember.socials).map(([platform, url]) => (
+                      <Link
+                        key={platform}
+                        href={url}
+                        className="text-gray-400 hover:text-accent transition-colors"
+                      >
+                        {platform.charAt(0).toUpperCase() + platform.slice(1)}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>

@@ -10,14 +10,14 @@ export default function Footer() {
         <div className="block md:grid md:grid-cols-3 md:gap-8">
           {/* First column (Logo) */}
           <div className="mb-8 md:mb-0">
-            {/* For desktop - position the logo with negative margin */}
-            <div className="hidden md:flex md:flex-col md:items-center" style={{ marginTop: '-24px' }}>
+            {/* For desktop - position the logo aligned with the column headers */}
+            <div className="hidden md:flex md:flex-col md:items-center" style={{ marginTop: '-40px' }}>
               <Image 
                 src="/images/logo.svg" 
                 alt="Little Branch Theater Logo" 
-                width={160}
-                height={160}
-                className="w-40 h-40" 
+                width={200}
+                height={200}
+                className="w-48 h-48" 
                 priority
               />
               <p className="text-gray-400 mt-2 text-center">
@@ -64,9 +64,9 @@ export default function Footer() {
           <Image 
             src="/images/logo.svg" 
             alt="Little Branch Theater Logo" 
-            width={160}
-            height={160}
-            className="w-40 h-40" 
+            width={180}
+            height={180}
+            className="w-44 h-44" 
             priority
           />
           <p className="text-gray-400 mt-2 text-center">
@@ -75,7 +75,7 @@ export default function Footer() {
         </div>
         
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} Little Branch Theater. All rights reserved.
+          &copy; {new Date().getFullYear()} Little Branch. All rights reserved.
         </div>
       </div>
     </footer>
