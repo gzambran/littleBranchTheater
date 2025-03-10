@@ -47,7 +47,7 @@ export default function Team() {
       }
     },
     {
-      "name": "Edin Ferkic",
+      "name": "Edin Ferkić",
       "role": "Denis",
       "image": "/images/placeholder.jpg",
       "bio": "Portraying Denis with nuance and intensity.",
@@ -102,7 +102,7 @@ export default function Team() {
       }
     },
     {
-      "name": "Amela Karadza",
+      "name": "Amela Karadža",
       "role": "Director/Alma",
       "image": "/images/placeholder.jpg",
       "bio": "Bringing a bold vision to the stage as director and performer in Honey Brown Eyes.",
@@ -179,7 +179,7 @@ export default function Team() {
       }
     },
     {
-      "name": "Majda Zahič",
+      "name": "Majda Zahić",
       "role": "Radio Broadcaster",
       "image": "/images/placeholder.jpg",
       "bio": "Bringing key narrative elements to life through voice and sound.",
