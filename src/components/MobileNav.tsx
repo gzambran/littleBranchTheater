@@ -62,20 +62,18 @@ export default function MobileNav() {
         <Bars3Icon className="h-6 w-6" />
       </button>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Menu Dropdown - completely redesigned */}
       {isOpen && (
         <div className="fixed right-0 top-16 z-50 md:hidden">
-          {/* Menu container - compact dropdown with black background and rounder corners */}
           <div 
-            className="w-56 rounded-lg shadow-lg bg-black border border-gray-800"
+            className="w-72 rounded-lg shadow-lg bg-black border border-gray-800"
           >
-            {/* Navigation links - compact menu */}
-            <nav className="flex flex-col py-3">
+            <nav className="py-2">
               {navItems.map((item) => (
-                <div key={item.path}>
+                <div key={item.path} className="px-2 py-1">
                   <Link 
                     href={item.path} 
-                    className="text-base text-white hover:text-accent transition block px-5 py-2"
+                    className="block w-full text-white hover:bg-gray-800 rounded-md transition-colors px-4 py-3.5 text-lg"
                     onClick={closeMenu}
                   >
                     {item.label}

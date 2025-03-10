@@ -101,7 +101,7 @@ export default function UpcomingShow() {
               >
                 <h2 className="font-display text-3xl mb-6">Our Supporters</h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                  <a href="https://alleyrep.org" target="_blank" rel="noopener noreferrer" 
+                  <a href="https://alleyrep.org" target="_blank" rel="noopener" 
                     className="flex items-center justify-center h-32 bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-colors duration-300">
                     <Image 
                       src="/images/sponsors/alley-rep-logo.svg"
@@ -111,7 +111,7 @@ export default function UpcomingShow() {
                       className="max-w-full max-h-full object-contain"
                     />
                   </a>
-                  <a href="https://visualartscollective.com" target="_blank" rel="noopener noreferrer" 
+                  <a href="https://visualartscollective.com" target="_blank" rel="noopener" 
                     className="flex items-center justify-center h-32 bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-colors duration-300">
                     <Image 
                       src="/images/sponsors/visual-arts-collective-logo.svg"
@@ -121,7 +121,7 @@ export default function UpcomingShow() {
                       className="max-w-full max-h-full object-contain"
                     />
                   </a>
-                  <a href="https://arts.idaho.gov" target="_blank" rel="noopener noreferrer" 
+                  <a href="https://arts.idaho.gov" target="_blank" rel="noopener" 
                     className="flex items-center justify-center h-32 bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-colors duration-300">
                     <Image 
                       src="/images/sponsors/arts-idaho-logo.jpg"
@@ -131,7 +131,7 @@ export default function UpcomingShow() {
                       className="max-w-full max-h-full object-contain"
                     />
                   </a>
-                  <a href="https://www.puffinfoundation.org" target="_blank" rel="noopener noreferrer" 
+                  <a href="https://www.puffinfoundation.org" target="_blank" rel="noopener" 
                     className="flex items-center justify-center h-32 bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-colors duration-300">
                     <Image 
                       src="/images/sponsors/puffin-foundation-logo.jpeg"
