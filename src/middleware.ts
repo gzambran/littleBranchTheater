@@ -1,19 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-export function middleware(request: NextRequest) {
-  // Check if the request is using HTTP
-  if (request.headers.get('x-forwarded-proto') !== 'https') {
-    // Create the https URL
-    const httpsUrl = `https://${request.headers.get('host')}${request.nextUrl.pathname}${request.nextUrl.search}`;
-    
-    // Return a 301 redirect
-    return NextResponse.redirect(httpsUrl, 301);
-  }
-  
-  // If already using HTTPS, continue with authentication middleware
-  // Set this to false to disable password protection
-  const PASSWORD_PROTECTION_ENABLED = true;
+// Set this to false to disable password protection
+const PASSWORD_PROTECTION_ENABLED = true;
 
+export function middleware(request: NextRequest) {
+  // HTTPS redirect logic - has to come first
+  const protocol = request.headers.get('x-forwarded-proto');
+  if (protocol === 'http') {
+    const newUrl = `https://${request.headers.get('host')}${request.nextUrl.pathname}${request.nextUrl.search}`;
+    return NextResponse.redirect(newUrl, 301);
+  }
+
+  // Password protection logic - this was already working
   if (!PASSWORD_PROTECTION_ENABLED) {
     return NextResponse.next();
   }
@@ -49,6 +47,8 @@ export function middleware(request: NextRequest) {
   });
 }
 
+// Make sure the matcher covers all routes that need both password protection
+// and HTTP to HTTPS redirection
 export const config = {
   matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 };
