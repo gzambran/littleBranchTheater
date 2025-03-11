@@ -1,10 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-// Set this to false to disable password protection
-const PASSWORD_PROTECTION_ENABLED = true;
-
 export function middleware(request: NextRequest) {
-  // Skip if password protection is disabled
+  // Check if the request is using HTTP
+  if (request.headers.get('x-forwarded-proto') !== 'https') {
+    // Create the https URL
+    const httpsUrl = `https://${request.headers.get('host')}${request.nextUrl.pathname}${request.nextUrl.search}`;
+    
+    // Return a 301 redirect
+    return NextResponse.redirect(httpsUrl, 301);
+  }
+  
+  // If already using HTTPS, continue with authentication middleware
+  // Set this to false to disable password protection
+  const PASSWORD_PROTECTION_ENABLED = true;
+
   if (!PASSWORD_PROTECTION_ENABLED) {
     return NextResponse.next();
   }
