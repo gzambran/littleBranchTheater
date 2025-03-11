@@ -5,6 +5,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import PageTransition from '@/components/PageTransition'
 import { Analytics } from '@vercel/analytics/react'
+import OrganizationStructuredData from '@/components/OrganizationStructuredData'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair-display' })
@@ -26,6 +27,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <OrganizationStructuredData />
       </head>
       <body className={`${inter.variable} ${playfair.variable} 
         font-sans bg-black text-white min-h-screen`}>
