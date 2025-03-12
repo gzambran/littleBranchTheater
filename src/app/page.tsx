@@ -12,6 +12,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      <h1 className="sr-only">Little Branch Theater</h1>
       <section className="relative pt-10 flex flex-col items-center">
         <div className="w-full max-w-6xl mx-auto">
           <motion.div

@@ -13,6 +13,15 @@ interface EventStructuredDataProps {
   image?: string;
   doorTime?: string;
   performer?: string;
+  price?: number;
+  priceCurrency?: string;
+  validFrom?: string;
+  eventStatus?: string;
+  eventAttendanceMode?: string;
+  organizer?: {
+    name: string;
+    url?: string;
+  };
 }
 
 export default function EventStructuredData({
@@ -24,7 +33,13 @@ export default function EventStructuredData({
   ticketUrl,
   image,
   doorTime,
-  performer
+  performer,
+  price = 30,
+  priceCurrency = "USD",
+  validFrom = "2025-01-01T00:00:00-06:00",
+  eventStatus = "https://schema.org/EventScheduled",
+  eventAttendanceMode = "https://schema.org/OfflineEventAttendanceMode",
+  organizer = { name: "Little Branch Theater Company", url: "https://littlebranchtheater.org" }
 }: EventStructuredDataProps) {
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -34,6 +49,8 @@ export default function EventStructuredData({
     startDate,
     endDate: endDate || startDate,
     doorTime,
+    eventStatus,
+    eventAttendanceMode,
     location: {
       '@type': 'Place',
       name: location.name,
@@ -42,12 +59,20 @@ export default function EventStructuredData({
     offers: {
       '@type': 'Offer',
       url: ticketUrl,
+      price,
+      priceCurrency,
+      validFrom,
       availability: 'https://schema.org/InStock'
     },
     performer: performer ? {
       '@type': 'PerformingGroup',
       name: performer
     } : undefined,
+    organizer: {
+      '@type': 'Organization',
+      name: organizer.name,
+      url: organizer.url
+    },
     image
   };
 

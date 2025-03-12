@@ -1,4 +1,4 @@
-# robots.txt for Little Branch Theater
+# robots.txt for Little Branch Theater Company
 User-agent: *
 Allow: /
 

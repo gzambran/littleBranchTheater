@@ -4,9 +4,9 @@ export default function OrganizationStructuredData() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'TheaterGroup',
-    name: 'Little Branch Theater',
+    name: 'Little Branch Theater Company',
     url: 'https://littlebranchtheater.org',
-    logo: 'https://littlebranchtheater.org/images/logo.jpg', // Update with actual logo path
+    logo: 'https://littlebranchtheater.org/images/logo.svg',
     location: {
       '@type': 'Place',
       name: 'Visual Arts Collective',
@@ -14,9 +14,7 @@ export default function OrganizationStructuredData() {
     },
     description: 'A new theater company bringing fresh perspectives to the stage.',
     sameAs: [
-      // Add social media profiles if available
-      // 'https://facebook.com/littlebranchtheater',
-      // 'https://instagram.com/littlebranchtheater'
+      'https://instagram.com/littlebranchtheater'
     ]
   };
 

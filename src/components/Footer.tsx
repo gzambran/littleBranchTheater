@@ -10,20 +10,20 @@ export default function Footer() {
         <div className="md:hidden">
           {/* Quick Links */}
           <div className="mb-6">
-            <h4 className="font-bold mb-3 text-left">Quick Links</h4>
+            <h3 className="font-bold mb-3 text-left">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/shows/upcoming" className="text-gray-400 hover:text-accent">
+                <Link href="/shows/upcoming" className="text-gray-300 hover:text-accent">
                   Upcoming Show
                 </Link>
               </li>
               <li>
-                <Link href="/ensemble" className="text-gray-400 hover:text-accent">
+                <Link href="/ensemble" className="text-gray-300 hover:text-accent">
                   Meet the Ensemble
                 </Link>
               </li>
               <li>
-                <Link href="/who-we-are" className="text-gray-400 hover:text-accent">
+                <Link href="/who-we-are" className="text-gray-300 hover:text-accent">
                   Who We Are
                 </Link>
               </li>
@@ -32,8 +32,8 @@ export default function Footer() {
           
           {/* Contact */}
           <div className="mb-6">
-            <h4 className="font-bold mb-3 text-left">Contact</h4>
-            <p className="text-gray-400">
+            <h3 className="font-bold mb-3 text-left">Contact</h3>
+            <p className="text-gray-300">
               <a href="mailto:info@littlebranchtheater.org">info@littlebranchtheater.org</a>
               <br />
               Garden City, Idaho
@@ -50,7 +50,7 @@ export default function Footer() {
               className="w-36 h-36 mb-2" 
               priority
             />
-            <p className="text-gray-400 text-center text-sm">
+            <p className="text-gray-300 text-center text-sm">
               Rooted in storytelling, reaching for change.
             </p>
           </div>
@@ -69,7 +69,7 @@ export default function Footer() {
                 className="w-48 h-48" 
                 priority
               />
-              <p className="text-gray-400 mt-2 text-center">
+              <p className="text-gray-300 mt-2 text-center">
                 Rooted in storytelling, reaching for change.
               </p>
             </div>
@@ -80,17 +80,17 @@ export default function Footer() {
             <h4 className="font-bold mb-4 text-left">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/shows/upcoming" className="text-gray-400 hover:text-accent">
+                <Link href="/shows/upcoming" className="text-gray-300 hover:text-accent">
                   Upcoming Show
                 </Link>
               </li>
               <li>
-                <Link href="/ensemble" className="text-gray-400 hover:text-accent">
+                <Link href="/ensemble" className="text-gray-300 hover:text-accent">
                   Meet the Ensemble
                 </Link>
               </li>
               <li>
-                <Link href="/who-we-are" className="text-gray-400 hover:text-accent">
+                <Link href="/who-we-are" className="text-gray-300 hover:text-accent">
                   Who We Are
                 </Link>
               </li>
@@ -100,7 +100,7 @@ export default function Footer() {
           {/* Contact */}
           <div className="mb-8 md:mb-0">
             <h4 className="font-bold mb-4 text-left">Contact</h4>
-            <p className="text-gray-400">
+            <p className="text-gray-300">
               <a href="mailto:info@littlebranchtheater.org">info@littlebranchtheater.org</a>
               <br />
               Garden City, Idaho
@@ -110,7 +110,7 @@ export default function Footer() {
         
         {/* Copyright */}
         <div className="pt-4 border-t border-gray-800 text-center text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} Little Branch. All rights reserved.
+          &copy; {new Date().getFullYear()} Little Branch Theater Company. All rights reserved.
         </div>
       </div>
     </footer>
