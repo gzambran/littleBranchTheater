@@ -7,16 +7,12 @@ import AnimatedText from '@/components/AnimatedText'
 import Lightbox from 'yet-another-react-lightbox'
 import 'yet-another-react-lightbox/styles.css'
 
-// Metadata needs to be in a separate file when using client components
-// Using static values inline instead
-
-export const revalidate = 3600 // Revalidate this page every hour
+export const revalidate = 3600
 
 export default function Gallery() {
   const [isOpen, setIsOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
 
-  // This will be replaced with CMS content later
   const galleryImages = [
     {
       id: 1,

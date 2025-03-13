@@ -33,7 +33,7 @@ export default function UpcomingShow() {
               <div className="block relative group">
                 <div className="relative w-full flex justify-center bg-black/30 py-8">
                   <Image 
-                    src="/images/honeybrowneyes.png"
+                    src="/images/honeybrowneyes.webp"
                     alt="Honey Brown Eyes"
                     width={500}
                     height={750}
