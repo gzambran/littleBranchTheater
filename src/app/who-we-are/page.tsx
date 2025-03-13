@@ -61,7 +61,7 @@ export default function Vision() {
             >
               <div className="w-40 h-40 mx-auto mb-6 relative rounded-full overflow-hidden">
                 <Image
-                  src="/images/placeholder.jpg"
+                  src="/images/karadza.webp"
                   alt="Amela - Artistic Director"
                   fill
                   className="object-cover"
@@ -187,27 +187,27 @@ export default function Vision() {
             {[
               {
                 title: "Innovation",
-                description: "We push the boundaries of theatrical expression, exploring new ways to tell stories and engage our audience."
+                description: "We embrace bold, creative approaches to storytelling and stagecraft."
               },
               {
                 title: "Community",
-                description: "Theater is a collaborative art form. We foster strong connections within our creative community and with our audience."
+                description: "We build connections through theater, fostering collaboration, local artistry, and an engaged audience."
               },
               {
                 title: "Authenticity",
-                description: "We believe in honest storytelling that reflects the complexity and diversity of human experience."
-              },
-              {
-                title: "Accessibility",
-                description: "We strive to make theater accessible to all, breaking down barriers between art and audience."
-              },
-              {
-                title: "Excellence",
-                description: "We maintain high artistic standards while nurturing new talent and fresh perspectives."
+                description: "We bring honest, meaningful stories to the stage with integrity and care."
               },
               {
                 title: "Impact",
-                description: "Every production should leave a lasting impression, sparking conversation and inspiring change."
+                description: "We produce work that sparks conversation, challenges perspectives, and inspires change."
+              },
+              {
+                title: "Representation",
+                description: "We highlight diverse voices and underrepresented narratives in our productions."
+              },
+              {
+                title: "Empowerment",
+                description: "We create opportunities for artists to grow, collaborate, and share their voices."
               }
             ].map((value, index) => (
               <motion.div
@@ -252,7 +252,7 @@ export default function Vision() {
                 transition={{ delay: 0.2 }}
               >
                 <span className="text-accent">•</span>
-                <span>New voices find their stage and their audience</span>
+                <span>Diverse stories inspire, challenge, and unite our community.</span>
               </motion.li>
               <motion.li 
                 className="flex items-center space-x-3"
@@ -262,7 +262,7 @@ export default function Vision() {
                 transition={{ delay: 0.3 }}
               >
                 <span className="text-accent">•</span>
-                <span>Diverse stories inspire and unite our community</span>
+                <span>Emerging local artists develop their craft alongside seasoned professionals.</span>
               </motion.li>
               <motion.li 
                 className="flex items-center space-x-3"
@@ -272,7 +272,17 @@ export default function Vision() {
                 transition={{ delay: 0.4 }}
               >
                 <span className="text-accent">•</span>
-                <span>Emerging artists develop their craft alongside seasoned professionals</span>
+                <span>A dedicated teaching studio introduces performers to the fundamentals of Meisner technique, culminating in a live performance.</span>
+              </motion.li>
+              <motion.li 
+                className="flex items-center space-x-3"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+              >
+                <span className="text-accent">•</span>
+                <span>One day, we hope to establish a permanent space to call our theater home.</span>
               </motion.li>
             </ul>
           </div>

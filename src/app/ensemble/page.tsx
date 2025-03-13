@@ -104,7 +104,7 @@ export default function Team() {
     {
       "name": "Amela Karadža",
       "role": "Director/Alma",
-      "image": "/images/placeholder.jpg",
+      "image": "/images/karadza.webp",
       "bio": "Bringing a bold vision to the stage as director and performer in Honey Brown Eyes.",
       "extendedBio": "As director and performer, Amela leads the production with a deep commitment to storytelling and theatrical excellence. Her work brings nuance and authenticity to every performance.",
       "socials": {
