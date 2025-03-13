@@ -66,7 +66,7 @@ export default function UpcomingShow() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
             >
               <a 
                 href="https://alleyreptheater.thundertix.com/events/236398"
@@ -113,7 +113,7 @@ export default function UpcomingShow() {
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
                   <h2 className="font-display text-3xl mb-6">Our Supporters</h2>
@@ -168,7 +168,7 @@ export default function UpcomingShow() {
                   className="bg-gray-900 p-8 rounded-lg sticky top-24"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
                   <h3 className="font-display text-2xl mb-6">Performance Details</h3>

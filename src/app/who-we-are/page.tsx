@@ -15,7 +15,7 @@ export default function Vision() {
         className="relative py-16 bg-black"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.5 }}
       >
         <div className="container mx-auto px-4">
           <motion.div
@@ -46,7 +46,7 @@ export default function Vision() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.5 }}
       >
         <div className="container mx-auto px-4">
           <h2 className="font-display text-3xl md:text-4xl mb-12 text-center">Our Co-founders</h2>
@@ -110,7 +110,7 @@ export default function Vision() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.5 }}
       >
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
@@ -149,7 +149,7 @@ export default function Vision() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.5 }}
       >
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">

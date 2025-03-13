@@ -91,7 +91,7 @@ export default function Gallery() {
         className="relative py-16 bg-black"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.5 }}
       >
         <div className="container mx-auto px-4">
           <motion.div className="text-center">
