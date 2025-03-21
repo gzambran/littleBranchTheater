@@ -44,9 +44,9 @@ export default function UpcomingShow() {
                   
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent pt-16 pb-6 px-6">
                     <motion.div 
-                      initial={{ opacity: 0, y: 10 }}
+                      initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: 0.3 }}
+                      transition={{ duration: 0.7, delay: 0.3 }}
                       className="text-center"
                     >
                       <p className="text-white text-lg md:text-xl">
@@ -64,9 +64,9 @@ export default function UpcomingShow() {
         <div className="container mx-auto px-4">
           <div className="mt-8 mb-12 flex justify-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
             >
               <a 
                 href="https://alleyreptheater.thundertix.com/events/236398"
@@ -88,7 +88,7 @@ export default function UpcomingShow() {
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.7 }}
                   viewport={{ once: true }}
                 >
                   <h2 className="font-display text-3xl mb-6">About the Show</h2>
@@ -113,7 +113,7 @@ export default function UpcomingShow() {
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
+                  transition={{ duration: 0.7, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
                   <h2 className="font-display text-3xl mb-6">Our Supporters</h2>
@@ -168,7 +168,7 @@ export default function UpcomingShow() {
                   className="bg-gray-900 p-8 rounded-lg sticky top-24"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
+                  transition={{ duration: 0.7, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
                   <h3 className="font-display text-2xl mb-6">Performance Details</h3>

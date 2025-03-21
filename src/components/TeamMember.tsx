@@ -19,7 +19,7 @@ export default function TeamMember({ name, role, bio, headshot, index }: TeamMem
       className="bg-gray-900 p-6 rounded-lg"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+      transition={{ duration: 0.7, delay: index * 0.1 }}
       viewport={{ once: true }}
     >
       <div className="w-32 h-32 mx-auto mb-4 relative rounded-full overflow-hidden">

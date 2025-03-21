@@ -25,7 +25,7 @@ export default function Team() {
 
   const teamMembers: TeamMember[] = [
     {
-      "name": "Terri Dillon",
+      "name": "Terri Dillion",
       "role": "Jovanka",
       "image": "/images/placeholder.jpg",
       "bio": "Bringing compassion and strength to the character of Jovanka.",
@@ -223,9 +223,9 @@ export default function Team() {
       <section className="relative py-16 bg-black">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.7 }}
             className="text-center"
           >
             <AnimatedText
@@ -234,9 +234,9 @@ export default function Team() {
             />
             <motion.p 
               className="text-xl text-gray-300 max-w-2xl mx-auto"
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
             >
               Meet the talented individuals bringing Honey Brown Eyes to the stage
             </motion.p>
@@ -294,7 +294,7 @@ export default function Team() {
           >
             <motion.div 
               className="bg-gray-900 rounded-lg max-w-2xl w-full p-8 relative"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               onClick={(e) => e.stopPropagation()}

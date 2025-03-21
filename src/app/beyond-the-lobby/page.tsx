@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import AnimatedText from '@/components/AnimatedText'
 import Link from 'next/link'
 
-export const revalidate = 3600 // Revalidate this page every hour
+export const revalidate = 3600
 
 export default function Research() {
   return (
@@ -25,7 +25,7 @@ export default function Research() {
             className="text-center"
           >
             <AnimatedText
-              text="Behind the Production"
+              text="Beyond the Lobby"
               className="font-display text-5xl md:text-7xl mb-6"
             />
             <motion.p 
@@ -34,7 +34,7 @@ export default function Research() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              Exclusive background research and additional context for our current production
+              Explore the history and research that shaped Honey Brown Eyes.
             </motion.p>
           </motion.div>
         </div>

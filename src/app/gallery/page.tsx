@@ -89,9 +89,9 @@ export default function Gallery() {
       {/* Gallery Hero */}
       <motion.section 
         className="relative py-16 bg-black"
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.7 }}
       >
         <div className="container mx-auto px-4">
           <motion.div className="text-center">
@@ -101,9 +101,9 @@ export default function Gallery() {
             />
             <motion.p 
               className="text-xl text-gray-300 max-w-2xl mx-auto"
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
             >
               A visual journey through our productions and behind-the-scenes moments
             </motion.p>

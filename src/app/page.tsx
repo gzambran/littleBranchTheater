@@ -16,7 +16,7 @@ export default function Home() {
         <div className="w-full max-w-6xl mx-auto">
           <motion.div
             whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.7 }}
             className="rounded-xl overflow-hidden shadow-[0_0_30px_rgba(217,119,6,0.2)] relative"
           >
             <Link href="/shows/upcoming" className="block relative group">
@@ -34,7 +34,7 @@ export default function Home() {
                   <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
+                    transition={{ duration: 0.7, delay: 0.3 }}
                     className="text-center"
                   >
                     <p className="text-white text-lg md:text-xl">
@@ -53,7 +53,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.7 }}
             viewport={{ once: true }}
             className="flex flex-col items-center"
           >
