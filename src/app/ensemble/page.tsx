@@ -13,7 +13,6 @@ interface TeamMember {
   role: string;
   image: string;
   bio: string;
-  extendedBio: string;
   socials: {
     instagram: string;
     website: string;
@@ -28,8 +27,7 @@ export default function Team() {
       "name": "Terri Dillion",
       "role": "Jovanka",
       "image": "/images/placeholder.jpg",
-      "bio": "Bringing compassion and strength to the character of Jovanka.",
-      "extendedBio": "Terri's thoughtful portrayal captures the resilience and humanity of her character, adding emotional depth to every scene she inhabits.",
+      "bio": "",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -39,8 +37,7 @@ export default function Team() {
       "name": "Amber Ellis",
       "role": "Scenic Assistant/Scenic Charge Assist",
       "image": "/images/placeholder.jpg",
-      "bio": "Supporting scenic design and set construction with precision and creativity.",
-      "extendedBio": "Amber contributes to the scenic design process, ensuring that every set element is executed to perfection and enhances the production.",
+      "bio": "",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -50,8 +47,7 @@ export default function Team() {
       "name": "Edin Ferkić",
       "role": "Denis",
       "image": "/images/placeholder.jpg",
-      "bio": "Portraying Denis with nuance and intensity.",
-      "extendedBio": "Edin brings authenticity and power to his performance, helping to shape the emotional core of the production.",
+      "bio": "",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -61,8 +57,7 @@ export default function Team() {
       "name": "Trevor Ferguson",
       "role": "Dragan",
       "image": "/images/placeholder.jpg",
-      "bio": "Bringing depth and emotion to the role of Dragan.",
-      "extendedBio": "Trevor embodies the complexities of his character, delivering a performance that captivates and moves audiences.",
+      "bio": "",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -72,8 +67,7 @@ export default function Team() {
       "name": "Wendy Fox",
       "role": "Costume Designer",
       "image": "/images/placeholder.jpg",
-      "bio": "Creating costumes that enhance character and storytelling.",
-      "extendedBio": "Wendy brings characters to life through her thoughtful costume designs, ensuring authenticity and visual appeal on stage.",
+      "bio": "",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -83,8 +77,7 @@ export default function Team() {
       "name": "Chaz Gentry",
       "role": "Lighting Designer",
       "image": "/images/placeholder.jpg",
-      "bio": "Shaping the visual atmosphere through dynamic lighting design.",
-      "extendedBio": "Chaz uses lighting to enhance mood, create tension, and immerse the audience in the world of the play.",
+      "bio": "",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -94,8 +87,7 @@ export default function Team() {
       "name": "Lexi Johns",
       "role": "Stage Manager",
       "image": "/images/placeholder.jpg",
-      "bio": "Coordinating all aspects of production to keep everything running smoothly.",
-      "extendedBio": "Lexi ensures that rehearsals, technical cues, and performances flow seamlessly, making sure every detail is in place for a successful show.",
+      "bio": "",  
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -105,8 +97,7 @@ export default function Team() {
       "name": "Amela Karadža",
       "role": "Director/Alma",
       "image": "/images/karadza.webp",
-      "bio": "Bringing a bold vision to the stage as director and performer in Honey Brown Eyes.",
-      "extendedBio": "As director and performer, Amela leads the production with a deep commitment to storytelling and theatrical excellence. Her work brings nuance and authenticity to every performance.",
+      "bio": "Amela Karadža was born in Bosnia and at the age of 5 immigrated to Boise where she spent many delightful years. She's a graduate of Rutgers Mason Gross School of the Arts, MFA program. Some of her favorite roles include: Joan (Vinegar Tom/Theatre C and Rutgers Theatre Co.), Duke of Aumerle (Richard II at Shakespeare's Globe Theatre in London), and #2 (The Wolves/Boise Contemporary Theater). She loves teaching Meisner Technique around the valley in her free time and hanging out with her fur-children! Thank you to my beautiful mom and wonderful husband for all your support. Love you dad, forever and always.",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -116,8 +107,7 @@ export default function Team() {
       "name": "Jessica Nebeker",
       "role": "Set Designer",
       "image": "/images/placeholder.jpg",
-      "bio": "Transforming the stage into a compelling and immersive environment.",
-      "extendedBio": "Jessica crafts the physical world of the production, ensuring that every element supports the story being told.",
+      "bio": "",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -127,8 +117,7 @@ export default function Team() {
       "name": "Anthony Parry",
       "role": "Musician/Composer",
       "image": "/images/placeholder.jpg",
-      "bio": "Crafting the musical backdrop that enhances the emotional landscape of the play.",
-      "extendedBio": "Anthony's compositions set the tone for each scene, providing an evocative auditory experience that complements the story.",
+      "bio": "",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -138,8 +127,7 @@ export default function Team() {
       "name": "Mirza Suman",
       "role": "Zlata",
       "image": "/images/placeholder.jpg",
-      "bio": "Delivering a heartfelt performance as Zlata.",
-      "extendedBio": "Mirza brings emotional depth and sincerity to her role, helping to drive the narrative forward.",
+      "bio": "",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -149,8 +137,7 @@ export default function Team() {
       "name": "Mike Ward",
       "role": "Musician/Composer",
       "image": "/images/placeholder.jpg",
-      "bio": "Creating evocative musical compositions to accompany the narrative.",
-      "extendedBio": "Mike's music serves as an emotional undercurrent throughout the play, reinforcing the themes and tensions of each scene.",
+      "bio": "",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -160,8 +147,7 @@ export default function Team() {
       "name": "John Wicks",
       "role": "Assistant Director",
       "image": "/images/placeholder.jpg",
-      "bio": "Supporting the creative vision and ensuring smooth execution behind the scenes.",
-      "extendedBio": "John works closely with the director to refine performances and maintain the artistic integrity of Honey Brown Eyes.",
+      "bio": "",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -171,8 +157,7 @@ export default function Team() {
       "name": "Ellie Wirth",
       "role": "Prop Designer/Assistant Stage Manager",
       "image": "/images/placeholder.jpg",
-      "bio": "Sourcing and creating detailed props while providing essential production support.",
-      "extendedBio": "Ellie brings attention to detail in both her prop design and stage management assistance, ensuring that every object on stage enhances the authenticity of the world while helping to keep the production running smoothly.",
+      "bio": "",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -182,8 +167,7 @@ export default function Team() {
       "name": "Majda Zahić",
       "role": "Radio Broadcaster",
       "image": "/images/placeholder.jpg",
-      "bio": "Bringing key narrative elements to life through voice and sound.",
-      "extendedBio": "Majda provides a compelling voice that enhances the storytelling and atmosphere of the production.",
+      "bio": "",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -193,11 +177,10 @@ export default function Team() {
       "name": "Jovani Zambrano",
       "role": "Sound Designer/Branko/Milenko",
       "image": "/images/zambrano.jpg",
-      "bio": "Designing immersive soundscapes while bringing characters to life on stage.",
-      "extendedBio": "Jovani blends technical expertise with creative performance, crafting a rich auditory world while portraying key roles in Honey Brown Eyes.",
+      "bio": "Jovani Zambrano was born and raised in Brooklyn, New York, and now calls Boise, Idaho, home, where he pursues his passion for acting and theater-making. He studied at Rutgers Mason Gross School of the Arts and performed at Shakespeare's Globe in As You Like It. His work has been seen at Hudson Valley Shakespeare, Theater for the New City, Boise Contemporary Theater, Alley Repertory Theater, and The Spot. Collaborating with these inspiring companies and ensembles fueled his desire to build Little Branch Theater—a space where artists can learn, take risks, fail spectacularly, and create something extraordinary. He would not be able to do any of this without the creativity and support of his wife. Among his favorite roles, playing Oscar in Sweat by Lynn Nottage was a particularly meaningful experience.",
       "socials": {
-        "instagram": "#",
-        "website": "#"
+        "instagram": "https://www.instagram.com/jovani_witha_j/",
+        "website": "https://www.jovanizambrano.com"
       }
     }
   ];
@@ -325,20 +308,26 @@ export default function Team() {
                   <p className="text-accent mb-4">{selectedMember.role}</p>
                   
                   <p className="text-gray-300 mb-6 leading-relaxed">
-                    {selectedMember.extendedBio}
+                    {selectedMember.bio}
                   </p>
 
-                  <div className="flex space-x-4">
-                    {Object.entries(selectedMember.socials).map(([platform, url]) => (
-                      <Link
-                        key={platform}
-                        href={url}
-                        className="text-gray-400 hover:text-accent transition-colors"
-                      >
-                        {platform.charAt(0).toUpperCase() + platform.slice(1)}
-                      </Link>
-                    ))}
-                  </div>
+                  {Object.values(selectedMember.socials).some(url => url !== "#") && (
+                    <div className="flex space-x-4">
+                      {Object.entries(selectedMember.socials).map(([platform, url]) => (
+                        url !== "#" && (
+                          <Link
+                            key={platform}
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-accent transition-colors"
+                          >
+                            {platform.charAt(0).toUpperCase() + platform.slice(1)}
+                          </Link>
+                        )
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             </motion.div>

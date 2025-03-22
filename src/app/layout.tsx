@@ -12,6 +12,9 @@ const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfa
 export const metadata = {
   title: 'Little Branch',
   description: 'A theater company bringing fresh perspectives to the stage',
+  alternates: {
+    canonical: 'https://www.littlebranchtheater.org',
+  },
 }
 
 export default function RootLayout({

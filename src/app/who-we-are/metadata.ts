@@ -1,13 +1,16 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Our Vision | Little Branch Theater',
-  description: 'The mission, values, and future vision of Little Branch Theater - bringing powerful stories to the stage.',
+  title: 'Who We Are | Little Branch',
+  description: 'Our journey, values, and vision – discover what drives Little Branch forward',
+  alternates: {
+    canonical: 'https://www.littlebranchtheater.org/who-we-are',
+  },
   openGraph: {
-    title: 'Our Vision | Little Branch Theater',
-    description: 'Building a stage where powerful stories find their voice.',
-    url: 'https://littlebranch.theater/vision',
-    siteName: 'Little Branch Theater',
+    title: 'Who We Are | Little Branch',
+    description: 'Our journey, values, and vision – discover what drives Little Branch forward',
+    url: 'https://www.littlebranch.theater/who-we-are',
+    siteName: 'Little Branch',
     locale: 'en_US',
     type: 'website',
   },
