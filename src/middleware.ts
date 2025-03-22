@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const PASSWORD_PROTECTION_ENABLED = true;
+const PASSWORD_PROTECTION_ENABLED = false;
 
 export function middleware(request: NextRequest) {
   if (!PASSWORD_PROTECTION_ENABLED) {
