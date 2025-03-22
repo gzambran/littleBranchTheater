@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 
 export const metadata = {
-  title: 'Honey Brown Eyes | Little Branch Theater',
-  description: 'Experience Honey Brown Eyes, a powerful production by Little Branch Theater. Running May 23-June 1, 2025 at Visual Arts Collective in Garden City, Idaho.',
+  title: 'Honey Brown Eyes | Little Branch',
+  description: 'Experience Honey Brown Eyes, a powerful production by Little Branch. Running May 23-June 1, 2025 at Visual Arts Collective in Garden City, Idaho.',
   openGraph: {
-    title: 'Honey Brown Eyes | Little Branch Theater',
-    description: 'Experience Honey Brown Eyes, a powerful production by Little Branch Theater. Running May 23-June 1, 2025 at Visual Arts Collective in Garden City, Idaho.',
+    title: 'Honey Brown Eyes | Little Branch',
+    description: 'Experience Honey Brown Eyes, a powerful production by Little Branch. Running May 23-June 1, 2025 at Visual Arts Collective in Garden City, Idaho.',
     url: 'https://www.littlebranchtheater.org/shows/upcoming',
     siteName: 'Little Branch Theater',
     images: [
@@ -21,8 +21,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Honey Brown Eyes | Little Branch Theater',
-    description: 'Experience Honey Brown Eyes, a powerful production by Little Branch Theater. Running May 23-June 1, 2025.',
+    title: 'Honey Brown Eyes | Little Branch',
+    description: 'Experience Honey Brown Eyes, a powerful production by Little Branch. Running May 23-June 1, 2025.',
     images: ['https://www.littlebranchtheater.org/images/honeybrowneyes.png'],
   },
 };

@@ -239,7 +239,7 @@ export default function Vision() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-display text-3xl md:text-4xl mb-6">Looking Forward</h2>
             <p className="text-xl text-gray-300 mb-8">
-              As we grow, we envision Little Branch Theater becoming a creative hub where:
+              As we grow, we envision Little Branch becoming a creative hub where:
             </p>
             <ul className="text-left text-lg text-gray-300 space-y-4 mb-12">
               <motion.li 

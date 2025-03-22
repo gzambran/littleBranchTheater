@@ -276,7 +276,7 @@ export default function Team() {
             onClick={() => setSelectedMember(null)}
           >
             <motion.div 
-              className="bg-gray-900 rounded-lg max-w-2xl w-full p-8 relative"
+              className="bg-gray-900 rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto p-8 relative"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
@@ -294,7 +294,7 @@ export default function Team() {
 
               <div className="flex flex-col md:flex-row gap-6">
                 {/* Add image to modal */}
-                <div className="w-32 h-32 rounded-full overflow-hidden relative mx-auto md:mx-0">
+                <div className="w-32 h-32 shrink-0 rounded-full overflow-hidden relative mx-auto md:mx-0">
                   <Image
                     src={selectedMember.image || '/images/placeholder.jpg'}
                     alt={`${selectedMember.name} - ${selectedMember.role}`}
