@@ -9,7 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/ensemble',
     '/shows',
     '/gallery',
-    '/research',
   ].map(route => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
