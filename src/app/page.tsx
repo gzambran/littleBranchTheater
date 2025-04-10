@@ -37,8 +37,11 @@ export default function Home() {
                     transition={{ duration: 0.7, delay: 0.3 }}
                     className="text-center"
                   >
+                    <p className="text-accent font-medium text-lg md:text-xl">
+                      May 22 - June 1, 2025
+                    </p>
                     <p className="text-white text-lg md:text-xl">
-                      <span className="text-accent font-medium">May 22 - June 1, 2025</span> • Visual Arts Collective, Garden City
+                      Visual Arts Collective, Garden City
                     </p>
                   </motion.div>
                 </div>

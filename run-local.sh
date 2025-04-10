@@ -13,7 +13,7 @@ if docker-compose ps -q | grep -q .; then
   docker-compose down
 fi
 
-echo -e "${BLUE}Building Little Branch Theater website container...${NC}"
+echo -e "${BLUE}Building PaceWise Playground container...${NC}"
 docker-compose build
 
 echo -e "${BLUE}Starting the container...${NC}"

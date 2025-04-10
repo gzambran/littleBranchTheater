@@ -26,11 +26,11 @@ export default function Team() {
     {
       "name": "Terri Dillion",
       "role": "Jovanka",
-      "image": "/images/placeholder.jpg",
-      "bio": "",
+      "image": "/images/dillion.jpg",
+      "bio": "After starting her career in theater followed by a second career at HP, Inc. Terri is now thoroughly enjoying retirement. Terri recently introduced live Audio Description to Idaho theater and dance, providing a more complete audience experience for people who are blind or have limited vision. So far, live AD is offered at the Morrison Center Main Stage and Danny Peterson Theaters and at the Idaho Shakespeare Festival - (check their websites!).  Every day I think of how very fortunate I am to be surrounded by loved ones - thank you for including me in your busy lives!",
       "socials": {
         "instagram": "#",
-        "website": "#"
+        "website": "https://www.morrisoncenter.com/news/detail/morrison-center-audio-descriptor-wins-governors-award-for-support-of-the-arts"
       }
     },
     {
@@ -44,22 +44,12 @@ export default function Team() {
       }
     },
     {
-      "name": "Edin Ferkić",
-      "role": "Denis",
-      "image": "/images/placeholder.jpg",
-      "bio": "",
-      "socials": {
-        "instagram": "#",
-        "website": "#"
-      }
-    },
-    {
       "name": "Trevor Ferguson",
       "role": "Dragan",
-      "image": "/images/placeholder.jpg",
-      "bio": "",
+      "image": "/images/ferguson.jpg",
+      "bio": "Trevor is beyond excited to be joining Little Branch’s first production, Honey Brown Eyes. Born and raised in Idaho, Trevor currently attends Boise State University as a Theatre Arts Major. When not at school you can probably find him underneath his ‘69 beetle trying to figure out where it all went wrong. Trevor has worked with Amela since 2022, learning about Meisner technique. Now he is excited to finally share the stage with her and the rest of the talented cast and see where it takes them! Other shows include: Anastasia, Nightfall with Edgar Allen Poe, American Buffalo, Little Prince, Grease, and Sound of Music. ",
       "socials": {
-        "instagram": "#",
+        "instagram": "https://www.instagram.com/tre_boogie101/",
         "website": "#"
       }
     },
@@ -86,10 +76,10 @@ export default function Team() {
     {
       "name": "Lexi Johns",
       "role": "Stage Manager",
-      "image": "/images/placeholder.jpg",
-      "bio": "",  
+      "image": "/images/johns.jpg",
+      "bio": "Lexi Johns is a senior at Boise State University, where she has stage managed and assistant stage-managed multiple productions. For her technical work, she received a Certificate of Merit for Stage Management from KCACTF Region 7. Outside of her technical roles, her primary artistic focus is acting. At Boise State, she performed as a chorus nun in The Sound of Music and most recently portrayed Jerrie Cobb in They Promised Her the Moon. With a strong foundation in both stage management and performance, she is excited to contribute to Honey Brown Eyes as she prepares to graduate.",  
       "socials": {
-        "instagram": "#",
+        "instagram": "https://www.instagram.com/lexijohns/",
         "website": "#"
       }
     },
@@ -114,8 +104,8 @@ export default function Team() {
       }
     },
     {
-      "name": "Anthony Parry",
-      "role": "Musician/Composer",
+      "name": "Francisco Negron",
+      "role": "Denis",
       "image": "/images/placeholder.jpg",
       "bio": "",
       "socials": {
@@ -124,10 +114,20 @@ export default function Team() {
       }
     },
     {
-      "name": "Mirza Suman",
+      "name": "Anthony Parry",
+      "role": "Musician/Composer",
+      "image": "/images/parry.png",
+      "bio": "Anthony Parry, a native of Boise, is a multi-instrumentalist and composer. He hosts the 'Behind Gray Walls' podcast and has composed music for the podcast as well as various short films and plays. Anthony is thrilled to be performing again with his jazz combo bandmates, Mike and Lauryn. Recently, he was seen performing solo and with his band, aka Belle, at the Dream Team Variety Flora Fantasia show. When he's not on stage, Anthony can be found at the Old Idaho Penitentiary, sharing tales of Idaho's colorful history.",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
+      }
+    },
+    {
+      "name": "Mirza Šuman",
       "role": "Zlata",
-      "image": "/images/placeholder.jpg",
-      "bio": "",
+      "image": "/images/suman.jpg",
+      "bio": "Mirza Šuman was born and raised in Boise, as a first-generation American to refugee parents from Bosnia. Mirza is passionate about Honey Brown Eyes for its authentic depiction of the hardships many Bosniaks endured, and its potential for viewers to consider parallels to current genocides. This marks her debut role in a production, and she is hopeful for a future in theater! A heartfelt thank you to my parents, Izudin and Alda, for teaching me about our history and raising me to always remember where I came from.",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -136,8 +136,8 @@ export default function Team() {
     {
       "name": "Mike Ward",
       "role": "Musician/Composer",
-      "image": "/images/placeholder.jpg",
-      "bio": "",
+      "image": "/images/ward.jpg",
+      "bio": "Mike studied music at The College of Idaho. He plays guitar and saxophone pretty well, and about 15 other instruments poorly. He has played with a ton of bands around Boise, and currently plays sax with Lauryn and Anthony in their jazz trio, Kitchen Syncopation. He has also composed and performed music for several theater productions, films and other media in about every genre and ensemble you can think of. Mike is also the brewer at Mad Swede Brewing, and likes Jason Statham movies.",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -156,8 +156,8 @@ export default function Team() {
     {
       "name": "Ellie Wirth",
       "role": "Prop Designer/Assistant Stage Manager",
-      "image": "/images/placeholder.jpg",
-      "bio": "",
+      "image": "/images/wirth.jpg",
+      "bio": "Ellie is excited to join Honey Brown Eyes as the Assistant Stage Manager and Props Master! Previously, she worked on Lost Girl and Charlie Brown Christmas at Boise State as props master and The Little Prince as an assistant stage manager where she honed skills in organizing, problem-solving, and ensuring the smooth execution of live performances. Outside of backstage work, Ellie enjoys acting and has a passion for theater and a dedication to supporting the creative process.",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -167,7 +167,7 @@ export default function Team() {
       "name": "Majda Zahić",
       "role": "Radio Broadcaster",
       "image": "/images/placeholder.jpg",
-      "bio": "",
+      "bio": "Majda Zahić is a freshman at Boise State University. Her family is from Bosnia and Herzegovina, but Majda was born and raised in Meridian, Idaho. She has never done theater before, but she has been a dancer for about 13 years and enjoys everything to do with performance art! She is so grateful that Amela asked her to be a part of this show—Majda loves sharing the history and culture of her people, especially since it’s quite an unknown region of the world and often overlooked when taught in schools. She is excited to simply be a part of a theater production and experience the behind-the-scenes of it all!",
       "socials": {
         "instagram": "#",
         "website": "#"
