@@ -6,6 +6,13 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false)
+  // Add a hydration check
+  const [isMounted, setIsMounted] = useState(false)
+
+  // Set isMounted to true after component mounts
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   // Close menu when ESC key is pressed
   useEffect(() => {
@@ -62,36 +69,35 @@ export default function MobileNav() {
         <Bars3Icon className="h-6 w-6" />
       </button>
 
-      {/* Mobile Menu Sliding from right - half width */}
-      <div 
-        className={`fixed top-0 right-0 z-50 h-screen w-1/2 bg-black/90 border-l border-gray-800 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}
-      >
-        <div className="pt-4 px-4">
-          <div className="flex justify-end mb-2">
-            <button 
-              onClick={closeMenu}
-              className="text-gray-400 hover:text-white p-1"
-              aria-label="Close menu"
-            >
-              <XMarkIcon className="h-5 w-5" />
-            </button>
+      {isMounted && isOpen && (
+        <div className="fixed right-0 top-0 z-50 h-screen w-1/2 bg-black/90 border-l border-gray-800 md:hidden">
+          <div className="pt-4 px-4">
+            <div className="flex justify-end mb-2">
+              <button 
+                onClick={closeMenu}
+                className="text-gray-400 hover:text-white p-1"
+                aria-label="Close menu"
+              >
+                <XMarkIcon className="h-5 w-5" />
+              </button>
+            </div>
+            
+            <nav>
+              {navItems.map((item) => (
+                <div key={item.path} className="py-2">
+                  <Link 
+                    href={item.path} 
+                    className="block w-full text-white hover:bg-gray-800 rounded-md transition-colors px-2 py-2 text-lg"
+                    onClick={closeMenu}
+                  >
+                    {item.label}
+                  </Link>
+                </div>
+              ))}
+            </nav>
           </div>
-          
-          <nav>
-            {navItems.map((item) => (
-              <div key={item.path} className="py-2">
-                <Link 
-                  href={item.path} 
-                  className="block w-full text-white hover:bg-gray-800 rounded-md transition-colors px-2 py-2 text-lg"
-                  onClick={closeMenu}
-                >
-                  {item.label}
-                </Link>
-              </div>
-            ))}
-          </nav>
         </div>
-      </div>
+      )}
     </div>
   )
 }
