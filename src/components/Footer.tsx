@@ -4,23 +4,22 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 py-6">
+    <footer className="bg-gray-900 py-2">
       <div className="container mx-auto px-4">
         {/* Mobile Layout (Balanced) */}
         <div className="md:hidden">
           <div className="flex flex-col items-center">
-            {/* Mid-sized Logo - between current and smallest suggestion */}
             <Image 
               src="/images/logo.svg" 
               alt="Little Branch Theater Logo" 
-              width={150}
-              height={150}
-              className="w-28 h-28 mb-2" 
+              width={200}
+              height={200}
+              className="w-38 h-38 -mt-6 mb-0" 
               priority
             />
             
             {/* Tagline */}
-            <p className="text-gray-300 text-sm text-center mb-2">
+            <p className="text-gray-300 text-sm text-center -mt-4 mb-2">
               Rooted in storytelling, reaching for change.
             </p>
             
@@ -85,8 +84,9 @@ export default function Footer() {
         </div>
         
         {/* Copyright */}
-        <div className="pt-3 mt-3 border-t border-gray-800 text-center text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} Little Branch Theater Company. All rights reserved.
+        <div className="pt-2 mt-2 border-t border-gray-800 text-center text-gray-500 text-sm">
+          {/* Reduced pt-3 and mt-3 to pt-2 and mt-2 */}
+          &copy; {new Date().getFullYear()} Little Branch. All rights reserved.
         </div>
       </div>
     </footer>
