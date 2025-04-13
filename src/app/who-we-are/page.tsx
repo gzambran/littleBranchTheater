@@ -8,20 +8,41 @@ import AnimatedText from '@/components/AnimatedText'
 export const revalidate = 3600
 
 export default function Vision() {
+  // Animation variants for more theatrical, less corporate feel
+  const fadeIn = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { 
+      opacity: 1, 
+      scale: 1,
+      transition: { duration: 0.5 }
+    }
+  };
+  
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <motion.section 
-        className="relative py-16 bg-black"
+        className="relative py-16 pb-8 bg-black"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7 }}
       >
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2 }}
             className="text-center"
           >
             <AnimatedText
@@ -40,26 +61,33 @@ export default function Vision() {
         </div>
       </motion.section>
 
-      {/* Co-founders Section */}
+      {/* Co-founders Section - Stylized with artistic elements */}
       <motion.section 
-        className="py-16 bg-black"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        className="pt-8 pb-16 bg-black relative overflow-hidden"
+        variants={fadeIn}
+        initial="hidden"
+        whileInView="visible"
         viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
       >
-        <div className="container mx-auto px-4">
-          <h2 className="font-display text-3xl md:text-4xl mb-12 text-center">Our Co-founders</h2>
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-40 h-40 bg-accent/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-60 h-60 bg-accent/5 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.h2 
+            className="font-display text-3xl md:text-4xl mb-12 text-center"
+            variants={fadeIn}
+          >
+            Our Co-founders
+          </motion.h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Amela */}
             <motion.div 
-              className="bg-gray-900 p-8 rounded-lg"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              className="bg-gray-900/80 backdrop-blur-sm p-8 rounded-lg border-l-2 border-accent/40"
+              variants={fadeIn}
               viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
             >
-              <div className="w-40 h-40 mx-auto mb-6 relative rounded-full overflow-hidden">
+              <div className="w-40 h-40 mx-auto mb-6 relative rounded-full overflow-hidden border-2 border-accent/20 shadow-lg shadow-accent/10">
                 <Image
                   src="/images/karadza.webp"
                   alt="Amela - Artistic Director"
@@ -80,13 +108,11 @@ export default function Vision() {
 
             {/* Jovani */}
             <motion.div 
-              className="bg-gray-900 p-8 rounded-lg"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              className="bg-gray-900/80 backdrop-blur-sm p-8 rounded-lg border-r-2 border-accent/40"
+              variants={fadeIn}
               viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
             >
-              <div className="w-40 h-40 mx-auto mb-6 relative rounded-full overflow-hidden">
+              <div className="w-40 h-40 mx-auto mb-6 relative rounded-full overflow-hidden border-2 border-accent/20 shadow-lg shadow-accent/10">
                 <Image
                   src="/images/zambrano.jpg"
                   alt="Jovani - Artistic Director"
@@ -108,23 +134,29 @@ export default function Vision() {
         </div>
       </motion.section>
 
-      {/* Our Story Section */}
+      {/* Our Story Section - Floating card without background */}
       <motion.section 
-        className="py-24 bg-gray-900"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        className="py-24 bg-gray-900 relative"
+        variants={fadeIn}
+        initial="hidden"
+        whileInView="visible"
         viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
       >
-        <div className="container mx-auto px-4">
+        {/* Subtle background texture */}
+        <div className="absolute inset-0 opacity-5 bg-[url('/images/texture.png')] bg-repeat"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
+            <motion.h2 
+              className="font-display text-3xl md:text-4xl mb-8 text-center"
+              variants={fadeIn}
             >
-              <h2 className="font-display text-3xl md:text-4xl mb-6 text-center">Our Story</h2>
+              Our Story
+            </motion.h2>
+            <motion.div
+              variants={fadeIn}
+              className="p-6 rounded-lg border-l-2 border-r-2 border-accent/30 shadow-xl shadow-black/30"
+            >
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
                 Amela and Jovani met at Rutgers Mason Gross School of the Arts, where they trained in the Meisner Technique, Williamson Movement Technique, and classical theater. 
                 After graduating, they worked in theater, commercials, and film on the East Coast until the pandemic led them to Boise to be near Amela's family. 
@@ -142,25 +174,35 @@ export default function Vision() {
         </div>
       </motion.section>
 
-      {/* Little Branch Name Story */}
+      {/* Little Branch Name Story - With decorative elements */}
       <motion.section 
-        className="py-24 bg-black"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        className="py-24 bg-black relative overflow-hidden"
+        variants={fadeIn}
+        initial="hidden"
+        whileInView="visible"
         viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
       >
-        <div className="container mx-auto px-4">
+        {/* Decorative branch illustrations */}
+        <div className="absolute top-10 right-0 w-64 h-64 opacity-10 bg-[url('/images/branch-illustration.png')] bg-no-repeat bg-contain"></div>
+        <div className="absolute bottom-10 left-0 w-64 h-64 opacity-10 bg-[url('/images/branch-illustration.png')] bg-no-repeat bg-contain transform -scale-x-100"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
+            <motion.h2 
+              className="font-display text-3xl md:text-4xl mb-8 text-center" 
+              variants={fadeIn}
             >
-              <h2 className="font-display text-3xl md:text-4xl mb-6 text-center">The Meaning Behind the Name</h2>
+              The Meaning Behind the Name
+            </motion.h2>
+            <motion.div
+              variants={fadeIn}
+              className="border-r-2 border-accent/30 bg-gray-900/30 backdrop-blur-sm p-6 rounded-lg"
+            >
+              <p className="text-gray-300 text-lg leading-relaxed mb-6 italic">
+                "Every voice, every story, every artist matters."
+              </p>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                Every voice, every story, every artist matters. We wanted the name of our company to reflect connection and growth. 
+                We wanted the name of our company to reflect connection and growth. 
                 That's when Amela recalled that her great-grandfather, out of love and because she was so small, called her his "little branch."
               </p>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
@@ -177,112 +219,110 @@ export default function Vision() {
         </div>
       </motion.section>
 
-      {/* Values Section */}
-      <section className="py-24 bg-gray-900">
-        <div className="container mx-auto px-4">
-          <h2 className="font-display text-3xl md:text-4xl mb-12 text-center">Our Values</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                title: "Innovation",
-                description: "We embrace bold, creative approaches to storytelling and stagecraft."
-              },
-              {
-                title: "Community",
-                description: "We build connections through theater, fostering collaboration, local artistry, and an engaged audience."
-              },
-              {
-                title: "Authenticity",
-                description: "We bring honest, meaningful stories to the stage with integrity and care."
-              },
-              {
-                title: "Impact",
-                description: "We produce work that sparks conversation, challenges perspectives, and inspires change."
-              },
-              {
-                title: "Representation",
-                description: "We highlight diverse voices and underrepresented narratives in our productions."
-              },
-              {
-                title: "Empowerment",
-                description: "We create opportunities for artists to grow, collaborate, and share their voices."
-              }
-            ].map((value, index) => (
-              <motion.div
-                key={value.title}
-                className="bg-gray-800 p-8 rounded-lg"
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <h3 className="font-display text-2xl mb-4 text-accent">
-                  {value.title}
-                </h3>
-                <p className="text-gray-300">
-                  {value.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Future Section */}
+      {/* What Matters to Us Section - New artistic design */}
       <motion.section 
-        className="py-24 bg-black"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        className="py-24 bg-gray-900 relative overflow-hidden"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
         viewport={{ once: true }}
       >
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-display text-3xl md:text-4xl mb-6">Looking Forward</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              As we grow, we envision Little Branch becoming a creative hub where:
-            </p>
-            <ul className="text-left text-lg text-gray-300 space-y-4 mb-12">
-              <motion.li 
-                className="flex items-center space-x-3"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-              >
-                <span className="text-accent">•</span>
-                <span>Diverse stories inspire, challenge, and unite our community.</span>
-              </motion.li>
-              <motion.li 
-                className="flex items-center space-x-3"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-              >
-                <span className="text-accent">•</span>
-                <span>Emerging local artists develop their craft alongside seasoned professionals.</span>
-              </motion.li>
-              <motion.li 
-                className="flex items-center space-x-3"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4 }}
-              >
-                <span className="text-accent">•</span>
-                <span>A dedicated teaching studio introduces performers to the fundamentals of Meisner technique, culminating in a live performance.</span>
-              </motion.li>
-              <motion.li 
-                className="flex items-center space-x-3"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4 }}
-              >
-                <span className="text-accent">•</span>
-                <span>One day, we hope to establish a permanent space to call our theater home.</span>
-              </motion.li>
-            </ul>
+        {/* Abstract decorative elements */}
+        <div className="absolute left-0 top-1/4 w-40 h-40 rounded-full bg-accent/10 blur-3xl"></div>
+        <div className="absolute right-0 bottom-1/4 w-40 h-40 rounded-full bg-accent/10 blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto">
+            <motion.h2 
+              className="font-display text-3xl md:text-4xl mb-10 text-center"
+              variants={fadeIn}
+            >
+              What Matters to Us
+            </motion.h2>
+            
+            <div className="space-y-6">
+              {[
+                "We embrace bold stories.",
+                "We believe in collaboration, in building something together.",
+                "We care about engaging our audience and creating space for local and emerging artists.",
+                "We want to lift up voices that don't always get heard—especially those that reflect underrepresented experiences.",
+                "We think theater should challenge how we see the world—and maybe even change it.",
+                "And we believe art should feel like it belongs to everyone."
+              ].map((value, index) => (
+                <motion.div 
+                  key={index}
+                  variants={fadeIn}
+                  className="relative"
+                >
+                  <div className="ml-6 pl-4 py-3 bg-black/30 backdrop-blur-sm rounded-lg border-l-2 border-accent/50">
+                    <p className="text-xl md:text-2xl leading-relaxed text-white">
+                      {value}
+                    </p>
+                  </div>
+                  {/* Theater "spotlight" effect */}
+                  <div className="absolute -left-2 top-1/2 transform -translate-y-1/2 w-8 h-8 rounded-full bg-gradient-radial from-accent/30 to-transparent"></div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Looking Forward Section - With theatrical act numbers instead of bullets */}
+      <motion.section 
+        className="py-24 bg-black relative overflow-hidden"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        {/* Subtle decorative elements */}
+        <div className="absolute inset-0 opacity-5 bg-[url('/images/stage-texture.png')] bg-repeat"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto">
+            <motion.h2 
+              className="font-display text-3xl md:text-4xl mb-10 text-center"
+              variants={fadeIn}
+            >
+              Looking Forward
+            </motion.h2>
+            
+            <motion.div
+              variants={fadeIn}
+              className="bg-gradient-to-b from-gray-900/60 to-gray-900/20 backdrop-blur-sm p-8 rounded-lg border-t border-b border-gray-800"
+            >
+              <p className="text-xl text-gray-300 mb-8 italic font-light text-center">
+                "As we grow, we envision Little Branch becoming a creative hub where..."
+              </p>
+              
+              <div className="space-y-8">
+                {[
+                  "Diverse stories inspire, challenge, and unite our community.",
+                  "Emerging local artists develop their craft alongside seasoned professionals.",
+                  "A dedicated teaching studio introduces performers to the fundamentals of Meisner technique, culminating in a live performance.",
+                  "One day, we hope to establish a permanent space to call our theater home."
+                ].map((item, index) => (
+                  <motion.div 
+                    key={index}
+                    className="relative pl-14"
+                    variants={fadeIn}
+                  >
+                    {/* Act number styling - theatrical instead of bullets */}
+                    <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-gray-900/60 backdrop-blur-sm flex items-center justify-center border border-accent/30">
+                      <span className="text-accent text-sm font-serif italic">Act {index + 1}</span>
+                    </div>
+                    
+                    <p className="text-gray-300 text-lg">{item}</p>
+                    
+                    {/* Decorative divider except for last item */}
+                    {index < 3 && (
+                      <div className="w-full h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent mt-4"></div>
+                    )}
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </motion.section>

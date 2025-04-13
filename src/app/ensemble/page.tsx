@@ -47,7 +47,7 @@ export default function Team() {
       "name": "Trevor Ferguson",
       "role": "Dragan",
       "image": "/images/ferguson.jpg",
-      "bio": "Trevor is beyond excited to be joining Little Branch’s first production, Honey Brown Eyes. Born and raised in Idaho, Trevor currently attends Boise State University as a Theatre Arts Major. When not at school you can probably find him underneath his ‘69 beetle trying to figure out where it all went wrong. Trevor has worked with Amela since 2022, learning about Meisner technique. Now he is excited to finally share the stage with her and the rest of the talented cast and see where it takes them! Other shows include: Anastasia, Nightfall with Edgar Allen Poe, American Buffalo, Little Prince, Grease, and Sound of Music. ",
+      "bio": "Trevor is beyond excited to be joining Little Branch's first production, Honey Brown Eyes. Born and raised in Idaho, Trevor currently attends Boise State University as a Theatre Arts Major. When not at school you can probably find him underneath his '69 beetle trying to figure out where it all went wrong. Trevor has worked with Amela since 2022, learning about Meisner technique. Now he is excited to finally share the stage with her and the rest of the talented cast and see where it takes them! Other shows include: Anastasia, Nightfall with Edgar Allen Poe, American Buffalo, Little Prince, Grease, and Sound of Music. ",
       "socials": {
         "instagram": "https://www.instagram.com/tre_boogie101/",
         "website": "#"
@@ -167,7 +167,7 @@ export default function Team() {
       "name": "Majda Zahić",
       "role": "Radio Broadcaster",
       "image": "/images/placeholder.jpg",
-      "bio": "Majda Zahić is a freshman at Boise State University. Her family is from Bosnia and Herzegovina, but Majda was born and raised in Meridian, Idaho. She has never done theater before, but she has been a dancer for about 13 years and enjoys everything to do with performance art! She is so grateful that Amela asked her to be a part of this show—Majda loves sharing the history and culture of her people, especially since it’s quite an unknown region of the world and often overlooked when taught in schools. She is excited to simply be a part of a theater production and experience the behind-the-scenes of it all!",
+      "bio": "Majda Zahić is a freshman at Boise State University. Her family is from Bosnia and Herzegovina, but Majda was born and raised in Meridian, Idaho. She has never done theater before, but she has been a dancer for about 13 years and enjoys everything to do with performance art! She is so grateful that Amela asked her to be a part of this show—Majda loves sharing the history and culture of her people, especially since it's quite an unknown region of the world and often overlooked when taught in schools. She is excited to simply be a part of a theater production and experience the behind-the-scenes of it all!",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -190,7 +190,7 @@ export default function Team() {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
+        staggerChildren: 0.1 // Reduced stagger time for faster animation with more cards
       }
     }
   };
@@ -235,13 +235,13 @@ export default function Team() {
           initial="hidden"
           animate="show"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
                 variants={item}
                 className="group bg-gray-900 rounded-lg overflow-hidden cursor-pointer"
-                whileHover={{ y: -8 }}
+                whileHover={{ y: -5 }} // Reduced hover effect for smaller cards
                 onClick={() => setSelectedMember(member)}
               >
                 {/* Image Container */}
@@ -250,17 +250,18 @@ export default function Team() {
                     src={member.image || '/images/placeholder.jpg'}
                     alt={`${member.name} - ${member.role}`}
                     fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-accent/10" />
                 </div>
                 
                 {/* Content */}
-                <div className="p-6">
-                  <h2 className="font-display text-2xl mb-2 group-hover:text-accent transition-colors">
+                <div className="p-3 md:p-4"> {/* Reduced padding for smaller cards */}
+                  <h2 className="font-display text-lg md:text-xl mb-1 group-hover:text-accent transition-colors line-clamp-1">
                     {member.name}
                   </h2>
-                  <p className="text-accent mb-4">{member.role}</p>
+                  <p className="text-accent text-sm md:text-base line-clamp-2">{member.role}</p>
                 </div>
               </motion.div>
             ))}
@@ -276,7 +277,7 @@ export default function Team() {
             onClick={() => setSelectedMember(null)}
           >
             <motion.div 
-              className="bg-gray-900 rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto p-8 relative"
+              className="bg-gray-900 rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto p-6 md:p-8 relative"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
@@ -304,11 +305,11 @@ export default function Team() {
                 </div>
 
                 <div className="flex-1">
-                  <h2 className="font-display text-3xl mb-2">{selectedMember.name}</h2>
+                  <h2 className="font-display text-2xl md:text-3xl mb-2">{selectedMember.name}</h2>
                   <p className="text-accent mb-4">{selectedMember.role}</p>
                   
                   <p className="text-gray-300 mb-6 leading-relaxed">
-                    {selectedMember.bio}
+                    {selectedMember.bio || "Bio coming soon..."}
                   </p>
 
                   {Object.values(selectedMember.socials).some(url => url !== "#") && (
