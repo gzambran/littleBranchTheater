@@ -10,11 +10,11 @@ NC='\033[0m' # No Color
 echo -e "${YELLOW}Checking for existing containers...${NC}"
 if docker-compose ps -q | grep -q .; then
   echo -e "${BLUE}Stopping and removing existing containers...${NC}"
-  docker-compose down
+  docker-compose down --volumes --remove-orphans
 fi
 
-echo -e "${BLUE}Building PaceWise Playground container...${NC}"
-docker-compose build
+echo -e "${BLUE}Rebuilding Little Branch...${NC}"
+docker-compose build --no-cache
 
 echo -e "${BLUE}Starting the container...${NC}"
 docker-compose up -d

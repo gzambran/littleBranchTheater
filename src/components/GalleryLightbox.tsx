@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import Lightbox from 'yet-another-react-lightbox'
 import 'yet-another-react-lightbox/styles.css'
-import { urlFor } from '@/lib/sanity/client'
 import { motion } from 'framer-motion'
 
 interface GalleryImage {
@@ -59,7 +58,7 @@ export default function GalleryLightbox({ images }: GalleryLightboxProps) {
             variants={item}
           >
             <Image
-              src={urlFor(image.image).url()}
+              src=""
               alt={image.alt}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -84,7 +83,7 @@ export default function GalleryLightbox({ images }: GalleryLightboxProps) {
         close={() => setOpen(false)}
         index={imageIndex}
         slides={images.map((image) => ({
-          src: urlFor(image.image).width(1200).url(),
+          src: "",
           alt: image.alt,
           title: image.title || '',
         }))}

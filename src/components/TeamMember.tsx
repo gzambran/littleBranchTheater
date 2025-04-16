@@ -2,7 +2,6 @@
 
 import React from 'react'
 import Image from 'next/image'
-import { urlFor } from '@/lib/sanity/client'
 import { motion } from 'framer-motion'
 
 interface TeamMemberProps {
@@ -25,7 +24,7 @@ export default function TeamMember({ name, role, bio, headshot, index }: TeamMem
       <div className="w-32 h-32 mx-auto mb-4 relative rounded-full overflow-hidden">
         {headshot ? (
           <Image
-            src={urlFor(headshot).width(256).height(256).url()}
+            src=""
             alt={name}
             fill
             className="object-cover"

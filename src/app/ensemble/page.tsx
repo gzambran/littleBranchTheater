@@ -35,7 +35,7 @@ export default function Team() {
     },
     {
       "name": "Amber Ellis",
-      "role": "Scenic Assistant/Scenic Charge Assist",
+      "role": "Scenic Assistant",
       "image": "/images/placeholder.jpg",
       "bio": "",
       "socials": {
@@ -88,6 +88,16 @@ export default function Team() {
       "role": "Director/Alma",
       "image": "/images/karadza.webp",
       "bio": "Amela Karadža was born in Bosnia and at the age of 5 immigrated to Boise where she spent many delightful years. She's a graduate of Rutgers Mason Gross School of the Arts, MFA program. Some of her favorite roles include: Joan (Vinegar Tom/Theatre C and Rutgers Theatre Co.), Duke of Aumerle (Richard II at Shakespeare's Globe Theatre in London), and #2 (The Wolves/Boise Contemporary Theater). She loves teaching Meisner Technique around the valley in her free time and hanging out with her fur-children! Thank you to my beautiful mom and wonderful husband for all your support. Love you dad, forever and always.",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
+      }
+    },
+    {
+      "name": "Lauryn Mederios",
+      "role": "Musician/Composer",
+      "image": "/images/mederios.webp",
+      "bio": "Lauryn found creativity at a very young age, drawing sharpie monsters on carpets and pounding movie themes into the piano. She eventually channeled that energy into the drums in high school, jamming with her twin sister on electric guitar. Her creative career began with a degree in Fine Art and Music at the College of Idaho, where she met Mike and Anthony. When they aren't playing jazzy tunes together, Lauryn works as Art Director at Drake Cooper, travels as much as she can, and watches lots of movies. She has made Boise her home with her husband Mike, and their two cats Johnny and Loki.",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -155,7 +165,7 @@ export default function Team() {
     },
     {
       "name": "Ellie Wirth",
-      "role": "Prop Designer/Assistant Stage Manager",
+      "role": "Prop Designer/ASM",
       "image": "/images/wirth.jpg",
       "bio": "Ellie is excited to join Honey Brown Eyes as the Assistant Stage Manager and Props Master! Previously, she worked on Lost Girl and Charlie Brown Christmas at Boise State as props master and The Little Prince as an assistant stage manager where she honed skills in organizing, problem-solving, and ensuring the smooth execution of live performances. Outside of backstage work, Ellie enjoys acting and has a passion for theater and a dedication to supporting the creative process.",
       "socials": {
@@ -175,7 +185,7 @@ export default function Team() {
     },
     {
       "name": "Jovani Zambrano",
-      "role": "Sound Designer/Branko/Milenko",
+      "role": "Sound Designer/Branko”",
       "image": "/images/zambrano.jpg",
       "bio": "Jovani Zambrano was born and raised in Brooklyn, New York, and now calls Boise, Idaho, home, where he pursues his passion for acting and theater-making. He studied at Rutgers Mason Gross School of the Arts and performed at Shakespeare's Globe in As You Like It. His work has been seen at Hudson Valley Shakespeare, Theater for the New City, Boise Contemporary Theater, Alley Repertory Theater, and The Spot. Collaborating with these inspiring companies and ensembles fueled his desire to build Little Branch Theater—a space where artists can learn, take risks, fail spectacularly, and create something extraordinary. He would not be able to do any of this without the creativity and support of his wife. Among his favorite roles, playing Oscar in Sweat by Lynn Nottage was a particularly meaningful experience.",
       "socials": {
