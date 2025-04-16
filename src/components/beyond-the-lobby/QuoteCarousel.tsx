@@ -1,9 +1,8 @@
-// src/components/QuoteCarousel.tsx
 "use client"
 
 import React, { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { QuoteData } from '@/data/bosnian-war/quoteData'
+import { QuoteData } from '@/data/beyond-the-lobby/quoteData'
 
 interface QuoteCarouselProps {
   quotes: QuoteData[]

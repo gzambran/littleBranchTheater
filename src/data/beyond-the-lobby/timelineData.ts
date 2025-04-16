@@ -1,4 +1,4 @@
-import { TimelineItemData } from '@/components/TimelineItem';
+import { TimelineItemData } from '@/components/beyond-the-lobby/TimelineItem';
 
 export const timelineData: TimelineItemData[] = [
   {

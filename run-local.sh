@@ -7,6 +7,13 @@ YELLOW='\033[0;33m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
+# Determine build cache strategy
+BUILD_CMD="docker-compose build"
+if [ "$1" == "--no-cache" ]; then
+  BUILD_CMD="docker-compose build --no-cache"
+  echo -e "${YELLOW}⚠️  No-cache build requested.${NC}"
+fi
+
 echo -e "${YELLOW}Checking for existing containers...${NC}"
 if docker-compose ps -q | grep -q .; then
   echo -e "${BLUE}Stopping and removing existing containers...${NC}"
@@ -14,7 +21,7 @@ if docker-compose ps -q | grep -q .; then
 fi
 
 echo -e "${BLUE}Rebuilding Little Branch...${NC}"
-docker-compose build --no-cache
+eval $BUILD_CMD
 
 echo -e "${BLUE}Starting the container...${NC}"
 docker-compose up -d

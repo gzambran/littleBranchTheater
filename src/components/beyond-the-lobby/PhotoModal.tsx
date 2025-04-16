@@ -1,4 +1,3 @@
-// src/components/PhotoModal.tsx
 "use client"
 
 import React, { useEffect } from 'react'
@@ -8,32 +7,9 @@ import { WarPhoto } from './PhotoCard'
 interface PhotoModalProps {
   photo: WarPhoto
   onClose: () => void
-  theme?: 'dark' | 'honey' // Add theme prop
 }
 
-export default function PhotoModal({ photo, onClose, theme = 'dark' }: PhotoModalProps) {
-  // Theme-based styles
-  const styles = {
-    dark: {
-      overlay: "bg-black/90",
-      card: "bg-gray-900",
-      title: "text-white",
-      caption: "text-gray-300",
-      source: "text-gray-400",
-      closeButton: "text-white hover:text-gray-300",
-    },
-    honey: {
-      overlay: "bg-black/90", // Keep dark overlay for contrast
-      card: "bg-[#FEF9E7] border border-[#D4A017]/20",
-      title: "text-[#333333]",
-      caption: "text-[#333333]",
-      source: "text-[#8B4513]",
-      closeButton: "text-white hover:text-[#D4A017]",
-    }
-  }
-  
-  const style = styles[theme]
-  
+export default function PhotoModal({ photo, onClose }: PhotoModalProps) {
   // Close modal on escape key
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -48,24 +24,24 @@ export default function PhotoModal({ photo, onClose, theme = 'dark' }: PhotoModa
   
   return (
     <motion.div
-      className={`fixed inset-0 ${style.overlay} z-50 flex items-center justify-center p-4`}
+      className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-2"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       onClick={onClose}
     >
       <motion.div 
-        className={`relative max-w-4xl rounded-lg shadow-xl overflow-hidden ${style.card}`}
-        initial={{ scale: 0.9, opacity: 0 }}
+        className="relative max-w-4xl overflow-hidden"
+        initial={{ scale: 0.95, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.9, opacity: 0 }}
+        exit={{ scale: 0.95, opacity: 0 }}
         transition={{ type: 'spring', damping: 25 }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}
         <button 
           onClick={onClose}
-          className={`absolute top-2 right-2 z-10 p-2 rounded-full ${style.closeButton} transition-colors`}
+          className="absolute top-2 right-2 z-10 p-2 rounded-full bg-[#D4A017] text-white hover:bg-[#E6B325] transition-colors"
           aria-label="Close modal"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -83,17 +59,14 @@ export default function PhotoModal({ photo, onClose, theme = 'dark' }: PhotoModa
         </div>
         
         {/* Caption and details */}
-        <div className="p-4 sm:p-6">
-          {/* Removed reference to photo.title */}
-          
+        <div className="bg-[#FEF9E7] p-4 sm:p-6 border-t-4 border-[#D4A017]">          
           {photo.caption && (
-            <p className={`mb-3 ${style.caption}`}>{photo.caption}</p>
+            <p className="text-[#333333] mb-3">{photo.caption}</p>
           )}
           
           {photo.source && (
-            <p className={`text-sm ${style.source}`}>
+            <p className="text-[#8B4513] text-sm italic">
               Source: {photo.source}
-              {/* Removed reference to photo.sourceUrl */}
             </p>
           )}
         </div>

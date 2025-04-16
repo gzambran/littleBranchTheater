@@ -1,8 +1,6 @@
-// src/pages/beyond-the-lobby.tsx
 import React from 'react';
 import Head from 'next/head';
 import { Inter, Playfair_Display } from 'next/font/google';
-import Document from 'next/document';
 import { Analytics } from '@vercel/analytics/react';
 
 // Import Tailwind directly
@@ -10,17 +8,21 @@ import 'tailwindcss/base.css';
 import 'tailwindcss/components.css';
 import 'tailwindcss/utilities.css';
 
-// Import your components and data
+// Import components
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Timeline from '@/components/Timeline';
+import Timeline from '@/components/beyond-the-lobby/Timeline';
 import Link from 'next/link';
-import { WarPhoto } from '@/components/PhotoCard';
-import PhotoModal from '@/components/PhotoModal';
-import HorizontalGallery from '@/components/HorizontalGallery';
-import QuoteCarousel from '@/components/QuoteCarousel';
-import { timelineData, quoteData, bosnianWarPhotos } from '@/data/bosnian-war';
-import { lobbyPhotos } from '@/data/bosnian-war/lobbyData';
+import { WarPhoto } from '@/components/beyond-the-lobby/PhotoCard';
+import PhotoModal from '@/components/beyond-the-lobby/PhotoModal';
+import HorizontalGallery from '@/components/beyond-the-lobby/HorizontalGallery';
+import QuoteCarousel from '@/components/beyond-the-lobby/QuoteCarousel';
+import BeyondLobbyHeader from '@/components/beyond-the-lobby/BeyondLobbyHeader';
+import BeyondLobbySection from '@/components/beyond-the-lobby/BeyondLobbySection';
+
+// Import data
+import { timelineData, quoteData, bosnianWarPhotos } from '@/data/beyond-the-lobby';
+import { lobbyPhotos } from '@/data/beyond-the-lobby/lobbyData';
 
 // Load fonts
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
@@ -77,48 +79,15 @@ export default function BeyondTheLobbyPage() {
         `}</style>
       </Head>
 
-      <div className={`${inter.variable} ${playfair.variable} font-sans min-h-screen bg-white text-[#333333]`}>
-        {/* Custom Header for Beyond the Lobby */}
-        <motion.header 
-          className="relative py-12 bg-gradient-to-b from-[#D4A017] to-[#E6B325]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="container mx-auto px-4 text-center">
-            <div className="mb-6">
-              <svg 
-                className="h-16 w-16 mx-auto mb-4" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <path d="M21 6H3C2.4 6 2 6.4 2 7V17C2 17.6 2.4 18 3 18H21C21.6 18 22 17.6 22 17V7C22 6.4 21.6 6 21 6Z" stroke="#8B4513" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M16 14C17.1046 14 18 13.1046 18 12C18 10.8954 17.1046 10 16 10C14.8954 10 14 10.8954 14 12C14 13.1046 14.8954 14 16 14Z" fill="#8B4513"/>
-                <path d="M6 18V21" stroke="#8B4513" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M18 18V21" stroke="#8B4513" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M12 14V18" stroke="#8B4513" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M7 10H9" stroke="#8B4513" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              <h1 className="font-display text-5xl md:text-7xl text-[#333333] mb-4">
-                Beyond the Lobby
-              </h1>
-              <p className="text-xl md:text-2xl text-[#8B4513] max-w-2xl mx-auto">
-                Exclusive content for theater patrons
-              </p>
-            </div>
-            <div className="bg-black/10 w-20 h-1 mx-auto my-6 rounded-full"></div>
-            <p className="text-lg text-[#8B4513] max-w-3xl mx-auto mb-4">
-              Thank you for scanning our QR code. Explore behind-the-scenes information about our current production and enhance your viewing experience.
-            </p>
-          </div>
-        </motion.header>
+      <div className={`${inter.variable} ${playfair.variable} font-sans min-h-screen bg-white text-[#333333] overflow-x-hidden`}>
+        {/* Use the new header component */}
+        <BeyondLobbyHeader />
 
         {/* Content Section */}
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
+              {/* Welcome section - keep this as is since it's unique */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -194,108 +163,53 @@ export default function BeyondTheLobbyPage() {
                 </div>
               </motion.div>
 
-              {/* Lobby Photos Section */}
-              <motion.div
+              <BeyondLobbySection
                 id="lobby"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                className="mb-16 scroll-mt-8"
+                title="Lobby Photo Gallery"
+                description="Take a virtual tour of our theater lobby and the special exhibition we've created to enhance your understanding of 'Honey Brown Eyes' and its historical context."
               >
-                <div className="mb-8 text-center">
-                  <h2 className="font-display text-3xl text-[#D4A017] mb-4">Lobby Photo Gallery</h2>
-                  <p className="text-[#333333] max-w-2xl mx-auto">
-                    Take a virtual tour of our theater lobby and the special exhibition we've created to enhance your understanding of "Honey Brown Eyes" and its historical context.
-                  </p>
-                </div>
-                
-                {/* Horizontal Gallery */}
-                <div className="gallery-custom">
-                  <HorizontalGallery 
-                    photos={lobbyPhotos}
-                    onPhotoClick={openModal}
-                  />
-                </div>
-              </motion.div>
+                <HorizontalGallery 
+                  photos={lobbyPhotos}
+                  onPhotoClick={openModal}
+                />
+              </BeyondLobbySection>
 
-              {/* Timeline Section */}
-              <motion.div
+              <BeyondLobbySection
                 id="timeline"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                className="mb-16 scroll-mt-8"
+                title="The Bosnian War Timeline"
+                description="Explore the key events of the Bosnian War (1992-1995) that form the historical backdrop for our production. This conflict tore apart communities and shaped the experiences of our characters."
               >
-                <div className="mb-8 text-center">
-                  <h2 className="font-display text-3xl text-[#D4A017] mb-4">The Bosnian War Timeline</h2>
-                  <p className="text-[#333333] max-w-2xl mx-auto">
-                    Explore the key events of the Bosnian War (1992-1995) that form the historical backdrop for our production. This conflict tore apart communities and shaped the experiences of our characters.
-                  </p>
-                </div>
-                
                 <Timeline 
                   items={timelineData}
                   onInfoClick={handleTimelineInfoClick}
                 />
-              </motion.div>
+              </BeyondLobbySection>
 
-              {/* Voices from the War Section */}
-              <motion.div
+              <BeyondLobbySection
                 id="voices"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                className="mb-16 scroll-mt-8"
+                title="Voices from the War"
+                description="Hear firsthand accounts from those who lived through the conflict. These personal perspectives shaped the development of our characters and their stories."
               >
-                <div className="mb-8 text-center">
-                  <h2 className="font-display text-3xl text-[#D4A017] mb-4">Voices from the War</h2>
-                  <p className="text-[#333333] max-w-2xl mx-auto">
-                    Hear firsthand accounts from those who lived through the conflict. These personal perspectives shaped the development of our characters and their stories.
-                  </p>
-                </div>
-                
-                {/* Apply custom styles directly to the existing component */}
-                <div className="quotes-custom">
-                  <QuoteCarousel quotes={quoteData} />
-                </div>
-              </motion.div>
+                <QuoteCarousel quotes={quoteData} />
+              </BeyondLobbySection>
 
-              {/* Bosnian War Through Pictures Section */}
-              <motion.div
+              <BeyondLobbySection
                 id="photos"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                className="mb-16 scroll-mt-8"
+                title="The Bosnian War Through Pictures"
+                description="These images provide visual context for the setting of our production. The Bosnian War (1992-1995) tore apart communities that had coexisted for generations, setting the backdrop for our story."
               >
-                <div className="mb-8 text-center">
-                  <h2 className="font-display text-3xl text-[#D4A017] mb-4">The Bosnian War Through Pictures</h2>
-                  <p className="text-[#333333] max-w-2xl mx-auto">
-                    These images provide visual context for the setting of our production. The Bosnian War (1992-1995) tore apart communities that had coexisted for generations, setting the backdrop for our story.
-                  </p>
-                </div>
-                
-                {/* Horizontal Gallery */}
-                <div className="gallery-custom">
-                  <HorizontalGallery 
-                    photos={bosnianWarPhotos}
-                    onPhotoClick={openModal}
-                  />
-                </div>
-              </motion.div>
+                <HorizontalGallery 
+                  photos={bosnianWarPhotos}
+                  onPhotoClick={openModal}
+                />
+              </BeyondLobbySection>
 
               {/* About Little Branch Section */}
-              <motion.div
+              <BeyondLobbySection
                 id="about"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                className="mt-16 mb-16 scroll-mt-8"
+                title="About Little Branch Theater"
+                description=""
               >
-                <div className="mb-8 text-center">
-                  <h2 className="font-display text-3xl text-[#D4A017] mb-4">About Little Branch Theater</h2>
-                </div>
-                
                 <div className="bg-gradient-to-br from-[#FEF9E7] to-[#FEF9E7]/80 p-8 rounded-lg border border-[#D4A017]/20 shadow-lg">
                   <p className="text-[#333333] mb-6">
                     Little Branch Theater is a new theater company dedicated to bringing fresh perspectives to the stage. Founded in 2022 by a collective of artists committed to thought-provoking storytelling, we aim to create theatrical experiences that challenge, inspire, and connect.
@@ -327,7 +241,7 @@ export default function BeyondTheLobbyPage() {
                     </Link>
                   </div>
                 </div>
-              </motion.div>
+              </BeyondLobbySection>
               
               {/* Custom Footer */}
               <footer className="mt-16 text-center py-6 border-t border-[#D4A017]/20">

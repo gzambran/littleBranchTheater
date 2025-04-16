@@ -43,7 +43,7 @@ export default function PhotoCard({ photo, onClick, index }: PhotoCardProps) {
       viewport={{ once: true, margin: "-100px" }}
       variants={cardVariants}
     >
-      <div className="relative h-64 w-full">
+      <div className="relative h-[480px] w-full md:h-64">
         <Image
           src={photo.src}
           alt={photo.alt}
