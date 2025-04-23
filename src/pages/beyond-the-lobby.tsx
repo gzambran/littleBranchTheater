@@ -1,3 +1,5 @@
+// /src/pages/beyond-the-lobby.tsx
+
 import React from 'react';
 import Head from 'next/head';
 import { Inter, Playfair_Display } from 'next/font/google';
@@ -15,13 +17,16 @@ import Timeline from '@/components/beyond-the-lobby/Timeline';
 import Link from 'next/link';
 import { WarPhoto } from '@/components/beyond-the-lobby/PhotoCard';
 import PhotoModal from '@/components/beyond-the-lobby/PhotoModal';
+import TimelineMediaModal from '@/components/beyond-the-lobby/TimelineMediaModal';
 import HorizontalGallery from '@/components/beyond-the-lobby/HorizontalGallery';
 import QuoteCarousel from '@/components/beyond-the-lobby/QuoteCarousel';
 import BeyondLobbyHeader from '@/components/beyond-the-lobby/BeyondLobbyHeader';
 import BeyondLobbySection from '@/components/beyond-the-lobby/BeyondLobbySection';
 
 // Import data
-import { timelineData, quoteData, bosnianWarPhotos } from '@/data/beyond-the-lobby';
+import { timelineData } from '@/data/beyond-the-lobby';
+import { TimelineMedia } from '@/data/beyond-the-lobby/timelineData';
+import { quoteData, bosnianWarPhotos } from '@/data/beyond-the-lobby';
 import { lobbyPhotos } from '@/data/beyond-the-lobby/lobbyData';
 
 // Load fonts
@@ -30,23 +35,30 @@ const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfa
 
 export default function BeyondTheLobbyPage() {
   const [selectedPhoto, setSelectedPhoto] = useState<WarPhoto | null>(null);
+  const [timelineMedia, setTimelineMedia] = useState<TimelineMedia[] | null>(null);
+  const [timelineTitle, setTimelineTitle] = useState<string>('');
   
-  // Function to open modal with selected photo
+  // Function to open photo modal
   const openModal = (photo: WarPhoto) => {
     setSelectedPhoto(photo);
     document.body.style.overflow = 'hidden'; // Prevent background scrolling
   };
 
-  // Function to close modal
+  // Function to close modals
   const closeModal = () => {
     setSelectedPhoto(null);
+    setTimelineMedia(null);
     document.body.style.overflow = 'auto'; // Restore scrolling
   };
 
   // Function to handle timeline info icon clicks
-  const handleTimelineInfoClick = (id: string) => {
-    // For future functionality - could show a modal with more information
-    console.log(`More info requested for timeline item: ${id}`);
+  const handleTimelineInfoClick = (id: string, title: string) => {
+    const timelineItem = timelineData.find(item => item.id === id);
+    if (timelineItem && timelineItem.additionalMedia && timelineItem.additionalMedia.length > 0) {
+      setTimelineMedia(timelineItem.additionalMedia);
+      setTimelineTitle(title);
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
   };
 
   // Function to scroll to section smoothly
@@ -87,78 +99,44 @@ export default function BeyondTheLobbyPage() {
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              {/* Welcome section - keep this as is since it's unique */}
+              {/* Enhanced Welcome section */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
               >
                 <div className="bg-gradient-to-br from-[#FEF9E7] to-[#FEF9E7]/80 p-8 rounded-lg border border-[#D4A017]/20 shadow-lg mb-12">
-                  <h2 className="font-display text-3xl text-[#8B4513] mb-6">Welcome to Honey Brown Eyes</h2>
-                  
-                  <p className="text-[#333333] mb-6">
-                    This digital companion contains exclusive behind-the-scenes information about our production, research materials that informed our creative decisions, and deeper context to enhance your viewing experience.
-                  </p>
-                  
-                  <div className="border-l-4 border-[#D4A017] pl-4 italic text-[#8B4513] mb-8">
-                    "The true magic of theater lies not just in what audiences see on stage, but in the countless hours of research, exploration, and discovery that shape every production." 
-                  </div>
+                  <h2 className="font-display text-3xl text-[#8B4513] mb-4">Welcome to Beyond the Lobby</h2>
                   
                   <div className="mt-8">
-                    <p className="text-[#8B4513] font-medium mb-4">In this digital program, you'll find:</p>
+                    <h3 className="text-[#D4A017] font-display text-xl mb-4">Scroll to Explore:</h3>
                     
-                    <ul className="space-y-3">
-                      <li>
-                        <a 
-                          href="#lobby" 
-                          onClick={(e) => scrollToSection(e, 'lobby')}
-                          className="block p-3 border border-[#D4A017]/30 rounded bg-white/80 text-[#333333] hover:bg-[#FEF9E7] transition-colors"
-                        >
-                          <span className="text-[#D4A017] font-medium">Lobby Photo Gallery</span>
-                          <span className="block text-sm text-[#8B4513] mt-1">Take a virtual tour of our theater lobby exhibition</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a 
-                          href="#timeline" 
-                          onClick={(e) => scrollToSection(e, 'timeline')}
-                          className="block p-3 border border-[#D4A017]/30 rounded bg-white/80 text-[#333333] hover:bg-[#FEF9E7] transition-colors"
-                        >
-                          <span className="text-[#D4A017] font-medium">The Bosnian War Timeline</span>
-                          <span className="block text-sm text-[#8B4513] mt-1">Key events from 1992-1995 that form the backdrop of our story</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a 
-                          href="#voices" 
-                          onClick={(e) => scrollToSection(e, 'voices')}
-                          className="block p-3 border border-[#D4A017]/30 rounded bg-white/80 text-[#333333] hover:bg-[#FEF9E7] transition-colors"
-                        >
-                          <span className="text-[#D4A017] font-medium">Voices from the War</span>
-                          <span className="block text-sm text-[#8B4513] mt-1">Firsthand accounts that inspired our characters</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a 
-                          href="#photos" 
-                          onClick={(e) => scrollToSection(e, 'photos')}
-                          className="block p-3 border border-[#D4A017]/30 rounded bg-white/80 text-[#333333] hover:bg-[#FEF9E7] transition-colors"
-                        >
-                          <span className="text-[#D4A017] font-medium">The Bosnian War Through Pictures</span>
-                          <span className="block text-sm text-[#8B4513] mt-1">Visual context for the world of the play</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a 
-                          href="#about" 
-                          onClick={(e) => scrollToSection(e, 'about')}
-                          className="block p-3 border border-[#D4A017]/30 rounded bg-white/80 text-[#333333] hover:bg-[#FEF9E7] transition-colors"
-                        >
-                          <span className="text-[#D4A017] font-medium">About Little Branch Theater</span>
-                          <span className="block text-sm text-[#8B4513] mt-1">Learn about our company and artistic mission</span>
-                        </a>
-                      </li>
-                    </ul>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
+                      <div className="bg-white/50 p-4 rounded-lg border border-[#D4A017]/10">
+                        <span className="text-[#D4A017] font-medium block mb-1">Lobby Photo Gallery</span>
+                        <span className="text-sm text-[#8B4513]">Step into our virtual exhibition and discover the visual elements that complement our storytelling</span>
+                      </div>
+                      
+                      <div className="bg-white/50 p-4 rounded-lg border border-[#D4A017]/10">
+                        <span className="text-[#D4A017] font-medium block mb-1">The Bosnian War Timeline</span>
+                        <span className="text-sm text-[#8B4513]">Understand the historical backdrop through key events from 1992-1995</span>
+                      </div>
+                      
+                      <div className="bg-white/50 p-4 rounded-lg border border-[#D4A017]/10">
+                        <span className="text-[#D4A017] font-medium block mb-1">Voices of the War</span>
+                        <span className="text-sm text-[#8B4513]">Hear different perspectives that shaped our narrative </span>
+                      </div>
+                      
+                      <div className="bg-white/50 p-4 rounded-lg border border-[#D4A017]/10">
+                        <span className="text-[#D4A017] font-medium block mb-1">The Bosnian War Through Pictures</span>
+                        <span className="text-sm text-[#8B4513]">Explore additional photography that brings context to our production</span>
+                      </div>
+                      
+                      <div className="bg-white/50 p-4 rounded-lg border border-[#D4A017]/10">
+                        <span className="text-[#D4A017] font-medium block mb-1">About Little Branch</span>
+                        <span className="text-sm text-[#8B4513]">Learn more about our theater company and what drives us forward</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -166,7 +144,7 @@ export default function BeyondTheLobbyPage() {
               <BeyondLobbySection
                 id="lobby"
                 title="Lobby Photo Gallery"
-                description="Take a virtual tour of our theater lobby and the special exhibition we've created to enhance your understanding of 'Honey Brown Eyes' and its historical context."
+                description="Take a virtual tour of our theater lobby created to deepen your connection to Honey Brown Eyes."
               >
                 <HorizontalGallery 
                   photos={lobbyPhotos}
@@ -177,7 +155,7 @@ export default function BeyondTheLobbyPage() {
               <BeyondLobbySection
                 id="timeline"
                 title="The Bosnian War Timeline"
-                description="Explore the key events of the Bosnian War (1992-1995) that form the historical backdrop for our production. This conflict tore apart communities and shaped the experiences of our characters."
+                description="Learn about the key events of the Bosnian War (1992-1995) that provide historical context for our production. This conflict tore apart communities and shaped the lives of our characters."
               >
                 <Timeline 
                   items={timelineData}
@@ -187,8 +165,8 @@ export default function BeyondTheLobbyPage() {
 
               <BeyondLobbySection
                 id="voices"
-                title="Voices from the War"
-                description="Hear firsthand accounts from those who lived through the conflict. These personal perspectives shaped the development of our characters and their stories."
+                title="Voices of the War"
+                description="Explore a collection of quotes that reveal how the war was experienced, witnessed, and remembered."
               >
                 <QuoteCarousel quotes={quoteData} />
               </BeyondLobbySection>
@@ -196,7 +174,7 @@ export default function BeyondTheLobbyPage() {
               <BeyondLobbySection
                 id="photos"
                 title="The Bosnian War Through Pictures"
-                description="These images provide visual context for the setting of our production. The Bosnian War (1992-1995) tore apart communities that had coexisted for generations, setting the backdrop for our story."
+                description="Journey through a curated selection of additional photographs that offer deeper visual context for the world of the play."
               >
                 <HorizontalGallery 
                   photos={bosnianWarPhotos}
@@ -209,23 +187,30 @@ export default function BeyondTheLobbyPage() {
                 id="about"
                 title="About Little Branch Theater"
                 description=""
+                marginBottom="mb-10" // Less margin since followed by footer
               >
                 <div className="bg-gradient-to-br from-[#FEF9E7] to-[#FEF9E7]/80 p-8 rounded-lg border border-[#D4A017]/20 shadow-lg">
                   <p className="text-[#333333] mb-6">
-                    Little Branch Theater is a new theater company dedicated to bringing fresh perspectives to the stage. Founded in 2022 by a collective of artists committed to thought-provoking storytelling, we aim to create theatrical experiences that challenge, inspire, and connect.
+                    Little Branch is a new theater company rooted in the belief that storytelling builds connection, uplifts unheard voices, and nurtures the art that makes a community thrive.
                   </p>
                   
                   <p className="text-[#333333] mb-6">
-                    Our mission is to produce works that explore complex human experiences across borders and cultures. We believe in theater's unique power to foster empathy and understanding by inviting audiences to witness stories that might otherwise remain untold.
+                    Founded by artists Amela and Jovani, we’re committed to creating opportunities for local talent and bringing bold, diverse stories to Boise.
                   </p>
                   
                   <p className="text-[#333333] mb-8">
-                    Through productions like "Honey Brown Eyes," we hope to illuminate historical events and personal narratives that resonate with contemporary audiences and inspire meaningful dialogue about our shared humanity.
+                    With productions like Honey Brown Eyes, we aim to spark meaningful dialogue and celebrate the shared humanity at the heart of every story. We’re grateful to Alley Repertory Theater and the Visual Arts Collective for giving us a space to begin.
+                  </p>
+
+                  <p className="text-[#333333] mb-8">
+                    We hope you’ll continue this journey with us.
                   </p>
                   
                   <div className="flex justify-center">
                     <Link
                       href="/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 bg-[#D4A017] hover:bg-[#E6B325] text-white px-8 py-3 rounded-md transition group shadow-md"
                     >
                       <span>Discover Our Main Site</span>
@@ -248,7 +233,7 @@ export default function BeyondTheLobbyPage() {
                 <p className="text-sm text-[#8B4513]">
                   &copy; {new Date().getFullYear()} Little Branch Theater | Exclusive Digital Content
                 </p>
-                <p className="text-xs text-[#8B4513]/70 mt-1">
+                <p className="text-xs text-[#8B4513]/80 mt-1">
                   Scan the QR code in our playbill to access this content anytime
                 </p>
               </footer>
@@ -260,6 +245,17 @@ export default function BeyondTheLobbyPage() {
         <AnimatePresence>
           {selectedPhoto && (
             <PhotoModal photo={selectedPhoto} onClose={closeModal} />
+          )}
+        </AnimatePresence>
+
+        {/* New Timeline Media Modal */}
+        <AnimatePresence>
+          {timelineMedia && timelineMedia.length > 0 && (
+            <TimelineMediaModal 
+              media={timelineMedia} 
+              title={timelineTitle}
+              onClose={closeModal} 
+            />
           )}
         </AnimatePresence>
       </div>

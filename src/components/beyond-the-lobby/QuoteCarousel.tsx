@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { QuoteData } from '@/data/beyond-the-lobby/quoteData'
 
@@ -10,7 +10,6 @@ interface QuoteCarouselProps {
 
 export default function QuoteCarousel({ quotes }: QuoteCarouselProps) {
   const [activeQuoteId, setActiveQuoteId] = useState<string>(quotes[0]?.id || "")
-  const [isScrollable, setIsScrollable] = useState(false)
   const quoteContainerRef = useRef<HTMLDivElement>(null)
   
   // Get the active quote
@@ -27,26 +26,8 @@ export default function QuoteCarousel({ quotes }: QuoteCarouselProps) {
     quoteCard: "bg-[#FEF9E7] border border-[#D4A017]/20 shadow-md",
     quoteText: "text-[#333333]",
     quoteIcon: "text-[#D4A017]/30",
-    sourceText: "text-[#8B4513]",
-    scrollGradient: "from-[#FEF9E7]"
+    sourceText: "text-[#8B4513]"
   }
-  
-  // Check if content is scrollable whenever active quote changes
-  useEffect(() => {
-    const checkScrollable = () => {
-      if (quoteContainerRef.current) {
-        const { scrollHeight, clientHeight } = quoteContainerRef.current
-        setIsScrollable(scrollHeight > clientHeight)
-      }
-    }
-    
-    checkScrollable()
-    
-    // Also check after any potential layout changes
-    const timer = setTimeout(checkScrollable, 100)
-    
-    return () => clearTimeout(timer)
-  }, [activeQuoteId])
   
   return (
     <div className="w-full">
@@ -114,14 +95,17 @@ export default function QuoteCarousel({ quotes }: QuoteCarouselProps) {
                   className="max-h-full w-full overflow-y-auto pr-2 custom-scrollbar"
                 >
                   <blockquote className={`italic text-lg md:text-xl pl-12 pt-1 ${styles.quoteText}`}>
-                    {activeQuote.quote}
+                    {Array.isArray(activeQuote.quote) ? (
+                      // Render array of lines with proper line breaks
+                      activeQuote.quote.map((line, index) => (
+                        <p key={index} className="mb-2 last:mb-0">{line}</p>
+                      ))
+                    ) : (
+                      // Backward compatibility for string quotes
+                      activeQuote.quote
+                    )}
                   </blockquote>
                 </div>
-                
-                {/* Scroll gradient indicator - only shown when content is scrollable */}
-                {isScrollable && (
-                  <div className={`absolute bottom-0 left-0 right-2 h-8 bg-gradient-to-t ${styles.scrollGradient} to-transparent pointer-events-none`}></div>
-                )}
               </div>
               
               <div className="text-right mt-4">

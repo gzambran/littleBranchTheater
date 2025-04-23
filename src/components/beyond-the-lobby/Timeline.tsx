@@ -8,7 +8,7 @@ interface TimelineProps {
   items: TimelineItemData[]
   title?: string
   description?: string
-  onInfoClick?: (id: string) => void
+  onInfoClick?: (id: string, title: string) => void
 }
 
 export default function Timeline({ items, title, description, onInfoClick }: TimelineProps) {

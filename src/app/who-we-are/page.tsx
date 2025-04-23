@@ -89,7 +89,7 @@ export default function Vision() {
             >
               <div className="w-40 h-40 mx-auto mb-6 relative rounded-full overflow-hidden border-2 border-accent/20 shadow-lg shadow-accent/10">
                 <Image
-                  src="/images/karadza.webp"
+                  src="/images/ensemble/karadza.webp"
                   alt="Amela - Artistic Director"
                   fill
                   className="object-cover"
@@ -114,7 +114,7 @@ export default function Vision() {
             >
               <div className="w-40 h-40 mx-auto mb-6 relative rounded-full overflow-hidden border-2 border-accent/20 shadow-lg shadow-accent/10">
                 <Image
-                  src="/images/zambrano.jpg"
+                  src="/images/ensemble/zambrano.jpg"
                   alt="Jovani - Artistic Director"
                   fill
                   className="object-cover"

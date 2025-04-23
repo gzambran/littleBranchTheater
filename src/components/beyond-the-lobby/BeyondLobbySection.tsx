@@ -6,16 +6,23 @@ interface SectionProps {
   title: string;
   description: string;
   children: React.ReactNode;
+  marginBottom?: string;
 }
 
-export default function BeyondLobbySection({ id, title, description, children }: SectionProps) {
+export default function BeyondLobbySection({ 
+  id, 
+  title, 
+  description, 
+  children,
+  marginBottom = "mb-16"
+}: SectionProps) {
   return (
     <motion.div
       id={id}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.5 }}
-      className="mb-16 scroll-mt-8"
+      className={`${marginBottom} scroll-mt-8`}
     >
       <div className="mb-8 text-center">
         <h2 className="font-display text-3xl text-[#D4A017] mb-4">{title}</h2>

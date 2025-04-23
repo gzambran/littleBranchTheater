@@ -86,7 +86,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="pt-2 mt-2 border-t border-gray-800 text-center text-gray-500 text-sm">
           {/* Reduced pt-3 and mt-3 to pt-2 and mt-2 */}
-          &copy; {new Date().getFullYear()} Little Branch. All rights reserved.
+          &copy; {new Date().getFullYear()} Little Branch Theater. All rights reserved.
         </div>
       </div>
     </footer>

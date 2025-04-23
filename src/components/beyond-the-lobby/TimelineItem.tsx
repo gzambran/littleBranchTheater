@@ -3,6 +3,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { InformationCircleIcon } from '@heroicons/react/24/outline'
+import { TimelineMedia } from '@/data/beyond-the-lobby/timelineData'
 
 export interface TimelineItemData {
   id: string
@@ -10,12 +11,15 @@ export interface TimelineItemData {
   title: string
   content: string
   iconColor?: string
+  additionalMedia?: TimelineMedia[]
+  safe?: string   // Added separate property for 'safe'
+  areas?: string  // Added separate property for 'areas'
 }
 
 interface TimelineItemProps {
   item: TimelineItemData
   index: number
-  onInfoClick?: (id: string) => void
+  onInfoClick?: (id: string, title: string) => void
 }
 
 export default function TimelineItem({ item, index, onInfoClick }: TimelineItemProps) {
@@ -69,15 +73,23 @@ export default function TimelineItem({ item, index, onInfoClick }: TimelineItemP
           <h3 className="font-display text-lg sm:text-xl text-[#8B4513] mb-2 timeline-title">{item.title}</h3>
           <p className="text-[#333333] text-sm sm:text-base">{item.content}</p>
           
+          {/* Safe Areas info if available */}
+          {(item.safe || item.areas) && (
+            <div className="mt-2 text-sm text-[#8B4513]/80 italic">
+              {item.safe} {item.areas}
+            </div>
+          )}
+          
           {/* Info Icon */}
-          {onInfoClick && (
+          {onInfoClick && item.additionalMedia && item.additionalMedia.length > 0 && (
             <button 
-              onClick={() => onInfoClick(item.id)}
-              className="mt-3 text-[#D4A017] hover:text-[#8B4513] transition-colors flex items-center text-sm"
-              aria-label={`More information about ${item.title}`}
+              onClick={() => onInfoClick(item.id, item.title)}
+              className="mt-3 text-[#D4A017] hover:text-[#8B4513] transition-colors flex items-center text-sm group"
+              aria-label={`Learn Moret ${item.title}`}
             >
-              <InformationCircleIcon className="h-4 w-4 sm:h-5 sm:w-5 mr-1" />
-              <span>More info</span>
+              <InformationCircleIcon className="h-4 w-4 sm:h-5 sm:w-5 mr-1 group-hover:animate-pulse" />
+              <span>Learn More</span>
+              <span className="ml-1 text-xs text-[#8B4513]/70">({item.additionalMedia.length} slides)</span>
             </button>
           )}
         </div>
