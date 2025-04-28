@@ -1,8 +1,13 @@
-import React from 'react'
+"use client"
+
+import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import ContactModal from './ContactModal'
 
 export default function Footer() {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  
   return (
     <footer className="bg-gray-900 py-2 md:pt-8 md:pb-4">
       <div className="container mx-auto px-4">
@@ -23,11 +28,16 @@ export default function Footer() {
               Rooted in storytelling, reaching for change.
             </p>
             
-            {/* Contact Info - Minimal */}
-            <p className="text-gray-300 text-sm text-center">
-              Garden City, Idaho<br />
-              <a href="mailto:info@littlebranchtheater.org">info@littlebranchtheater.org</a>
+            {/* Contact Info - Minimal with button */}
+            <p className="text-gray-300 text-sm text-center mb-2">
+              Garden City, Idaho
             </p>
+            <button
+              onClick={() => setIsContactModalOpen(true)}
+              className="text-accent hover:text-white transition-colors text-sm font-medium"
+            >
+              Contact Us
+            </button>
           </div>
         </div>
         
@@ -75,20 +85,32 @@ export default function Footer() {
           {/* Contact */}
           <div className="mb-8 md:mb-0">
             <h4 className="font-bold mb-4 text-left">Contact</h4>
-            <p className="text-gray-300">
-              <a href="mailto:info@littlebranchtheater.org">info@littlebranchtheater.org</a>
-              <br />
+            <p className="text-gray-300 mb-3">
               Garden City, Idaho
             </p>
+            <button
+              onClick={() => setIsContactModalOpen(true)}
+              className="text-accent hover:text-white transition-colors flex items-center"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Contact Us
+            </button>
           </div>
         </div>
         
         {/* Copyright */}
         <div className="pt-2 mt-2 border-t border-gray-800 text-center text-gray-500 text-sm">
-          {/* Reduced pt-3 and mt-3 to pt-2 and mt-2 */}
           &copy; {new Date().getFullYear()} Little Branch Theater. All rights reserved.
         </div>
       </div>
+      
+      {/* Contact Modal */}
+      <ContactModal 
+        isOpen={isContactModalOpen} 
+        onClose={() => setIsContactModalOpen(false)} 
+      />
     </footer>
   )
 }
