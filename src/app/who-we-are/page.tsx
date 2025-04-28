@@ -1,10 +1,11 @@
 "use client"
 
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import PageHeader, {SiteBlurb} from '@/components/PageHeader'
+import ContactModal from '@/components/ContactModal'
 
 // Animation variants
 const animations = {
@@ -33,6 +34,8 @@ export const revalidate = 3600
 
 export default function WhoWeAre() {
   const { fadeIn, staggerContainer } = animations;
+
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-black">
@@ -305,7 +308,7 @@ export default function WhoWeAre() {
               </Link>
               
               <button 
-                onClick={() => window.alert("Please email us at: info@littlebranchtheater.org")}
+                onClick={() => setIsContactModalOpen(true)}
                 className="bg-accent text-black px-6 py-3 rounded-lg font-medium hover:bg-accent/80 transition-colors shadow-md shadow-black/10"
               >
                 Contact Us
@@ -315,6 +318,10 @@ export default function WhoWeAre() {
         </div>
       </motion.section>
 
+      <ContactModal 
+        isOpen={isContactModalOpen} 
+        onClose={() => setIsContactModalOpen(false)} 
+      />
     </div>
   )
 }
