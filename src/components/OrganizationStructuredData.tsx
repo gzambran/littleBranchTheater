@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function OrganizationStructuredData() {
-  const jsonLd = {
+  const organizationLd = {
     '@context': 'https://schema.org',
     '@type': 'TheaterGroup',
     name: 'Little Branch Theater Company',
@@ -18,10 +18,28 @@ export default function OrganizationStructuredData() {
     ]
   };
 
+  const websiteLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Little Branch Theater',
+    url: 'https://www.littlebranchtheater.org',
+    potentialAction: {
+      '@type': 'SearchAction',
+      'target': 'https://www.littlebranchtheater.org/search?q={search_term_string}',
+      'query-input': 'required name=search_term_string'
+    }
+  };
+
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
+      />
+    </>
   );
 }

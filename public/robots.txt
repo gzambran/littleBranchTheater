@@ -1,6 +1,8 @@
 # robots.txt for Little Branch
 User-agent: *
 Allow: /
+Disallow: /gallery/
+Disallow: /beyond-the-lobby/
 
 # Sitemap location
 Sitemap: https://www.littlebranchtheater.org/sitemap.xml

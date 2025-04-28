@@ -39,9 +39,6 @@ export default function Header() {
             <Link href="/ensemble" className="text-base hover:text-accent transition font-medium">
               Ensemble
             </Link>
-            <Link href="/gallery" className="text-base hover:text-accent transition font-medium">
-              Gallery
-            </Link>
           </div>
           
           {/* Mobile Navigation - Shown only on mobile */}

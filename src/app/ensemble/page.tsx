@@ -3,9 +3,9 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import AnimatedText from '@/components/AnimatedText'
 import Image from 'next/image'
 import { TeamMember, teamMembers } from '@/data/team-members'
+import PageHeader, {SiteBlurb} from '@/components/PageHeader'
 
 export const revalidate = 3600
 
@@ -28,36 +28,21 @@ export default function Team() {
   };
 
   return (
-    <div className="min-h-screen">
-      {/* Team Hero */}
-      <section className="relative py-16 bg-black">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="text-center"
-          >
-            <AnimatedText
-              text="Ensemble"
-              className="font-display text-5xl md:text-7xl mb-6"
-            />
-            <motion.p 
-              className="text-xl text-gray-300 max-w-2xl mx-auto"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-            >
-              Meet the talented individuals bringing Honey Brown Eyes to the stage
-            </motion.p>
-          </motion.div>
-        </div>
-      </section>
+    <div className="min-h-screen bg-black">
+      {/* Introduction using PageHeader component */}
+      <PageHeader>
+        <SiteBlurb>
+          Meet the <span className="text-accent font-normal">talented</span> individuals bringing Honey Brown Eyes to life through their <span className="text-accent font-normal">craft</span> and <span className="text-accent font-normal">passion</span> for storytelling.
+        </SiteBlurb>
+      </PageHeader>
 
       {/* Team Grid */}
-      <section className="py-16 bg-black">
+      <section className="py-16 bg-black relative">
+        {/* Subtle gradient background */}
+        <div className="absolute inset-0 opacity-3 bg-gradient-to-b from-accent/5 to-transparent"></div>
+        
         <motion.div 
-          className="container mx-auto px-4"
+          className="container mx-auto px-4 relative z-10"
           variants={container}
           initial="hidden"
           animate="show"
@@ -67,8 +52,9 @@ export default function Team() {
               <motion.div
                 key={index}
                 variants={item}
-                className="group bg-gray-900 rounded-lg overflow-hidden cursor-pointer"
-                whileHover={{ y: -5 }} // Reduced hover effect for smaller cards
+                className="group bg-gray-900/80 backdrop-blur-sm rounded-lg overflow-hidden cursor-pointer shadow-md shadow-black/20 border border-accent/10"
+                whileHover={{ y: -5, scale: 1.02 }} 
+                transition={{ duration: 0.2 }}
                 onClick={() => setSelectedMember(member)}
               >
                 {/* Image Container */}
@@ -84,7 +70,7 @@ export default function Team() {
                 </div>
                 
                 {/* Content */}
-                <div className="p-3 md:p-4"> {/* Reduced padding for smaller cards */}
+                <div className="p-3 md:p-4">
                   <h2 className="font-display text-lg md:text-xl mb-1 group-hover:text-accent transition-colors line-clamp-1">
                     {member.name}
                   </h2>
@@ -94,6 +80,9 @@ export default function Team() {
             ))}
           </div>
         </motion.div>
+        
+        {/* Subtle divider */}
+        <div className="w-24 h-px bg-accent/30 mx-auto mt-16"></div>
       </section>
 
       {/* Team Member Modal */}
@@ -104,7 +93,7 @@ export default function Team() {
             onClick={() => setSelectedMember(null)}
           >
             <motion.div 
-              className="bg-gray-900 rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto p-6 md:p-8 relative"
+              className="bg-gray-900/90 backdrop-blur-sm rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto p-6 md:p-8 relative shadow-[0_5px_25px_rgba(217,119,6,0.15)] border border-accent/20"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
@@ -122,7 +111,7 @@ export default function Team() {
 
               <div className="flex flex-col md:flex-row gap-6">
                 {/* Add image to modal */}
-                <div className="w-32 h-32 shrink-0 rounded-full overflow-hidden relative mx-auto md:mx-0">
+                <div className="w-32 h-32 shrink-0 rounded-full overflow-hidden relative mx-auto md:mx-0 shadow-md shadow-black/20 border border-accent/30">
                   <Image
                     src={selectedMember.image || '/images/placeholder.jpg'}
                     alt={`${selectedMember.name} - ${selectedMember.role}`}
@@ -135,12 +124,14 @@ export default function Team() {
                   <h2 className="font-display text-2xl md:text-3xl mb-2">{selectedMember.name}</h2>
                   <p className="text-accent mb-4">{selectedMember.role}</p>
                   
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {selectedMember.bio || "Bio coming soon..."}
-                  </p>
+                  <div className="bg-black/40 p-4 rounded backdrop-blur-sm shadow-inner shadow-black/20">
+                    <p className="text-gray-300 leading-relaxed">
+                      {selectedMember.bio || "Bio coming soon..."}
+                    </p>
+                  </div>
 
                   {Object.values(selectedMember.socials).some(url => url !== "#") && (
-                    <div className="flex space-x-4">
+                    <div className="flex space-x-4 mt-6">
                       {Object.entries(selectedMember.socials).map(([platform, url]) => (
                         url !== "#" && (
                           <Link
