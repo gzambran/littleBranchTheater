@@ -4,6 +4,7 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import OrganizationStructuredData from '@/components/OrganizationStructuredData'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
@@ -38,10 +39,11 @@ export default function RootLayout({
         </a>
         <Header />
         <main id="main-content" className="pt-16">
-          {children}
-      </main>
+            {children}
+        </main>
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
