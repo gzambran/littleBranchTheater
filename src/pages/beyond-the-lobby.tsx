@@ -1,5 +1,3 @@
-// /src/pages/beyond-the-lobby.tsx
-
 import React from 'react';
 import Head from 'next/head';
 import { Inter, Playfair_Display } from 'next/font/google';

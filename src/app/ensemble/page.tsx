@@ -12,6 +12,19 @@ export const revalidate = 3600
 export default function Team() {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
 
+  // Filter cast and production team members
+  const castAndProductionMembers = teamMembers.filter(member => 
+    !["Set Designer", "Lighting Designer", "Costume Designer", "Scenic Assistant"].includes(member.role)
+  );
+  
+  // Filter creative design team members
+  const creativeDesignMembers = [
+    { name: "Amber Ellis", role: "Scenic Assistant" },
+    { name: "Wendy Fox", role: "Costume Design" },
+    { name: "Chaz Gentry", role: "Lighting Design" },
+    { name: "Jessica Nebeker", role: "Set Design" }
+  ];
+
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -36,8 +49,8 @@ export default function Team() {
         </SiteBlurb>
       </PageHeader>
 
-      {/* Team Grid */}
-      <section className="py-16 bg-black relative">
+      {/* Cast & Production Team Grid with pt-8 to match other pages */}
+      <section className="pt-8 pb-16 bg-black relative">
         {/* Subtle gradient background */}
         <div className="absolute inset-0 opacity-3 bg-gradient-to-b from-accent/5 to-transparent"></div>
         
@@ -47,8 +60,12 @@ export default function Team() {
           initial="hidden"
           animate="show"
         >
+          <h2 className="font-display text-2xl md:text-3xl text-white mb-8 border-l-4 border-accent pl-4">
+            Cast & Production Team
+          </h2>
+          
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            {teamMembers.map((member, index) => (
+            {castAndProductionMembers.map((member, index) => (
               <motion.div
                 key={index}
                 variants={item}
@@ -83,6 +100,38 @@ export default function Team() {
         
         {/* Subtle divider */}
         <div className="w-24 h-px bg-accent/30 mx-auto mt-16"></div>
+      </section>
+      
+      {/* Creative Design Team Section */}
+      <section className="py-16 bg-black relative">
+        <motion.div 
+          className="container mx-auto px-4 relative z-10"
+          variants={container}
+          initial="hidden"
+          animate="show"
+          viewport={{ once: true }}
+        >
+          <h2 className="font-display text-2xl md:text-3xl text-white mb-8 border-l-4 border-accent pl-4">
+            Creative Design Team
+          </h2>
+          
+          <div className="bg-gray-900/80 backdrop-blur-sm rounded-lg overflow-hidden shadow-md shadow-black/20 border border-accent/10 p-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {creativeDesignMembers.map((designer, index) => (
+                <motion.div 
+                  key={index}
+                  variants={item}
+                  className="flex items-center space-x-4"
+                >
+                  <div>
+                    <h3 className="font-display text-xl text-white">{designer.name}</h3>
+                    <p className="text-accent">{designer.role}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
       </section>
 
       {/* Team Member Modal */}

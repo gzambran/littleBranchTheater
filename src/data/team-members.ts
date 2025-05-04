@@ -11,20 +11,20 @@ export interface TeamMember {
   
   export const teamMembers: TeamMember[] = [
     {
-      "name": "Terri Dillion",
-      "role": "Jovanka",
-      "image": "/images/ensemble/dillion.jpg",
-      "bio": "After starting her career in theater followed by a second career at HP, Inc. Terri is now thoroughly enjoying retirement. Terri recently introduced live Audio Description to Idaho theater and dance, providing a more complete audience experience for people who are blind or have limited vision. So far, live AD is offered at the Morrison Center Main Stage and Danny Peterson Theaters and at the Idaho Shakespeare Festival - (check their websites!).  Every day I think of how very fortunate I am to be surrounded by loved ones - thank you for including me in your busy lives!",
+      "name": "Amela Karadža",
+      "role": "Director/Alma",
+      "image": "/images/ensemble/karadza.webp",
+      "bio": "Amela Karadža was born in Bosnia and at the age of 5 immigrated to Boise where she spent many delightful years. She's a graduate of Rutgers Mason Gross School of the Arts, MFA program. Some of her favorite roles include: Joan (Vinegar Tom/Theatre C and Rutgers Theatre Co.), Duke of Aumerle (Richard II at Shakespeare's Globe Theatre in London), and #2 (The Wolves/Boise Contemporary Theater). She loves teaching Meisner Technique around the valley in her free time and hanging out with her fur-children! Thank you to my beautiful mom and wonderful husband for all your support. Love you dad, forever and always.",
       "socials": {
         "instagram": "#",
-        "website": "https://www.morrisoncenter.com/news/detail/morrison-center-audio-descriptor-wins-governors-award-for-support-of-the-arts"
+        "website": "#"
       }
     },
     {
-      "name": "Amber Ellis",
-      "role": "Scenic Assistant",
-      "image": "/images/ensemble/placeholder.jpg",
-      "bio": "",
+      "name": "John Wicks",
+      "role": "Assistant Director",
+      "image": "/images/ensemble/wicks.webp",
+      "bio": "John Wicks has directed and acted all over the valley with companies like Boise Contemporary Theatre, Idaho Shakespeare Festival, and Alley Repertory Theatre. His passion lies with telling stories for the marginalized and oppressed. His goal is to help those with underrepresented voices to have more representation. He is extremely excited to be working on this debut project for Little Branch. He would like to thank Jovani and Amela for bringing him on.",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -41,9 +41,39 @@ export interface TeamMember {
       }
     },
     {
-      "name": "Wendy Fox",
-      "role": "Costume Designer",
-      "image": "/images/ensemble/placeholder.jpg",
+      "name": "Mirza Šuman",
+      "role": "Zlata",
+      "image": "/images/ensemble/suman.jpg",
+      "bio": "Mirza Šuman was born and raised in Boise, as a first-generation American to refugee parents from Bosnia. Mirza is passionate about Honey Brown Eyes for its authentic depiction of the hardships many Bosniaks endured, and its potential for viewers to consider parallels to current genocides. This marks her debut role in a production, and she is hopeful for a future in theater! A heartfelt thank you to my parents, Izudin and Alda, for teaching me about our history and raising me to always remember where I came from.",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
+      }
+    },
+    {
+      "name": "Majda Zahić",
+      "role": "Radio Broadcaster",
+      "image": "/images/ensemble/zahic.webp",
+      "bio": "Majda Zahić is a freshman at Boise State University. Her family is from Bosnia and Herzegovina, but Majda was born and raised in Meridian, Idaho. She has never done theater before, but she has been a dancer for about 13 years and enjoys everything to do with performance art! She is so grateful that Amela asked her to be a part of this show—Majda loves sharing the history and culture of her people, especially since it's quite an unknown region of the world and often overlooked when taught in schools. She is excited to simply be a part of a theater production and experience the behind-the-scenes of it all!",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
+      }
+    },
+    {
+      "name": "Terri Dillion",
+      "role": "Jovanka",
+      "image": "/images/ensemble/dillion.jpg",
+      "bio": "After starting her career in theater followed by a second career at HP, Inc. Terri is now thoroughly enjoying retirement. Terri recently introduced live Audio Description to Idaho theater and dance, providing a more complete audience experience for people who are blind or have limited vision. So far, live AD is offered at the Morrison Center Main Stage and Danny Peterson Theaters and at the Idaho Shakespeare Festival - (check their websites!).  Every day I think of how very fortunate I am to be surrounded by loved ones - thank you for including me in your busy lives!",
+      "socials": {
+        "instagram": "#",
+        "website": "https://www.morrisoncenter.com/news/detail/morrison-center-audio-descriptor-wins-governors-award-for-support-of-the-arts"
+      }
+    },
+    {
+      "name": "Francisco Negron",
+      "role": "Denis",
+      "image": "/images/ensemble/negron.webp",
       "bio": "",
       "socials": {
         "instagram": "#",
@@ -51,13 +81,13 @@ export interface TeamMember {
       }
     },
     {
-      "name": "Chaz Gentry",
-      "role": "Lighting Designer",
-      "image": "/images/ensemble/placeholder.jpg",
-      "bio": "",
+      "name": "Jovani Zambrano",
+      "role": "Sound Designer/Branko",
+      "image": "/images/ensemble/zambrano.jpg",
+      "bio": "Jovani Zambrano was born and raised in Brooklyn, New York, and now calls Boise, Idaho, home, where he pursues his passion for acting and theater-making. He studied at Rutgers Mason Gross School of the Arts and performed at Shakespeare's Globe in As You Like It. His work has been seen at Hudson Valley Shakespeare, Theater for the New City, Boise Contemporary Theater, Alley Repertory Theater, and The Spot. Collaborating with these inspiring companies and ensembles fueled his desire to build Little Branch Theater—a space where artists can learn, take risks, fail spectacularly, and create something extraordinary. He would not be able to do any of this without the creativity and support of his wife. Among his favorite roles, playing Oscar in Sweat by Lynn Nottage was a particularly meaningful experience.",
       "socials": {
-        "instagram": "#",
-        "website": "#"
+        "instagram": "https://www.instagram.com/jovani_witha_j/",
+        "website": "https://www.jovanizambrano.com"
       }
     },
     {
@@ -71,40 +101,10 @@ export interface TeamMember {
       }
     },
     {
-      "name": "Amela Karadža",
-      "role": "Director/Alma",
-      "image": "/images/ensemble/karadza.webp",
-      "bio": "Amela Karadža was born in Bosnia and at the age of 5 immigrated to Boise where she spent many delightful years. She's a graduate of Rutgers Mason Gross School of the Arts, MFA program. Some of her favorite roles include: Joan (Vinegar Tom/Theatre C and Rutgers Theatre Co.), Duke of Aumerle (Richard II at Shakespeare's Globe Theatre in London), and #2 (The Wolves/Boise Contemporary Theater). She loves teaching Meisner Technique around the valley in her free time and hanging out with her fur-children! Thank you to my beautiful mom and wonderful husband for all your support. Love you dad, forever and always.",
-      "socials": {
-        "instagram": "#",
-        "website": "#"
-      }
-    },
-    {
-      "name": "Lauryn Mederios",
-      "role": "Musician/Composer",
-      "image": "/images/ensemble/mederios.webp",
-      "bio": "Lauryn found creativity at a very young age, drawing sharpie monsters on carpets and pounding movie themes into the piano. She eventually channeled that energy into the drums in high school, jamming with her twin sister on electric guitar. Her creative career began with a degree in Fine Art and Music at the College of Idaho, where she met Mike and Anthony. When they aren't playing jazzy tunes together, Lauryn works as Art Director at Drake Cooper, travels as much as she can, and watches lots of movies. She has made Boise her home with her husband Mike, and their two cats Johnny and Loki.",
-      "socials": {
-        "instagram": "#",
-        "website": "#"
-      }
-    },
-    {
-      "name": "Jessica Nebeker",
-      "role": "Set Designer",
-      "image": "/images/ensemble/placeholder.jpg",
-      "bio": "",
-      "socials": {
-        "instagram": "#",
-        "website": "#"
-      }
-    },
-    {
-      "name": "Francisco Negron",
-      "role": "Denis",
-      "image": "/images/ensemble/placeholder.jpg",
-      "bio": "",
+      "name": "Ellie Wirth",
+      "role": "Prop Designer/ASM",
+      "image": "/images/ensemble/wirth.jpg",
+      "bio": "Ellie is excited to join Honey Brown Eyes as the Assistant Stage Manager and Props Master! Previously, she worked on Lost Girl and Charlie Brown Christmas at Boise State as props master and The Little Prince as an assistant stage manager where she honed skills in organizing, problem-solving, and ensuring the smooth execution of live performances. Outside of backstage work, Ellie enjoys acting and has a passion for theater and a dedication to supporting the creative process.",
       "socials": {
         "instagram": "#",
         "website": "#"
@@ -121,16 +121,6 @@ export interface TeamMember {
       }
     },
     {
-      "name": "Mirza Šuman",
-      "role": "Zlata",
-      "image": "/images/ensemble/suman.jpg",
-      "bio": "Mirza Šuman was born and raised in Boise, as a first-generation American to refugee parents from Bosnia. Mirza is passionate about Honey Brown Eyes for its authentic depiction of the hardships many Bosniaks endured, and its potential for viewers to consider parallels to current genocides. This marks her debut role in a production, and she is hopeful for a future in theater! A heartfelt thank you to my parents, Izudin and Alda, for teaching me about our history and raising me to always remember where I came from.",
-      "socials": {
-        "instagram": "#",
-        "website": "#"
-      }
-    },
-    {
       "name": "Mike Ward",
       "role": "Musician/Composer",
       "image": "/images/ensemble/ward.jpg",
@@ -141,43 +131,24 @@ export interface TeamMember {
       }
     },
     {
-      "name": "John Wicks",
-      "role": "Assistant Director",
+      "name": "Lauryn Mederios",
+      "role": "Musician/Composer",
+      "image": "/images/ensemble/mederios.webp",
+      "bio": "Lauryn found creativity at a very young age, drawing sharpie monsters on carpets and pounding movie themes into the piano. She eventually channeled that energy into the drums in high school, jamming with her twin sister on electric guitar. Her creative career began with a degree in Fine Art and Music at the College of Idaho, where she met Mike and Anthony. When they aren't playing jazzy tunes together, Lauryn works as Art Director at Drake Cooper, travels as much as she can, and watches lots of movies. She has made Boise her home with her husband Mike, and their two cats Johnny and Loki.",
+      "socials": {
+        "instagram": "#",
+        "website": "#"
+      }
+    },
+
+    {
+      "name": "Amber Ellis",
+      "role": "Scenic Assistant",
       "image": "/images/ensemble/placeholder.jpg",
       "bio": "",
       "socials": {
         "instagram": "#",
         "website": "#"
-      }
-    },
-    {
-      "name": "Ellie Wirth",
-      "role": "Prop Designer/ASM",
-      "image": "/images/ensemble/wirth.jpg",
-      "bio": "Ellie is excited to join Honey Brown Eyes as the Assistant Stage Manager and Props Master! Previously, she worked on Lost Girl and Charlie Brown Christmas at Boise State as props master and The Little Prince as an assistant stage manager where she honed skills in organizing, problem-solving, and ensuring the smooth execution of live performances. Outside of backstage work, Ellie enjoys acting and has a passion for theater and a dedication to supporting the creative process.",
-      "socials": {
-        "instagram": "#",
-        "website": "#"
-      }
-    },
-    {
-      "name": "Majda Zahić",
-      "role": "Radio Broadcaster",
-      "image": "/images/ensemble/placeholder.jpg",
-      "bio": "Majda Zahić is a freshman at Boise State University. Her family is from Bosnia and Herzegovina, but Majda was born and raised in Meridian, Idaho. She has never done theater before, but she has been a dancer for about 13 years and enjoys everything to do with performance art! She is so grateful that Amela asked her to be a part of this show—Majda loves sharing the history and culture of her people, especially since it's quite an unknown region of the world and often overlooked when taught in schools. She is excited to simply be a part of a theater production and experience the behind-the-scenes of it all!",
-      "socials": {
-        "instagram": "#",
-        "website": "#"
-      }
-    },
-    {
-      "name": "Jovani Zambrano",
-      "role": "Sound Designer/Branko",
-      "image": "/images/ensemble/zambrano.jpg",
-      "bio": "Jovani Zambrano was born and raised in Brooklyn, New York, and now calls Boise, Idaho, home, where he pursues his passion for acting and theater-making. He studied at Rutgers Mason Gross School of the Arts and performed at Shakespeare's Globe in As You Like It. His work has been seen at Hudson Valley Shakespeare, Theater for the New City, Boise Contemporary Theater, Alley Repertory Theater, and The Spot. Collaborating with these inspiring companies and ensembles fueled his desire to build Little Branch Theater—a space where artists can learn, take risks, fail spectacularly, and create something extraordinary. He would not be able to do any of this without the creativity and support of his wife. Among his favorite roles, playing Oscar in Sweat by Lynn Nottage was a particularly meaningful experience.",
-      "socials": {
-        "instagram": "https://www.instagram.com/jovani_witha_j/",
-        "website": "https://www.jovanizambrano.com"
       }
     }
   ];
