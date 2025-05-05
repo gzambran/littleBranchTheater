@@ -20,7 +20,7 @@ export default function Home() {
             className="rounded-xl overflow-hidden shadow-[0_0_35px_rgba(217,119,6,0.25)] relative"
           >
             <Link href="/shows/upcoming" className="block relative group">
-              <div className="relative w-full flex justify-center bg-black/30 py-8">
+              <div className="relative w-full flex justify-center py-8">
                 <Image 
                   src="/images/honeybrowneyes.webp"
                   alt="Honey Brown Eyes"
@@ -30,7 +30,7 @@ export default function Home() {
                   priority
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1536px"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent pt-16 pb-6 px-6 backdrop-blur-sm">
+                <div className="absolute bottom-0 left-0 right-0 pt-16 pb-6 px-6">
                   <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

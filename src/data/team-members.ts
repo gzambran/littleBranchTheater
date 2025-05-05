@@ -140,12 +140,11 @@ export interface TeamMember {
         "website": "#"
       }
     },
-
     {
-      "name": "Amber Ellis",
-      "role": "Scenic Assistant",
-      "image": "/images/ensemble/placeholder.jpg",
-      "bio": "",
+      "name": "Sabina Selimović",
+      "role": "Singer",
+      "image": "/images/ensemble/mederios.webp",
+      "bio": "Sabina, born and raised in Bosnia, came to Boise, Idaho, as a refugee at the age of 17. For the past twenty years, she has dedicated her life to helping others through her career in nursing, raising a beautiful family, and cherishing time with loved ones. Sabina is very excited to be joining Little Branch’s first production, Honey Brown Eyes. As a little girl, she was always involved in choir, dance, and attending the local theater in her hometown. Her passion for the performing arts continues to draw her to the stage. She enjoys spending time outdoors with family and friends. Thank you to Amela and John for including me in this beautiful production.",
       "socials": {
         "instagram": "#",
         "website": "#"

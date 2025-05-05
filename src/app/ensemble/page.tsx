@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
@@ -12,12 +12,15 @@ export const revalidate = 3600
 export default function Team() {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
 
-  // Filter cast and production team members
-  const castAndProductionMembers = teamMembers.filter(member => 
-    !["Set Designer", "Lighting Designer", "Costume Designer", "Scenic Assistant"].includes(member.role)
-  );
+  // Preload the selected member's image when they're clicked
+  useEffect(() => {
+    if (selectedMember) {
+      const imgElement = new window.Image();
+      imgElement.src = selectedMember.image || '/images/placeholder.jpg';
+    }
+  }, [selectedMember]);
   
-  // Filter creative design team members
+  // Creative design team members
   const creativeDesignMembers = [
     { name: "Amber Ellis", role: "Scenic Assistant" },
     { name: "Wendy Fox", role: "Costume Design" },
@@ -65,7 +68,7 @@ export default function Team() {
           </h2>
           
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            {castAndProductionMembers.map((member, index) => (
+            {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
                 variants={item}
@@ -82,6 +85,8 @@ export default function Team() {
                     fill
                     sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
                     className="object-cover"
+                    priority={index < 4} // Add priority loading for the first 4 images
+                    loading={index < 4 ? "eager" : "lazy"} // Explicitly set loading strategy
                   />
                   <div className="absolute inset-0 bg-accent/10" />
                 </div>
@@ -159,13 +164,15 @@ export default function Team() {
               </button>
 
               <div className="flex flex-col md:flex-row gap-6">
-                {/* Add image to modal */}
+                {/* Add image to modal with priority loading */}
                 <div className="w-32 h-32 shrink-0 rounded-full overflow-hidden relative mx-auto md:mx-0 shadow-md shadow-black/20 border border-accent/30">
                   <Image
                     src={selectedMember.image || '/images/placeholder.jpg'}
                     alt={`${selectedMember.name} - ${selectedMember.role}`}
                     fill
                     className="object-cover"
+                    priority={true}
+                    loading="eager"
                   />
                 </div>
 
