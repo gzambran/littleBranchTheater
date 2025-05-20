@@ -74,7 +74,7 @@ export interface TeamMember {
       "name": "Francisco Negron",
       "role": "Denis",
       "image": "/images/ensemble/negron.webp",
-      "bio": "",
+      "bio": "This is Fransico’s second time performing at the Visual Arts Collective. Previously, he played Berger in the musical HAIR. He has also performed at BCT in All is Calm, and in many productions at Boise State University, including the titular role in SpongeBob the Musical, Tiresias in Oedipus, Oberon in Midsummer, and Anthony in Sweeney Todd.",
       "socials": {
         "instagram": "#",
         "website": "#"
