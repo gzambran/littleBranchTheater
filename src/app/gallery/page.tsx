@@ -1,12 +1,14 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import PageHeader, { SiteBlurb } from '@/components/PageHeader'
 
 export default function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
+  const [imageLoading, setImageLoading] = useState(false)
+  const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set())
   
   // Gallery images data with captions
   const galleryImages = [
@@ -156,25 +158,58 @@ export default function GalleryPage() {
     },
   ]
 
+  // Preload adjacent images for smoother navigation
+  const preloadImage = useCallback((index: number) => {
+    if (index >= 0 && index < galleryImages.length) {
+      const img = new window.Image()
+      img.src = galleryImages[index].src
+    }
+  }, [galleryImages])
+
   const openLightbox = (index: number) => {
     setSelectedImage(index)
+    setImageLoading(true)
     document.body.style.overflow = 'hidden'
+    
+    // Preload adjacent images
+    preloadImage(index - 1)
+    preloadImage(index + 1)
   }
 
   const closeLightbox = () => {
     setSelectedImage(null)
+    setImageLoading(false)
     document.body.style.overflow = 'auto'
   }
 
   const navigateImage = (direction: 'prev' | 'next') => {
     if (selectedImage === null) return
     
+    const newIndex = direction === 'prev' 
+      ? (selectedImage === 0 ? galleryImages.length - 1 : selectedImage - 1)
+      : (selectedImage === galleryImages.length - 1 ? 0 : selectedImage + 1)
+    
+    // Only show loading if image hasn't been loaded before
+    if (!loadedImages.has(newIndex)) {
+      setImageLoading(true)
+    }
+    
+    setSelectedImage(newIndex)
+    
+    // Preload the next image in the direction of navigation
     if (direction === 'prev') {
-      setSelectedImage(selectedImage === 0 ? galleryImages.length - 1 : selectedImage - 1)
+      preloadImage(newIndex - 1)
     } else {
-      setSelectedImage(selectedImage === galleryImages.length - 1 ? 0 : selectedImage + 1)
+      preloadImage(newIndex + 1)
     }
   }
+
+  const handleImageLoad = useCallback(() => {
+    setImageLoading(false)
+    if (selectedImage !== null) {
+      setLoadedImages(prev => new Set(prev).add(selectedImage))
+    }
+  }, [selectedImage])
 
   // Handle keyboard navigation
   React.useEffect(() => {
@@ -318,18 +353,48 @@ export default function GalleryPage() {
               className="relative max-w-[90vw] max-h-[90vh] flex flex-col items-center"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Image */}
-              <div className="relative">
+              {/* Loading State & Image Container */}
+              <div className="relative flex items-center justify-center">
+                {/* Thumbnail placeholder while loading */}
+                {imageLoading && (
+                  <div className="absolute inset-0 flex flex-col items-center justify-center">
+                    {/* Show blurred thumbnail immediately */}
+                    <div className="relative w-full h-full max-w-[90vw] max-h-[75vh]">
+                      <Image
+                        src={galleryImages[selectedImage].thumb}
+                        alt={galleryImages[selectedImage].alt}
+                        width={400}
+                        height={300}
+                        className="object-contain w-full h-full blur-sm opacity-50"
+                      />
+                    </div>
+                    {/* Loading spinner overlay */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="bg-black/60 rounded-full p-4">
+                        <svg className="animate-spin h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                
+                {/* Full resolution image */}
                 <Image
                   src={galleryImages[selectedImage].src}
                   alt={galleryImages[selectedImage].alt}
                   width={1200}
                   height={800}
-                  className="object-contain max-w-full max-h-[75vh] w-auto h-auto"
+                  className={`object-contain max-w-full max-h-[75vh] w-auto h-auto transition-opacity duration-300 ${
+                    imageLoading ? 'opacity-0' : 'opacity-100'
+                  }`}
+                  priority
+                  onLoad={handleImageLoad}
                 />
               </div>
               
-              {/* Caption and Credit */}
+              {/* Caption and Credit - Always visible */}
               <div className="mt-4 text-center max-w-2xl px-4">
                 <p className="text-white text-lg mb-1">
                   {galleryImages[selectedImage].caption}
