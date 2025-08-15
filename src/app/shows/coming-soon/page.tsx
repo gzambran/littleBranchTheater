@@ -1,0 +1,183 @@
+"use client"
+
+import React from 'react'
+import Image from 'next/image'
+import { motion } from 'framer-motion'
+import PageHeader, {SiteBlurb} from '@/components/PageHeader'
+import Link from 'next/link'
+import ShowMediaSection from '@/components/show/ShowMediaSection'
+import ShowDateVenue from '@/components/show/ShowDateVenue'
+import ShowContentSection from '@/components/show/ShowContentSection'
+import ShowSidebar from '@/components/show/ShowSidebar'
+import SocialShare from '@/components/show/SocialShare'
+
+export const revalidate = 3600
+
+export default function ComingSoonPage() {
+
+  // Production Details content (shared between mobile and desktop)
+  const productionDetailsContent = (
+    <div className="space-y-6 text-gray-300">
+      <div>
+        <h4 className="font-medium mb-2">Timeline</h4>
+        <p>Spring 2026</p>
+        <p className="text-sm">Exact dates to be announced</p>
+      </div>
+      <div>
+        <h4 className="font-medium mb-2">Directors</h4>
+        <p>Amela Karadža</p>
+        <p>Jovani Zambrano</p>
+      </div>
+      <div>
+        <h4 className="font-medium mb-2">Venue</h4>
+        <p>To be announced</p>
+      </div>
+      
+      <SocialShare 
+        shareUrl="https://littlebranch.theater/shows/coming-soon"
+        shareText="Little Branch Theater - Coming Soon"
+      />
+    </div>
+  )
+
+  return (
+    <div className="min-h-screen bg-black">
+      {/* PageHeader Component with Show Description */}
+      <PageHeader>
+        <SiteBlurb>
+          Our next chapter is being written. Join us for another <span className="text-accent font-normal">powerful</span> story that challenges perspectives and celebrates <span className="text-accent font-normal">diverse voices</span>.
+        </SiteBlurb>
+      </PageHeader>
+
+      {/* Image Section */}
+      <ShowMediaSection>
+        <div className="relative aspect-[16/9]">
+          <Image 
+            src="/images/comingsoon.png"
+            alt="Coming Soon"
+            fill
+            className="object-contain"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1280px"
+            priority
+          />
+        </div>
+      </ShowMediaSection>
+
+      <ShowDateVenue 
+        dates="Spring 2026"
+        venue="Venue TBD"
+      />
+      
+      {/* CTA Button */}
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="mt-8 mb-12 flex justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+          >
+            <Link 
+              href="/get-involved"
+              className="bg-accent hover:bg-accent/90 text-white py-3 px-12 rounded-md text-center transition-all duration-200 transform hover:scale-[1.02] text-lg font-medium shadow-md shadow-black/20"
+            >
+              Stay Updated
+            </Link>
+          </motion.div>
+        </div>
+      </div>
+      
+      {/* Subtle divider */}
+      <div className="w-24 h-px bg-accent/30 mx-auto mb-8"></div>
+
+      {/* MOBILE LAYOUT */}
+      <section className="py-16 bg-black md:hidden">
+        <div className="container mx-auto px-4">
+          <div className="space-y-12">
+            <ShowContentSection title="About the Production">
+              <p className="text-gray-300 text-lg leading-relaxed mb-4">
+                Little Branch Theater is preparing its next theatrical production for Spring 2026. 
+                Following the success of <em>Honey Brown Eyes</em>, we're developing another powerful 
+                story that continues our mission of bringing diverse voices to the stage.
+              </p>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                Details about the production, including the play selection, cast, and specific dates, 
+                will be announced soon. Stay connected to be the first to know.
+              </p>
+            </ShowContentSection>
+
+            {/* Production Details - Mobile */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="font-display text-2xl mb-6">Production Details</h3>
+              <div className="bg-gray-900/50 p-8 rounded-lg shadow-lg shadow-black/20 backdrop-blur-sm">
+                {productionDetailsContent}
+              </div>
+            </motion.div>
+
+            <ShowContentSection title="Stay Connected">
+              <p className="text-gray-300 text-lg mb-4">
+                Be the first to know about auditions, show announcements, and ticket sales.
+              </p>
+              <Link 
+                href="/get-involved"
+                className="inline-block bg-accent hover:bg-accent/90 text-white py-2 px-6 rounded-md transition-all duration-200"
+              >
+                Join Our Mailing List
+              </Link>
+            </ShowContentSection>
+          </div>
+        </div>
+      </section>
+
+      {/* DESKTOP LAYOUT */}
+      <section className="py-16 bg-black hidden md:block">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-12">
+            {/* Main Content - Left 2 Columns */}
+            <div className="md:col-span-2 space-y-16">
+              <ShowContentSection title="About the Production">
+                <p className="text-gray-300 text-lg leading-relaxed mb-4">
+                  Little Branch Theater is preparing its next theatrical production for Spring 2026. 
+                  Following the success of <em>Honey Brown Eyes</em>, we're developing another powerful 
+                  story that continues our mission of bringing diverse voices to the stage.
+                </p>
+                <p className="text-gray-300 text-lg leading-relaxed mb-4">
+                  Our founders, Amela Karadža and Jovani Zambrano, are carefully selecting a work that 
+                  will challenge perspectives, celebrate our community's diversity, and provide opportunities 
+                  for local artists to showcase their talents.
+                </p>
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  Details about the production, including the play selection, cast, and specific dates, 
+                  will be announced soon. Stay connected to be the first to know.
+                </p>
+              </ShowContentSection>
+
+              <ShowContentSection title="Stay Connected" delay={0.2}>
+                <p className="text-gray-300 text-lg mb-6">
+                  Be the first to know about auditions, show announcements, and ticket sales.
+                </p>
+                <Link 
+                  href="/get-involved"
+                  className="inline-block bg-accent hover:bg-accent/90 text-white py-2 px-6 rounded-md transition-all duration-200"
+                >
+                  Join Our Mailing List
+                </Link>
+              </ShowContentSection>
+            </div>
+
+            {/* Sidebar - Right Column */}
+            <div>
+              <ShowSidebar title="Production Details">
+                {productionDetailsContent}
+              </ShowSidebar>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}

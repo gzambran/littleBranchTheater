@@ -7,7 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/who-we-are',
     '/ensemble',
-    '/shows'
+    '/shows',
+    '/productions',
+    '/get-involved',
+     '/gallery',
   ].map(route => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),

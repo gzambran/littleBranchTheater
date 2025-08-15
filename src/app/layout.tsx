@@ -11,8 +11,9 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair-display' })
 
 export const metadata = {
-  title: 'Little Branch',
-  description: 'A theater company bringing fresh perspectives to the stage',
+  title: 'Little Branch Theater | Boise-based Theater Company',
+  description: 'Little Branch is a Boise-based theater company committed to creating intimate, emotionally honest work that embraces curiosity, risk, and connection.',
+  keywords: 'theater, Boise, Little Branch, plays, performance, arts',
   alternates: {
     canonical: 'https://www.littlebranchtheater.org',
   },

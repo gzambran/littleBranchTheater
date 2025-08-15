@@ -12,41 +12,85 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black">
       <h1 className="sr-only">Little Branch Theater</h1>
-      <section className="relative pt-10 flex flex-col items-center">
-        <div className="w-full max-w-6xl mx-auto">
+      
+      {/* Hero Section */}
+      <section className="relative pt-20 pb-12 flex flex-col items-center">
+        <div className="container mx-auto px-4">
+          {/* Thank You Message */}
           <motion.div
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.7 }}
-            className="rounded-xl overflow-hidden shadow-[0_0_35px_rgba(217,119,6,0.25)] relative"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
           >
-            <Link href="/shows/upcoming" className="block relative group">
-              <div className="relative w-full flex justify-center py-8">
-                <Image 
-                  src="/images/honeybrowneyes.webp"
-                  alt="Honey Brown Eyes"
-                  width={500}
-                  height={750}
-                  className="object-contain h-[45vh] md:h-[55vh] w-auto"
-                  priority
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1536px"
-                />
-                <div className="absolute bottom-0 left-0 right-0 pt-16 pb-6 px-6">
-                  <motion.div 
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, delay: 0.3 }}
-                    className="text-center"
-                  >
-                    <p className="text-accent font-medium text-lg md:text-xl">
-                      May 22 - June 1, 2025
-                    </p>
-                    <p className="text-white text-lg md:text-xl">
-                      Visual Arts Collective, Garden City
-                    </p>
-                  </motion.div>
+            <h2 className="font-display text-3xl md:text-5xl text-white leading-relaxed">
+              Thank you for making our <span className="text-accent">debut</span> production a <span className="text-accent">success</span>.
+            </h2>
+            <p className="font-display text-2xl md:text-4xl text-white mt-4">
+              We&apos;ll be back in Spring 2026.
+            </p>
+          </motion.div>
+
+          {/* Hero Image with Overlay */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="relative max-w-5xl mx-auto"
+          >
+            <Link href="/shows/honey-brown-eyes" className="group block">
+              <div className="rounded-xl overflow-hidden shadow-[0_0_40px_rgba(166,226,46,0.15)] border border-accent/20 transition-all duration-300 group-hover:shadow-[0_0_50px_rgba(166,226,46,0.25)] group-hover:border-accent/30">
+                <div className="relative aspect-[16/10]">
+                  <Image 
+                    src="/images/homepage.webp"
+                    alt="Honey Brown Eyes Production"
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1280px"
+                  />
+                  
+                  {/* Gradient Overlay for Text */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                  
+                  {/* Production Info Overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 p-8">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.7, delay: 0.5 }}
+                      className="text-center"
+                    >
+                      <h3 className="font-display text-3xl md:text-4xl text-white mb-2 group-hover:text-accent transition-colors">
+                        Honey Brown Eyes
+                      </h3>
+                      <p className="text-gray-300 text-lg italic">
+                        By Stefanie Zadravec
+                      </p>
+                    </motion.div>
+                  </div>
                 </div>
               </div>
             </Link>
+            
+            {/* Review Quotes */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="mt-12 max-w-3xl mx-auto"
+            >
+              <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center justify-center">
+                <div className="text-center">
+                  <p className="text-gray-300 italic text-lg mb-2">"An explosive entrance for Little Branch."</p>
+                  <p className="text-accent text-sm">— The Spot</p>
+                </div>
+                <div className="hidden md:block w-px h-12 bg-accent/30"></div>
+                <div className="text-center">
+                  <p className="text-gray-300 italic text-lg mb-2">"A beautiful, heart-wrenching production."</p>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -54,6 +98,7 @@ export default function Home() {
       {/* Subtle divider */}
       <div className="w-24 h-px bg-accent/30 mx-auto my-16"></div>
 
+      {/* Mission Section - Unchanged */}
       <section className="py-24 bg-black relative">
         {/* Subtle gradient background */}
         <div className="absolute inset-0 opacity-3 bg-gradient-to-b from-accent/5 to-transparent"></div>

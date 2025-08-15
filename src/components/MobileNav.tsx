@@ -52,8 +52,9 @@ export default function MobileNav() {
 
   const navItems = [
     { path: '/who-we-are', label: 'Who We Are' },
-    { path: '/shows/upcoming', label: 'Upcoming Show' },
-    { path: '/ensemble', label: 'Ensemble' }
+    { path: '/productions', label: 'Productions' },
+    { path: '/gallery', label: 'Gallery' },
+    { path: '/get-involved', label: 'Get Involved' }
   ]
 
   return (

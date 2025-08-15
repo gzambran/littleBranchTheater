@@ -33,11 +33,14 @@ export default function Header() {
             <Link href="/who-we-are" className="text-base hover:text-accent transition font-medium">
               Who We Are
             </Link>
-            <Link href="/shows/upcoming" className="text-base hover:text-accent transition font-medium">
-              Upcoming Show
+            <Link href="/productions" className="text-base hover:text-accent transition font-medium">
+              Productions
             </Link>
-            <Link href="/ensemble" className="text-base hover:text-accent transition font-medium">
-              Ensemble
+            <Link href="/gallery" className="text-base hover:text-accent transition font-medium">
+              Gallery
+            </Link>
+            <Link href="/get-involved" className="text-base hover:text-accent transition font-medium">
+              Get Involved
             </Link>
           </div>
           
