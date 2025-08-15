@@ -354,19 +354,21 @@ export default function GalleryPage() {
               onClick={(e) => e.stopPropagation()}
             >
               {/* Loading State & Image Container */}
-              <div className="relative flex items-center justify-center">
-                {/* Thumbnail placeholder while loading */}
+              <div className="relative flex items-center justify-center min-h-[400px] min-w-[600px]">
+                {/* Show blurred thumbnail immediately while loading */}
                 {imageLoading && (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center">
-                    {/* Show blurred thumbnail immediately */}
-                    <div className="relative w-full h-full max-w-[90vw] max-h-[75vh]">
-                      <Image
-                        src={galleryImages[selectedImage].thumb}
-                        alt={galleryImages[selectedImage].alt}
-                        width={400}
-                        height={300}
-                        className="object-contain w-full h-full blur-md"
-                      />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Image
+                      src={galleryImages[selectedImage].thumb}
+                      alt={galleryImages[selectedImage].alt}
+                      width={600}
+                      height={400}
+                      className="object-contain max-w-[90vw] max-h-[75vh] blur-xl"
+                      priority
+                    />
+                    {/* Simple loading text */}
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white/60 text-sm">
+                      Loading high resolution...
                     </div>
                   </div>
                 )}
@@ -377,7 +379,7 @@ export default function GalleryPage() {
                   alt={galleryImages[selectedImage].alt}
                   width={1200}
                   height={800}
-                  className={`object-contain max-w-full max-h-[75vh] w-auto h-auto transition-opacity duration-500 ${
+                  className={`object-contain max-w-[90vw] max-h-[75vh] w-auto h-auto transition-opacity duration-500 ${
                     imageLoading ? 'opacity-0' : 'opacity-100'
                   }`}
                   priority
