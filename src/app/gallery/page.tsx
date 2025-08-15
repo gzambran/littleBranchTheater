@@ -168,7 +168,8 @@ export default function GalleryPage() {
 
   const openLightbox = (index: number) => {
     setSelectedImage(index)
-    setImageLoading(true)
+    // Only show loading state if image hasn't been loaded before
+    setImageLoading(!loadedImages.has(index))
     document.body.style.overflow = 'hidden'
     
     // Preload adjacent images
@@ -366,10 +367,6 @@ export default function GalleryPage() {
                       className="object-contain max-w-[90vw] max-h-[75vh] blur-xl"
                       priority
                     />
-                    {/* Simple loading text */}
-                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white/60 text-sm">
-                      Loading high resolution...
-                    </div>
                   </div>
                 )}
                 
