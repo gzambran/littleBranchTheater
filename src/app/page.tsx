@@ -73,23 +73,15 @@ export default function Home() {
               </div>
             </Link>
             
-            {/* Review Quotes */}
+            {/* Review Quote - Centered */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="mt-12 max-w-3xl mx-auto"
+              className="mt-12 max-w-3xl mx-auto text-center"
             >
-              <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center justify-center">
-                <div className="text-center">
-                  <p className="text-gray-300 italic text-lg mb-2">"An explosive entrance for Little Branch."</p>
-                  <p className="text-accent text-sm">— The Spot</p>
-                </div>
-                <div className="hidden md:block w-px h-12 bg-accent/30"></div>
-                <div className="text-center">
-                  <p className="text-gray-300 italic text-lg mb-2">"A beautiful, heart-wrenching production."</p>
-                </div>
-              </div>
+              <p className="text-gray-300 italic text-lg mb-2">"An explosive entrance for Little Branch."</p>
+              <p className="text-accent text-sm">— The Spot</p>
             </motion.div>
           </motion.div>
         </div>
