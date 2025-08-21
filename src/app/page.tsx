@@ -14,7 +14,7 @@ export default function Home() {
       <h1 className="sr-only">Little Branch Theater</h1>
       
       {/* Hero Section */}
-      <section className="relative pt-20 pb-12 flex flex-col items-center">
+      <section className="relative pt-20 pb-8 flex flex-col items-center">
         <div className="container mx-auto px-4">
           {/* Thank You Message */}
           <motion.div
@@ -78,7 +78,7 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="mt-12 max-w-3xl mx-auto text-center"
+              className="mt-8 max-w-3xl mx-auto text-center"
             >
               <p className="text-gray-300 italic text-lg mb-2">"An explosive entrance for Little Branch."</p>
               <p className="text-accent text-sm">— The Spot</p>
@@ -88,10 +88,10 @@ export default function Home() {
       </section>
 
       {/* Subtle divider */}
-      <div className="w-24 h-px bg-accent/30 mx-auto my-16"></div>
+      <div className="w-24 h-px bg-accent/30 mx-auto my-6"></div>
 
-      {/* Mission Section - Unchanged */}
-      <section className="py-24 bg-black relative">
+      {/* Mission Section */}
+      <section className="py-8 bg-black relative">
         {/* Subtle gradient background */}
         <div className="absolute inset-0 opacity-3 bg-gradient-to-b from-accent/5 to-transparent"></div>
         
