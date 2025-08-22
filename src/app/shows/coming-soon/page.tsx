@@ -44,10 +44,10 @@ export default function ComingSoonPage() {
     <div className="min-h-screen bg-black">
       {/* PageHeader Component with Show Description */}
       <PageHeader>
-        <SiteBlurb>
-          Our next chapter is being written. Join us for another <span className="text-accent font-normal">powerful</span> story that challenges perspectives and celebrates <span className="text-accent font-normal">diverse voices</span>.
-        </SiteBlurb>
-      </PageHeader>
+  <SiteBlurb>
+    The stage is being set for our next production—a story that <span className="text-accent font-normal">uplifts</span> diverse voices and <span className="text-accent font-normal">inspires</span> reflection.
+  </SiteBlurb>
+</PageHeader>
 
       {/* Image Section */}
       <ShowMediaSection>
