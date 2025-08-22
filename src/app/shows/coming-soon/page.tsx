@@ -94,16 +94,18 @@ export default function ComingSoonPage() {
         <div className="container mx-auto px-4">
           <div className="space-y-12">
             <ShowContentSection title="About the Production">
-              <p className="text-gray-300 text-lg leading-relaxed mb-4">
-                Little Branch Theater is preparing its next theatrical production for Spring 2026. 
-                Following the success of <em>Honey Brown Eyes</em>, we're developing another powerful 
-                story that continues our mission of bringing diverse voices to the stage.
-              </p>
-              <p className="text-gray-300 text-lg leading-relaxed">
-                Details about the production, including the play selection, cast, and specific dates, 
-                will be announced soon. Stay connected to be the first to know.
-              </p>
-            </ShowContentSection>
+  <p className="text-gray-300 text-lg leading-relaxed mb-4">
+    Little Branch is preparing for its next production, set to premiere in Spring 2026. 
+    Building on the success of our inaugural show, <em>Honey Brown Eyes</em>, we continue our 
+    commitment to telling stories that resonate with underrepresented voices and create 
+    space for community connection.
+  </p>
+  <p className="text-gray-300 text-lg leading-relaxed">
+    Amela Karadža and Jovani Zambrano, are in the process of selecting a work that challenges 
+    and inspires both artists and audiences alike. Stay tuned—details about the play, cast, 
+    and performance dates will be announced soon.
+  </p>
+</ShowContentSection>
 
             {/* Production Details - Mobile */}
             <motion.div 
@@ -139,22 +141,19 @@ export default function ComingSoonPage() {
           <div className="grid md:grid-cols-3 gap-12">
             {/* Main Content - Left 2 Columns */}
             <div className="md:col-span-2 space-y-16">
-              <ShowContentSection title="About the Production">
-                <p className="text-gray-300 text-lg leading-relaxed mb-4">
-                  Little Branch Theater is preparing its next theatrical production for Spring 2026. 
-                  Following the success of <em>Honey Brown Eyes</em>, we're developing another powerful 
-                  story that continues our mission of bringing diverse voices to the stage.
-                </p>
-                <p className="text-gray-300 text-lg leading-relaxed mb-4">
-                  Our founders, Amela Karadža and Jovani Zambrano, are carefully selecting a work that 
-                  will challenge perspectives, celebrate our community's diversity, and provide opportunities 
-                  for local artists to showcase their talents.
-                </p>
-                <p className="text-gray-300 text-lg leading-relaxed">
-                  Details about the production, including the play selection, cast, and specific dates, 
-                  will be announced soon. Stay connected to be the first to know.
-                </p>
-              </ShowContentSection>
+             <ShowContentSection title="About the Production">
+  <p className="text-gray-300 text-lg leading-relaxed mb-4">
+    Little Branch is preparing for its next production, set to premiere in Spring 2026. 
+    Building on the success of our inaugural show, <em>Honey Brown Eyes</em>, we continue our 
+    commitment to telling stories that resonate with underrepresented voices and create 
+    space for community connection.
+  </p>
+  <p className="text-gray-300 text-lg leading-relaxed">
+    Amela Karadža and Jovani Zambrano, are in the process of selecting a work that challenges 
+    and inspires both artists and audiences alike. Stay tuned—details about the play, cast, 
+    and performance dates will be announced soon.
+  </p>
+</ShowContentSection>
 
               <ShowContentSection title="Stay Connected" delay={0.2}>
                 <p className="text-gray-300 text-lg mb-6">
