@@ -168,37 +168,62 @@ export default function HoneyBrownEyesPage() {
           <div className="container mx-auto px-4">
             <div className="space-y-12">
               <ShowContentSection title="Reviews" variant="gray">
-                <div className="space-y-6">
-                  <div className="text-center">
-                    <p className="text-gray-300 italic text-lg mb-2">"Unpredictable and completely satisfying."</p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <p className="text-gray-300 italic text-lg mb-2">"A beautiful, heart-wrenching production."</p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <p className="text-gray-300 italic text-lg mb-2">"The feeling of the play is of an atomic explosion at the microscopic level."</p>
-                    <p className="text-accent text-sm">— Kemper Corner Reviews 
-                      <a href="https://www.kempercornerreviews.com/post/honey-brown-eyes" className="ml-2 underline hover:text-accent/80 transition-colors">(Read Full Review)</a>
-                    </p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <p className="text-gray-300 italic text-lg mb-2">"An explosive entrance for Little Branch."</p>
-                    <p className="text-accent text-sm">— The Spot</p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <p className="text-gray-300 italic text-lg mb-2">"Such an amazing play–could not stop talking about it."</p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <p className="text-gray-300 italic text-lg mb-2">"It was an incredible show."</p>
-                    <p className="text-accent text-sm">— Stagecoach Theatre</p>
-                  </div>
-                </div>
-              </ShowContentSection>
+  <div className="space-y-6">
+    {/* Theater Community Quotes - with attribution */}
+    <div className="text-center">
+      <p className="text-gray-300 italic text-lg mb-2">
+        "The feeling of the play is of an atomic explosion at the microscopic level."
+      </p>
+      <p className="text-accent text-sm">
+        — Kemper Corner Reviews
+        <a 
+          href="https://www.kempercornerreviews.com/post/honey-brown-eyes" 
+          className="ml-2 underline hover:text-accent/80 transition-colors"
+        >
+          (Read Full Review)
+        </a>
+      </p>
+    </div>
+    
+    <div className="text-center">
+      <p className="text-gray-300 italic text-lg mb-2">
+        "An explosive entrance for Little Branch."
+      </p>
+      <p className="text-accent text-sm">— The Spot</p>
+    </div>
+    
+    <div className="text-center">
+      <p className="text-gray-300 italic text-lg mb-2">
+        "It was an incredible show."
+      </p>
+      <p className="text-accent text-sm">— Stagecoach Theatre</p>
+    </div>
+
+    {/* Subtle spacing before audience quotes */}
+    <div className="pt-2">
+      <div className="text-center">
+        <p className="text-gray-300 italic text-lg mb-2">
+          "Unpredictable and completely satisfying."
+        </p>
+        <p className="text-accent text-sm">— From Our Audience</p>
+      </div>
+    </div>
+    
+    <div className="text-center">
+      <p className="text-gray-300 italic text-lg mb-2">
+        "A beautiful, heart-wrenching production."
+      </p>
+      <p className="text-accent text-sm">— From Our Audience</p>
+    </div>
+    
+    <div className="text-center">
+      <p className="text-gray-300 italic text-lg mb-2">
+        "Such an amazing play–could not stop talking about it."
+      </p>
+      <p className="text-accent text-sm">— From Our Audience</p>
+    </div>
+  </div>
+</ShowContentSection>
 
               <ShowContentSection title="About the Show">
                 <p className="text-gray-300 text-lg leading-relaxed mb-4">
@@ -254,38 +279,64 @@ export default function HoneyBrownEyesPage() {
             <div className="grid md:grid-cols-3 gap-12">
               {/* Main Content - Left 2 Columns */}
               <div className="md:col-span-2 space-y-16">
-                <ShowContentSection title="Reviews" variant="gray">
-                  <div className="space-y-6">
-                    <div className="text-center">
-                      <p className="text-gray-300 italic text-lg mb-2">"Unpredictable and completely satisfying."</p>
-                    </div>
-                    
-                    <div className="text-center">
-                      <p className="text-gray-300 italic text-lg mb-2">"A beautiful, heart-wrenching production."</p>
-                    </div>
-                    
-                    <div className="text-center">
-                      <p className="text-gray-300 italic text-lg mb-2">"The feeling of the play is of an atomic explosion at the microscopic level."</p>
-                      <p className="text-accent text-sm">— Kemper Corner Reviews 
-                        <a href="#" className="ml-2 underline hover:text-accent/80 transition-colors">(Read Full Review)</a>
-                      </p>
-                    </div>
-                    
-                    <div className="text-center">
-                      <p className="text-gray-300 italic text-lg mb-2">"An explosive entrance for Little Branch."</p>
-                      <p className="text-accent text-sm">— The Spot</p>
-                    </div>
-                    
-                    <div className="text-center">
-                      <p className="text-gray-300 italic text-lg mb-2">"Such an amazing play–could not stop talking about it."</p>
-                    </div>
-                    
-                    <div className="text-center">
-                      <p className="text-gray-300 italic text-lg mb-2">"It was an incredible show."</p>
-                      <p className="text-accent text-sm">— Stagecoach Theatre</p>
-                    </div>
-                  </div>
-                </ShowContentSection>
+               {/* DESKTOP LAYOUT - Reviews Section */}
+<ShowContentSection title="Reviews" variant="gray">
+  <div className="space-y-6">
+    {/* Theater Community Quotes - with attribution */}
+    <div className="text-center">
+      <p className="text-gray-300 italic text-lg mb-2">
+        "The feeling of the play is of an atomic explosion at the microscopic level."
+      </p>
+      <p className="text-accent text-sm">
+        — Kemper Corner Reviews
+        <a 
+          href="https://www.kempercornerreviews.com/post/honey-brown-eyes" 
+          className="ml-2 underline hover:text-accent/80 transition-colors"
+        >
+          (Read Full Review)
+        </a>
+      </p>
+    </div>
+    
+    <div className="text-center">
+      <p className="text-gray-300 italic text-lg mb-2">
+        "An explosive entrance for Little Branch."
+      </p>
+      <p className="text-accent text-sm">— The Spot</p>
+    </div>
+    
+    <div className="text-center">
+      <p className="text-gray-300 italic text-lg mb-2">
+        "It was an incredible show."
+      </p>
+      <p className="text-accent text-sm">— Stagecoach Theatre</p>
+    </div>
+
+    {/* Subtle spacing before audience quotes */}
+    <div className="pt-2">
+      <div className="text-center">
+        <p className="text-gray-300 italic text-lg mb-2">
+          "Unpredictable and completely satisfying."
+        </p>
+        <p className="text-accent text-sm">— From Our Audience</p>
+      </div>
+    </div>
+    
+    <div className="text-center">
+      <p className="text-gray-300 italic text-lg mb-2">
+        "A beautiful, heart-wrenching production."
+      </p>
+      <p className="text-accent text-sm">— From Our Audience</p>
+    </div>
+    
+    <div className="text-center">
+      <p className="text-gray-300 italic text-lg mb-2">
+        "Such an amazing play–could not stop talking about it."
+      </p>
+      <p className="text-accent text-sm">— From Our Audience</p>
+    </div>
+  </div>
+</ShowContentSection>
 
                 <ShowContentSection title="About the Show" delay={0.2}>
                   <p className="text-gray-300 text-lg leading-relaxed mb-4">
