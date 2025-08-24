@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import PageHeader, { SiteBlurb } from "@/components/PageHeader";
-import Link from "next/link";
 import ShowMediaSection from "@/components/show/ShowMediaSection";
 import ShowDateVenue from "@/components/show/ShowDateVenue";
 import ShowContentSection from "@/components/show/ShowContentSection";
@@ -69,23 +68,7 @@ export default function ComingSoonPage() {
 
       <ShowDateVenue dates="Spring 2026" venue="Venue TBD" />
 
-      {/* CTA Button */}
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="mt-8 mb-12 flex justify-center">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-          >
-            <Link
-              href="/get-involved"
-              className="bg-accent hover:bg-accent/90 text-white py-3 px-12 rounded-md text-center transition-all duration-200 transform hover:scale-[1.02] text-lg font-medium shadow-md shadow-black/20"
-            >
-              Stay Updated
-            </Link>
-          </motion.div>
-        </div>
-      </div>
+
 
       {/* Subtle divider */}
       <div className="w-24 h-px bg-accent/30 mx-auto mb-8"></div>
