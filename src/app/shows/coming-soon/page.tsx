@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import PageHeader, { SiteBlurb } from "@/components/PageHeader";
+import Link from "next/link";
 import ShowMediaSection from "@/components/show/ShowMediaSection";
 import ShowDateVenue from "@/components/show/ShowDateVenue";
 import ShowContentSection from "@/components/show/ShowContentSection";
@@ -71,7 +72,7 @@ export default function ComingSoonPage() {
 
 
       {/* Subtle divider */}
-      <div className="w-24 h-px bg-accent/30 mx-auto mb-8"></div>
+      <div className="w-24 h-px bg-accent/30 mx-auto my-6"></div>
 
       {/* MOBILE LAYOUT */}
       <section className="py-16 bg-black md:hidden">

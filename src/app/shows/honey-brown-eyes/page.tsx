@@ -209,7 +209,7 @@ export default function HoneyBrownEyesPage() {
         />
 
         {/* Subtle divider */}
-        <div className="w-24 h-px bg-accent/30 mx-auto mb-8"></div>
+        <div className="w-24 h-px bg-accent/30 mx-auto my-6"></div>
 
         {/* MOBILE LAYOUT */}
         <section className="py-16 bg-black md:hidden">
