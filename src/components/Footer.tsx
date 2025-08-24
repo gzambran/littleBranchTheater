@@ -65,13 +65,13 @@ export default function Footer() {
             <h4 className="font-bold mb-4 text-left">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/shows/upcoming" className="text-gray-300 hover:text-accent">
-                  Upcoming Show
+                <Link href="/productions" className="text-gray-300 hover:text-accent">
+                  Productions
                 </Link>
               </li>
               <li>
-                <Link href="/ensemble" className="text-gray-300 hover:text-accent">
-                  Meet the Ensemble
+                <Link href="/get-involved" className="text-gray-300 hover:text-accent">
+                  Get Involved
                 </Link>
               </li>
               <li>
