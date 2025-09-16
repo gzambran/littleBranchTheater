@@ -6,7 +6,7 @@ export const metadata = {
   openGraph: {
     title: 'Honey Brown Eyes | Little Branch',
     description: 'Experience Honey Brown Eyes, a powerful production by Little Branch. Running May 23-June 1, 2025 at Visual Arts Collective in Garden City, Idaho.',
-    url: 'https://www.littlebranchtheater.org/shows/upcoming',
+    url: 'https://www.littlebranchtheater.org/productions/honey-brown-eyes',
     siteName: 'Little Branch Theater',
     images: [
       {

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Coming Soon | Little Branch Theater',
     description: 'Little Branch Theater is preparing for its next production, set to premiere in Spring 2026. Stay updated on auditions, show announcements, and ticket sales.',
-    url: 'https://littlebranch.theater/shows/coming-soon',
+    url: 'https://littlebranch.theater/productions/coming-soon',
     siteName: 'Little Branch Theater',
     images: [
       {

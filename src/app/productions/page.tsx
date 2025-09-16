@@ -29,7 +29,7 @@ export default function ProductionsPage() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="group"
             >
-              <Link href="/shows/coming-soon" className="block">
+              <Link href="/productions/coming-soon" className="block">
                 <div className="relative aspect-[16/9] bg-black rounded-lg overflow-hidden group-hover:scale-105 transition-transform duration-300">
                   <Image 
                     src="/images/comingsoon.png"
@@ -58,7 +58,7 @@ export default function ProductionsPage() {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="group"
             >
-              <Link href="/shows/honey-brown-eyes" className="block">
+              <Link href="/productions/honey-brown-eyes" className="block">
                 <div className="relative aspect-[16/9] bg-black rounded-lg overflow-hidden group-hover:scale-105 transition-transform duration-300">
                   <Image 
                     src="/images/honeybrowneyes.webp"

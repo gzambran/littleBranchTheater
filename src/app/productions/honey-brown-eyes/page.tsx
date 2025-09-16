@@ -45,7 +45,7 @@ export default function HoneyBrownEyesPage() {
       </div>
 
       <SocialShare
-        shareUrl="https://littlebranch.theater/shows/honey-brown-eyes"
+        shareUrl="https://littlebranch.theater/productions/honey-brown-eyes"
         shareText="Honey Brown Eyes at Little Branch Theater"
       />
     </div>

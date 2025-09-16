@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Productions | Little Branch Theater',
-  description: 'Explore Little Branch Theater\'s past and upcoming productions. From Honey Brown Eyes to our upcoming Spring 2026 show, discover stories that uplift diverse voices.',
+  description: 'Explore Little Branch Theater\'s productions. From our debut with Honey Brown Eyes to exciting new work coming in Spring 2026, discover stories that uplift diverse voices.',
   openGraph: {
     title: 'Productions | Little Branch Theater',
-    description: 'Explore Little Branch Theater\'s past and upcoming productions. From Honey Brown Eyes to our upcoming Spring 2026 show, discover stories that uplift diverse voices.',
+    description: 'Explore Little Branch Theater\'s productions. From our debut with Honey Brown Eyes to exciting new work coming in Spring 2026, discover stories that uplift diverse voices.',
     url: 'https://littlebranch.theater/productions',
     siteName: 'Little Branch Theater',
     images: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Productions | Little Branch Theater',
-    description: 'Explore Little Branch Theater\'s past and upcoming productions. Discover stories that uplift diverse voices and inspire community connection.',
+    description: 'Explore Little Branch Theater\'s productions. From our debut with Honey Brown Eyes to exciting new work coming in Spring 2026.',
     images: ['https://littlebranch.theater/images/productions-og.png'],
   },
   keywords: [
@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     'theater shows',
     'Honey Brown Eyes',
     'upcoming productions',
+    'Spring 2026',
     'community theater',
     'diverse voices',
     'theater company',
