@@ -42,3 +42,4 @@ ehthumbs.db
 Desktop.ini
 .DS_Store
 ._*
+package-lock.json
