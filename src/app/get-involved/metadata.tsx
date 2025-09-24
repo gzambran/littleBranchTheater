@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Get Involved | Little Branch Theater',
     description: 'Join Little Branch Theater\'s community! Collaborate with us as an artist, support our work, stay updated with our newsletter, and follow us on social media.',
-    url: 'https://littlebranch.theater/get-involved',
+    url: 'https://www.littlebranchtheater.org/get-involved',
     siteName: 'Little Branch Theater',
     images: [
       {
-        url: 'https://littlebranch.theater/images/get-involved-og.png',
+        url: 'https://www.littlebranchtheater.org/images/get-involved-og.png',
         width: 1200,
         height: 630,
         alt: 'Get Involved with Little Branch Theater',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Get Involved | Little Branch Theater',
     description: 'Join Little Branch Theater\'s community! Collaborate with us as an artist, support our work, and stay updated with our newsletter.',
-    images: ['https://littlebranch.theater/images/get-involved-og.png'],
+    images: ['https://www.littlebranchtheater.org/images/get-involved-og.png'],
   },
   keywords: [
     'Little Branch Theater volunteer',
@@ -37,4 +37,7 @@ export const metadata: Metadata = {
     'performing arts',
     'theater opportunities'
   ],
+  alternates: {
+    canonical: 'https://www.littlebranchtheater.org/get-involved',
+  },
 };

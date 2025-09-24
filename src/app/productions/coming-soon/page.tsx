@@ -35,7 +35,7 @@ export default function ComingSoonPage() {
       </div>
 
       <SocialShare
-        shareUrl="https://littlebranch.theater/shows/coming-soon"
+        shareUrl="https://www.littlebranchtheater.org/productions/coming-soon"
         shareText="Little Branch Theater - Coming Soon"
       />
     </div>

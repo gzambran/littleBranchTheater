@@ -1,7 +1,16 @@
-# robots.txt for Little Branch
+# robots.txt for Little Branch Theater
 User-agent: *
 Allow: /
+
+# Block pages we don't want indexed
 Disallow: /beyond-the-lobby/
+
+# Block static assets that don't need indexing
+Disallow: /_next/static/
+Disallow: /favicon.ico
+Disallow: /*.woff2
+Disallow: /*.woff
+Disallow: /*.ttf
 
 # Sitemap location
 Sitemap: https://www.littlebranchtheater.org/sitemap.xml

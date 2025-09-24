@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Productions | Little Branch Theater',
     description: 'Explore Little Branch Theater\'s productions. From our debut with Honey Brown Eyes to exciting new work coming in Spring 2026, discover stories that uplift diverse voices.',
-    url: 'https://littlebranch.theater/productions',
+    url: 'https://www.littlebranchtheater.org/productions',
     siteName: 'Little Branch Theater',
     images: [
       {
-        url: 'https://littlebranch.theater/images/productions-og.png',
+        url: 'https://www.littlebranchtheater.org/images/productions-og.png',
         width: 1200,
         height: 630,
         alt: 'Little Branch Theater Productions',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Productions | Little Branch Theater',
     description: 'Explore Little Branch Theater\'s productions. From our debut with Honey Brown Eyes to exciting new work coming in Spring 2026.',
-    images: ['https://littlebranch.theater/images/productions-og.png'],
+    images: ['https://www.littlebranchtheater.org/images/productions-og.png'],
   },
   keywords: [
     'Little Branch Theater productions',
@@ -37,4 +37,8 @@ export const metadata: Metadata = {
     'live performance',
     'theatrical productions'
   ],
+  // Add explicit canonical URL
+  alternates: {
+    canonical: 'https://www.littlebranchtheater.org/productions',
+  },
 };
