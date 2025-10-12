@@ -21,10 +21,10 @@ export default function GetInvolvedPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             
-            {/* Two Column Layout for Desktop, Stack on Mobile */}
-            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto md:items-stretch">
+            {/* Three Box Layout - 2 on top, 1 centered below */}
+            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
               
-              {/* Collaborate With Us Section */}
+              {/* Box 1: Collaborate With Us */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ export default function GetInvolvedPage() {
                 </div>
               </motion.div>
 
-              {/* Newsletter Section */}
+              {/* Box 2: Stay Updated (Newsletter) */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -93,6 +93,47 @@ export default function GetInvolvedPage() {
 
                 <div className="flex justify-center mt-auto">
                   <Newsletter />
+                </div>
+              </motion.div>
+
+              {/* Box 3: Support Little Branch - Centered below the other two */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="md:col-span-2 md:max-w-[calc(50%-1rem)] md:mx-auto bg-gradient-to-br from-gray-900/50 to-black/50 p-8 rounded-lg border border-gray-800 hover:border-accent/30 transition-all duration-300 flex flex-col group"
+              >
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </div>
+                  <h2 className="font-display text-2xl md:text-3xl text-white">Support Little Branch</h2>
+                </div>
+                
+                <div className="flex-grow">
+                  <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-6">
+                    Your support helps us bring bold, innovative theater to our community. Every contribution directly funds our productions, supports our artists, and keeps ticket prices accessible.
+                  </p>
+                  
+                  <p className="text-gray-300 mb-8">
+                    With your help, we can continue creating meaningful theatrical experiences that inspire, challenge, and bring people together.
+                  </p>
+                </div>
+                
+                <div className="text-center mt-auto">
+                  <motion.a
+                    href="https://square.link/u/UO5LLWNE?src=embed"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-accent hover:bg-accent/90 text-black font-bold py-3 px-6 md:px-8 rounded-full transition-all duration-200 transform hover:scale-105 shadow-lg shadow-accent/20"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Support
+                  </motion.a>
                 </div>
               </motion.div>
             </div>
