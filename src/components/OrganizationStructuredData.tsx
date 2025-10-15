@@ -5,8 +5,8 @@ export default function OrganizationStructuredData() {
     '@context': 'https://schema.org',
     '@type': 'TheaterGroup',
     name: 'Little Branch Theater Company',
-    url: 'https://littlebranchtheater.org',
-    logo: 'https://littlebranchtheater.org/images/logo.svg',
+    url: 'https://www.littlebranchtheater.org',
+    logo: 'https://www.littlebranchtheater.org/images/logo.svg',
     location: {
       '@type': 'Place',
       name: 'Visual Arts Collective',

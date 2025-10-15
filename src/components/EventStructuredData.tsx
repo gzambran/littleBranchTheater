@@ -39,7 +39,7 @@ export default function EventStructuredData({
   validFrom = "2025-01-01T00:00:00-06:00",
   eventStatus = "https://schema.org/EventScheduled",
   eventAttendanceMode = "https://schema.org/OfflineEventAttendanceMode",
-  organizer = { name: "Little Branch Theater Company", url: "https://littlebranchtheater.org" }
+  organizer = { name: "Little Branch Theater Company", url: "https://www.littlebranchtheater.org" }
 }: EventStructuredDataProps) {
   const jsonLd = {
     '@context': 'https://schema.org',
