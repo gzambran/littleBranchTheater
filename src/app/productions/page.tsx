@@ -22,7 +22,7 @@ export default function ProductionsPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             
-            {/* Coming Soon Card */}
+            {/* Coming Soon Card - Sanctuary City */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -32,8 +32,8 @@ export default function ProductionsPage() {
               <Link href="/productions/coming-soon" className="block">
                 <div className="relative aspect-[16/9] bg-black rounded-lg overflow-hidden group-hover:scale-105 transition-transform duration-300">
                   <Image 
-                    src="/images/comingsoon.png"
-                    alt="Coming Soon"
+                    src="/images/sanctuary-city-promo.jpeg"
+                    alt="Sanctuary City by Martyna Majok"
                     fill
                     className="object-contain"
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -42,7 +42,10 @@ export default function ProductionsPage() {
                 
                 {/* Card Content */}
                 <div className="mt-4 text-center">
-                  <h2 className="text-white text-xl font-display mb-2 group-hover:text-accent transition-colors">TBD</h2>
+                  <h2 className="text-white text-xl font-display mb-2 group-hover:text-accent transition-colors">
+                    Sanctuary City
+                  </h2>
+                  <p className="text-gray-400 text-sm mb-1">by Martyna Majok</p>
                   <p className="text-gray-400 text-sm mb-1">
                     Directed by Amela Karadža and Jovani Zambrano
                   </p>
