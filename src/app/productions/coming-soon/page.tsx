@@ -60,7 +60,7 @@ export default function ComingSoonPage() {
       <ShowMediaSection>
         <div className="relative aspect-[16/9]">
           <Image
-            src="/images/Sanctuary-city-promo.jpeg"
+            src="/images/sanctuary-city-promo.jpeg"
             alt="Sanctuary City by Martyna Majok - Coming Spring 2026"
             fill
             className="object-contain"
