@@ -39,7 +39,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative max-w-5xl mx-auto"
           >
-            <Link href="/shows/honey-brown-eyes" className="group block">
+            <Link href="/productions/honey-brown-eyes" className="group block">
               <div className="rounded-xl overflow-hidden shadow-[0_0_40px_rgba(166,226,46,0.15)] border border-accent/20 transition-all duration-300 group-hover:shadow-[0_0_50px_rgba(166,226,46,0.25)] group-hover:border-accent/30">
                 <div className="relative aspect-[16/10]">
                   <Image
