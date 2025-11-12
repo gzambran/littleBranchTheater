@@ -182,7 +182,7 @@ export default function WhoWeAre() {
         viewport={{ once: true }}
       >
         {/* Subtle background texture */}
-        <div className="absolute inset-0 opacity-5 bg-[url('/images/texture.png')] bg-repeat"></div>
+        <div className="absolute inset-0 opacity-5 bg-gradient-to-br from-gray-800/20 to-transparent"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto">

@@ -179,7 +179,7 @@ export default function HoneyBrownEyesPage() {
         ticketUrl="https://alleyreptheater.thundertix.com/events/236398"
         doorTime="2025-05-23T19:00:00-06:00"
         performer="Little Branch Theater"
-        image="https://www.littlebranchtheater.org/images/honeybrowneyes.png"
+        image="https://www.littlebranchtheater.org/images/honeybrowneyes.webp"
       />
 
       <div className="min-h-screen bg-black">

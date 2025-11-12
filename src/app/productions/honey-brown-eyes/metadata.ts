@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     siteName: 'Little Branch Theater',
     images: [
       {
-        url: 'https://www.littlebranchtheater.org/images/honeybrowneyes.png',
+        url: 'https://www.littlebranchtheater.org/images/honeybrowneyes.webp',
         width: 1200,
         height: 630,
         alt: 'Honey Brown Eyes production',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Honey Brown Eyes | Little Branch Theater',
     description: 'Honey Brown Eyes was Little Branch Theater\'s powerful debut production. Ran May 22-June 1, 2025.',
-    images: ['https://www.littlebranchtheater.org/images/honeybrowneyes.png'],
+    images: ['https://www.littlebranchtheater.org/images/honeybrowneyes.webp'],
   },
   keywords: [
     'Honey Brown Eyes',
