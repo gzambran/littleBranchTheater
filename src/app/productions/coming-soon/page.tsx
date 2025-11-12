@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import PageHeader, { SiteBlurb } from "@/components/PageHeader";
-import Link from "next/link";
 import ShowMediaSection from "@/components/show/ShowMediaSection";
 import ShowDateVenue from "@/components/show/ShowDateVenue";
 import ShowContentSection from "@/components/show/ShowContentSection";
@@ -61,7 +60,7 @@ export default function ComingSoonPage() {
       <ShowMediaSection>
         <div className="relative aspect-[16/9]">
           <Image
-            src="/images/sanctuary-city-promo.jpeg"
+            src="/images/Sanctuary-city-promo.jpeg"
             alt="Sanctuary City by Martyna Majok - Coming Spring 2026"
             fill
             className="object-contain"
