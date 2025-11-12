@@ -20,6 +20,11 @@ export default function ComingSoonPage() {
   const productionDetailsContent = (
     <div className="space-y-6 text-gray-300">
       <div>
+        <h4 className="font-medium mb-2">Play</h4>
+        <p className="text-xl font-display">Sanctuary City</p>
+        <p className="text-sm text-gray-400">by Martyna Majok</p>
+      </div>
+      <div>
         <h4 className="font-medium mb-2">Timeline</h4>
         <p>Spring 2026</p>
         <p className="text-sm">Exact dates to be announced</p>
@@ -36,7 +41,7 @@ export default function ComingSoonPage() {
 
       <SocialShare
         shareUrl="https://www.littlebranchtheater.org/productions/coming-soon"
-        shareText="Little Branch Theater - Coming Soon"
+        shareText="Little Branch Theater presents Sanctuary City by Martyna Majok - Spring 2026"
       />
     </div>
   );
@@ -46,10 +51,9 @@ export default function ComingSoonPage() {
       {/* PageHeader Component with Show Description */}
       <PageHeader>
         <SiteBlurb>
-          The stage is being set for our next production—a story that{" "}
-          <span className="text-accent font-normal">uplifts</span> diverse
-          voices and <span className="text-accent font-normal">inspires</span>{" "}
-          reflection.
+          An intimate story of friendship, identity, and the{" "}
+          <span className="text-accent font-normal">courage</span> it takes to{" "}
+          <span className="text-accent font-normal">fight</span> for the future you deserve.
         </SiteBlurb>
       </PageHeader>
 
@@ -57,8 +61,8 @@ export default function ComingSoonPage() {
       <ShowMediaSection>
         <div className="relative aspect-[16/9]">
           <Image
-            src="/images/comingsoon.png"
-            alt="Coming Soon"
+            src="/images/sanctuary-city-promo.jpeg"
+            alt="Sanctuary City by Martyna Majok - Coming Spring 2026"
             fill
             className="object-contain"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1280px"
@@ -69,8 +73,6 @@ export default function ComingSoonPage() {
 
       <ShowDateVenue dates="Spring 2026" venue="Venue TBD" />
 
-
-
       {/* Subtle divider */}
       <div className="w-24 h-px bg-accent/30 mx-auto my-6"></div>
 
@@ -78,20 +80,12 @@ export default function ComingSoonPage() {
       <section className="py-16 bg-black md:hidden">
         <div className="container mx-auto px-4">
           <div className="space-y-12">
-            <ShowContentSection title="About the Production">
+            <ShowContentSection title="About Sanctuary City">
               <p className="text-gray-300 text-lg leading-relaxed mb-4">
-                Little Branch is preparing for its next production, set to
-                premiere in Spring 2026. Building on the success of our
-                inaugural show, <em>Honey Brown Eyes</em>, we continue our
-                commitment to telling stories that resonate with
-                underrepresented voices and create space for community
-                connection.
+                In post-9/11 Newark, NJ, two teenagers who were brought to America as children become one another's sanctuaries from harsh circumstances. When G becomes naturalized, she and B hatch a plan so that he may legally remain in the country and pursue the future he imagines for his life. But as time hurtles on and complications mount, the young friends find that this plan challenges and fractures the closest relationship either has ever had.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed">
-                Amela Karadža and Jovani Zambrano, are in the process of
-                selecting a work that challenges and inspires both artists and
-                audiences alike. Stay tuned—details about the play, cast, and
-                performance dates will be announced soon.
+                Written by Pulitzer Prize-winning playwright Martyna Majok, <em>Sanctuary City</em> is a powerful exploration of friendship, love, and what it means to find home in an uncertain world.
               </p>
             </ShowContentSection>
 
@@ -124,7 +118,7 @@ export default function ComingSoonPage() {
                 </div>
                 <h3 className="font-display text-2xl text-white mb-3">Stay Updated</h3>
                 <p className="text-gray-300 mb-6">
-                  Be the first to know about auditions, show announcements, and ticket sales.
+                  Be the first to know about auditions, show announcements, and ticket sales for <em>Sanctuary City</em>.
                 </p>
               </div>
 
@@ -142,20 +136,12 @@ export default function ComingSoonPage() {
           <div className="grid md:grid-cols-3 gap-12">
             {/* Main Content - Left 2 Columns */}
             <div className="md:col-span-2 space-y-16">
-              <ShowContentSection title="About the Production">
+              <ShowContentSection title="About Sanctuary City">
                 <p className="text-gray-300 text-lg leading-relaxed mb-4">
-                  Little Branch is preparing for its next production, set to
-                  premiere in Spring 2026. Building on the success of our
-                  inaugural show, <em>Honey Brown Eyes</em>, we continue our
-                  commitment to telling stories that resonate with
-                  underrepresented voices and create space for community
-                  connection.
+                  In post-9/11 Newark, NJ, two teenagers who were brought to America as children become one another's sanctuaries from harsh circumstances. When G becomes naturalized, she and B hatch a plan so that he may legally remain in the country and pursue the future he imagines for his life. But as time hurtles on and complications mount, the young friends find that this plan challenges and fractures the closest relationship either has ever had.
                 </p>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  Amela Karadža and Jovani Zambrano, are in the process of
-                  selecting a work that challenges and inspires both artists and
-                  audiences alike. Stay tuned—details about the play, cast, and
-                  performance dates will be announced soon.
+                  Written by Pulitzer Prize-winning playwright Martyna Majok, <em>Sanctuary City</em> is a powerful exploration of friendship, love, and what it means to find home in an uncertain world.
                 </p>
               </ShowContentSection>
 
@@ -175,7 +161,7 @@ export default function ComingSoonPage() {
                   </div>
                   <h3 className="font-display text-2xl text-white mb-3">Stay Updated</h3>
                   <p className="text-gray-300 mb-6">
-                    Be the first to know about auditions, show announcements, and ticket sales.
+                    Be the first to know about auditions, show announcements, and ticket sales for <em>Sanctuary City</em>.
                   </p>
                 </div>
 
