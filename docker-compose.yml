@@ -4,10 +4,14 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: little-branch-site
-    ports:
-      - "3001:3003"
     stdin_open: true
     tty: true
     volumes:
       - ./public:/app/public
     restart: unless-stopped
+    networks:
+      - shared
+
+networks:
+  shared:
+    external: true
