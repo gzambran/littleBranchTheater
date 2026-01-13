@@ -49,21 +49,21 @@ export default function Home() {
                   {/* Lighter Gradient Overlay for Text */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 
-                  {/* Production Info Overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 p-8">
+             {/* Production Info Overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 p-3 md:p-8">
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.7, delay: 0.3 }}
                       className="text-center"
                     >
-                      <h2 className="font-display text-3xl md:text-4xl text-white mb-2 group-hover:text-accent transition-colors">
+                      <h2 className="font-display text-xl md:text-4xl text-white mb-1 md:mb-2 group-hover:text-accent transition-colors">
                         Sanctuary City
                       </h2>
-                      <p className="text-gray-300 text-lg italic mb-2">
+                      <p className="text-gray-300 text-sm md:text-lg italic mb-0.5 md:mb-2">
                         by Martyna Majok
                       </p>
-                      <p className="text-accent text-xl font-medium">
+                      <p className="text-accent text-base md:text-xl font-medium">
                         May 2026
                       </p>
                     </motion.div>
