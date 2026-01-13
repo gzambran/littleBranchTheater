@@ -9,13 +9,10 @@ import ShowDateVenue from "@/components/show/ShowDateVenue";
 import ShowContentSection from "@/components/show/ShowContentSection";
 import ShowSidebar from "@/components/show/ShowSidebar";
 import SocialShare from "@/components/show/SocialShare";
-import Newsletter from "@/components/newsletter/Newsletter";
-import "@/components/newsletter/newsletter.css";
 
 export const revalidate = 3600;
 
-export default function ComingSoonPage() {
-  // Production Details content (shared between mobile and desktop)
+export default function SanctuaryCityPage() {
   const productionDetailsContent = (
     <div className="space-y-6 text-gray-300">
       <div>
@@ -24,9 +21,9 @@ export default function ComingSoonPage() {
         <p className="text-sm text-gray-400">by Martyna Majok</p>
       </div>
       <div>
-        <h4 className="font-medium mb-2">Timeline</h4>
-        <p>Spring 2026</p>
-        <p className="text-sm">Exact dates to be announced</p>
+        <h4 className="font-medium mb-2">Performance Dates</h4>
+        <p className="text-lg font-medium text-white">May 2026</p>
+        <p className="text-sm mt-1">Dates and times to be announced</p>
       </div>
       <div>
         <h4 className="font-medium mb-2">Directors</h4>
@@ -39,15 +36,14 @@ export default function ComingSoonPage() {
       </div>
 
       <SocialShare
-        shareUrl="https://www.littlebranchtheater.org/productions/coming-soon"
-        shareText="Little Branch Theater presents Sanctuary City by Martyna Majok - Spring 2026"
+        shareUrl="https://www.littlebranchtheater.org/productions/sanctuary-city"
+        shareText="Little Branch Theater presents Sanctuary City by Martyna Majok - May 2026"
       />
     </div>
   );
 
   return (
     <div className="min-h-screen bg-black">
-      {/* PageHeader Component with Show Description */}
       <PageHeader>
         <SiteBlurb>
           An intimate story of friendship, identity, and the{" "}
@@ -56,12 +52,11 @@ export default function ComingSoonPage() {
         </SiteBlurb>
       </PageHeader>
 
-      {/* Image Section */}
       <ShowMediaSection>
         <div className="relative aspect-[16/9]">
           <Image
-            src="/images/sanctuary-city-promo.jpeg"
-            alt="Sanctuary City by Martyna Majok - Coming Spring 2026"
+            src="/images/sanctuary-city-main.webp"
+            alt="Sanctuary City by Martyna Majok - May 2026"
             fill
             className="object-contain"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1280px"
@@ -70,12 +65,13 @@ export default function ComingSoonPage() {
         </div>
       </ShowMediaSection>
 
-      <ShowDateVenue dates="Spring 2026" venue="Venue TBD" />
+      <ShowDateVenue 
+        dates="May 7th - May 17th, 2026"
+        venue="Venue TBD" 
+      />
 
-      {/* Subtle divider */}
       <div className="w-24 h-px bg-accent/30 mx-auto my-6"></div>
 
-      {/* MOBILE LAYOUT */}
       <section className="py-16 bg-black md:hidden">
         <div className="container mx-auto px-4">
           <div className="space-y-12">
@@ -88,7 +84,6 @@ export default function ComingSoonPage() {
               </p>
             </ShowContentSection>
 
-            {/* Production Details - Mobile */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -101,39 +96,61 @@ export default function ComingSoonPage() {
               </div>
             </motion.div>
 
-            {/* Stay Updated Section - Mobile */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-gray-900/30 to-black/30 p-8 rounded-lg border border-gray-800"
+              className="bg-gradient-to-br from-accent/10 to-black/30 p-8 rounded-lg border border-accent/30"
             >
               <div className="text-center mb-6">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent/20 mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
+                <h3 className="font-display text-2xl md:text-3xl text-white mb-4">
+                  Auditions: February 15th, 2026
+                </h3>
+                
+                <div className="text-left bg-black/30 p-6 rounded-lg mb-6 space-y-3">
+                  <p className="text-gray-300">
+                    <strong className="text-white">When:</strong> Sunday, February 15th, 2026
+                  </p>
+                  <p className="text-gray-300">
+                    <strong className="text-white">Where:</strong> Xanadu (5015 Bond St, Boise, Idaho 83706)
+                  </p>
+                  <p className="text-gray-300">
+                    <strong className="text-white">What to Prepare:</strong> 60-90 second contemporary monologue
+                  </p>
+                  <p className="text-gray-300 text-sm">
+                    Each audition slot is 10 minutes. Sides will be provided. Headshots and resumes appreciated but not required.
+                  </p>
                 </div>
-                <h3 className="font-display text-2xl text-white mb-3">Stay Updated</h3>
-                <p className="text-gray-300 mb-6">
-                  Be the first to know about auditions, show announcements, and ticket sales for <em>Sanctuary City</em>.
+
+                <p className="text-gray-300 text-base mb-4">
+                  We're casting for <em>Sanctuary City</em> and future Little Branch Theater productions.
                 </p>
               </div>
 
-              <div className="flex justify-center">
-                <Newsletter />
+              <div className="text-center">
+                <motion.a
+                  href="https://www.signupgenius.com/go/10C044EA8AE23AAF8C16-61616113-sanctuary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-accent hover:bg-accent/90 text-black font-bold py-3 px-8 rounded-full transition-all duration-200 transform hover:scale-105 shadow-lg shadow-accent/20"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Sign Up for Auditions
+                </motion.a>
+                <p className="text-gray-400 text-sm mt-4">
+                  Questions? <a href="mailto:info@littlebranchtheater.org" className="text-accent hover:underline">info@littlebranchtheater.org</a>
+                </p>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* DESKTOP LAYOUT */}
       <section className="py-16 bg-black hidden md:block">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-12">
-            {/* Main Content - Left 2 Columns */}
             <div className="md:col-span-2 space-y-16">
               <ShowContentSection title="About Sanctuary City">
                 <p className="text-gray-300 text-lg leading-relaxed mb-4">
@@ -144,33 +161,56 @@ export default function ComingSoonPage() {
                 </p>
               </ShowContentSection>
 
-              {/* Stay Updated Section - Desktop */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-gray-900/30 to-black/30 p-8 rounded-lg border border-gray-800"
+                className="bg-gradient-to-br from-accent/10 to-black/30 p-8 rounded-lg border border-accent/30"
               >
                 <div className="text-center mb-6">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent/20 mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
+                  <h3 className="font-display text-2xl md:text-3xl text-white mb-4">
+                    Auditions: February 15th, 2026
+                  </h3>
+                  
+                  <div className="text-left bg-black/30 p-6 rounded-lg mb-6 space-y-3">
+                    <p className="text-gray-300">
+                      <strong className="text-white">When:</strong> Sunday, February 15th, 2026
+                    </p>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Where:</strong> Xanadu (5015 Bond St, Boise, Idaho 83706)
+                    </p>
+                    <p className="text-gray-300">
+                      <strong className="text-white">What to Prepare:</strong> 60-90 second contemporary monologue
+                    </p>
+                    <p className="text-gray-300 text-sm">
+                      Each audition slot is 10 minutes. Sides will be provided. Headshots and resumes appreciated but not required.
+                    </p>
                   </div>
-                  <h3 className="font-display text-2xl text-white mb-3">Stay Updated</h3>
-                  <p className="text-gray-300 mb-6">
-                    Be the first to know about auditions, show announcements, and ticket sales for <em>Sanctuary City</em>.
+
+                  <p className="text-gray-300 text-base mb-4">
+                    We're casting for <em>Sanctuary City</em> and future Little Branch Theater productions.
                   </p>
                 </div>
 
-                <div className="flex justify-center">
-                  <Newsletter />
+                <div className="text-center">
+                  <motion.a
+                    href="https://www.signupgenius.com/go/10C044EA8AE23AAF8C16-61616113-sanctuary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-accent hover:bg-accent/90 text-black font-bold py-3 px-8 rounded-full transition-all duration-200 transform hover:scale-105 shadow-lg shadow-accent/20"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Sign Up for Auditions
+                  </motion.a>
+                  <p className="text-gray-400 text-sm mt-4">
+                    Questions? <a href="mailto:info@littlebranchtheater.org" className="text-accent hover:underline">info@littlebranchtheater.org</a>
+                  </p>
                 </div>
               </motion.div>
             </div>
 
-            {/* Sidebar - Right Column */}
             <div>
               <ShowSidebar title="Production Details">
                 {productionDetailsContent}
