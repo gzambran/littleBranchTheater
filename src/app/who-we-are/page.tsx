@@ -38,13 +38,8 @@ export default function WhoWeAre() {
     <div className="min-h-screen bg-black">
       <PageHeader>
         <SiteBlurb>
-          Little Branch is a Boise-based theater company committed to creating{" "}
-          <span className="text-accent font-normal">intimate</span>, emotionally{" "}
-          <span className="text-accent font-normal">honest</span> work that
-          embraces <span className="text-accent font-normal">curiosity</span>,{" "}
-          <span className="text-accent font-normal">risk</span>, and{" "}
-          <span className="text-accent font-normal">connection</span>.
-        </SiteBlurb>
+  The <span className="text-accent font-normal">artists</span>, the <span className="text-accent font-normal">story</span>, and the <span className="text-accent font-normal">vision</span> behind Little Branch.
+</SiteBlurb>
       </PageHeader>
 
       {/* Founders Section */}
