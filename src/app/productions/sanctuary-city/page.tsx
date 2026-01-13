@@ -69,9 +69,9 @@ export default function SanctuaryCityPage() {
       </ShowMediaSection>
 
       <ShowDateVenue 
-        dates={<>May 7<sup className="text-xs">th</sup> - May 17<sup className="text-xs">th</sup>, 2026</>}
-        venue="Venue TBD" 
-      />
+  dates="May 7th - May 17th, 2026"
+  venue="Venue TBD" 
+/>
 
       {/* Subtle divider */}
       <div className="w-24 h-px bg-accent/30 mx-auto my-6"></div>
