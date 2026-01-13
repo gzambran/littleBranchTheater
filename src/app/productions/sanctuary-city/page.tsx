@@ -13,7 +13,6 @@ import SocialShare from "@/components/show/SocialShare";
 export const revalidate = 3600;
 
 export default function SanctuaryCityPage() {
-  // Production Details content (shared between mobile and desktop)
   const productionDetailsContent = (
     <div className="space-y-6 text-gray-300">
       <div>
@@ -45,7 +44,6 @@ export default function SanctuaryCityPage() {
 
   return (
     <div className="min-h-screen bg-black">
-      {/* PageHeader Component with Show Description */}
       <PageHeader>
         <SiteBlurb>
           An intimate story of friendship, identity, and the{" "}
@@ -54,7 +52,6 @@ export default function SanctuaryCityPage() {
         </SiteBlurb>
       </PageHeader>
 
-      {/* Image Section */}
       <ShowMediaSection>
         <div className="relative aspect-[16/9]">
           <Image
@@ -69,14 +66,12 @@ export default function SanctuaryCityPage() {
       </ShowMediaSection>
 
       <ShowDateVenue 
-  dates="May 7th - May 17th, 2026"
-  venue="Venue TBD" 
-/>
+        dates="May 7th - May 17th, 2026"
+        venue="Venue TBD" 
+      />
 
-      {/* Subtle divider */}
       <div className="w-24 h-px bg-accent/30 mx-auto my-6"></div>
 
-      {/* MOBILE LAYOUT */}
       <section className="py-16 bg-black md:hidden">
         <div className="container mx-auto px-4">
           <div className="space-y-12">
@@ -89,7 +84,6 @@ export default function SanctuaryCityPage() {
               </p>
             </ShowContentSection>
 
-            {/* Production Details - Mobile */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -102,7 +96,6 @@ export default function SanctuaryCityPage() {
               </div>
             </motion.div>
 
-            {/* Audition Announcement - Mobile */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -155,11 +148,9 @@ export default function SanctuaryCityPage() {
         </div>
       </section>
 
-      {/* DESKTOP LAYOUT */}
       <section className="py-16 bg-black hidden md:block">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-12">
-            {/* Main Content - Left 2 Columns */}
             <div className="md:col-span-2 space-y-16">
               <ShowContentSection title="About Sanctuary City">
                 <p className="text-gray-300 text-lg leading-relaxed mb-4">
@@ -170,7 +161,6 @@ export default function SanctuaryCityPage() {
                 </p>
               </ShowContentSection>
 
-              {/* Audition Announcement - Desktop */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -221,7 +211,6 @@ export default function SanctuaryCityPage() {
               </motion.div>
             </div>
 
-            {/* Sidebar - Right Column */}
             <div>
               <ShowSidebar title="Production Details">
                 {productionDetailsContent}
