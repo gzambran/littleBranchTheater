@@ -22,17 +22,17 @@ export default function ProductionsPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             
-            {/* Coming Soon Card - Sanctuary City */}
+            {/* Sanctuary City Card */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
               className="group"
             >
-              <Link href="/productions/coming-soon" className="block">
+              <Link href="/productions/sanctuary-city" className="block">
                 <div className="relative aspect-[16/9] bg-black rounded-lg overflow-hidden group-hover:scale-105 transition-transform duration-300">
                   <Image 
-                    src="/images/sanctuary-city-promo.jpeg"
+                    src="/images/sanctuary-city-main.webp"
                     alt="Sanctuary City by Martyna Majok"
                     fill
                     className="object-contain"
@@ -49,7 +49,9 @@ export default function ProductionsPage() {
                   <p className="text-gray-400 text-sm mb-1">
                     Directed by Amela Karadža and Jovani Zambrano
                   </p>
-                  <p className="text-accent text-lg font-medium">Spring 2026</p>
+                  <p className="text-accent text-lg font-medium">
+                    May 7<sup className="text-xs">th</sup> - May 17<sup className="text-xs">th</sup> 2026
+                  </p>
                 </div>
               </Link>
             </motion.div>
@@ -82,7 +84,7 @@ export default function ProductionsPage() {
                     Directed by Amela Karadža and John Wicks
                   </p>
                   <p className="text-accent text-lg font-medium">
-                    May 22<sup>nd</sup> - June 1<sup>st</sup> 2025
+                    May 22<sup className="text-xs">nd</sup> - June 1<sup className="text-xs">st</sup> 2025
                   </p>
                 </div>
               </Link>
