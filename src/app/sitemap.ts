@@ -53,12 +53,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     
-    // Future shows - Medium priority, more dynamic content
+    // Upcoming production
     {
-      url: `${baseUrl}/productions/coming-soon`,
+      url: `${baseUrl}/productions/sanctuary-city`,
       lastModified,
       changeFrequency: 'weekly',
-      priority: 0.6,
+      priority: 0.9,
     },
   ]
 
