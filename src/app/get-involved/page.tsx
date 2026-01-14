@@ -26,10 +26,9 @@ export default function GetInvolvedPage() {
               
               {/* Box 1: Collaborate With Us */}
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={false}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
-                viewport={{ once: true }}
                 className="bg-gradient-to-br from-gray-900/50 to-black/50 p-8 rounded-lg border border-gray-800 hover:border-accent/30 transition-all duration-300 flex flex-col group"
               >
                 <div className="flex items-center mb-6">
@@ -67,10 +66,9 @@ export default function GetInvolvedPage() {
 
               {/* Box 2: Stay Updated (Newsletter) */}
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.1 }}
-                viewport={{ once: true }}
+                initial={false}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
                 className="bg-gradient-to-br from-gray-900/30 to-black/30 p-8 rounded-lg border border-gray-800 hover:border-accent/30 transition-all duration-300 flex flex-col group"
               >
                 <div className="flex items-center mb-6">
@@ -98,10 +96,9 @@ export default function GetInvolvedPage() {
 
               {/* Box 3: Support Little Branch - Centered below the other two */}
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.2 }}
-                viewport={{ once: true }}
+                initial={false}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
                 className="md:col-span-2 md:max-w-[calc(50%-1rem)] md:mx-auto bg-gradient-to-br from-gray-900/50 to-black/50 p-8 rounded-lg border border-gray-800 hover:border-accent/30 transition-all duration-300 flex flex-col group"
               >
                 <div className="flex items-center mb-6">
@@ -140,10 +137,9 @@ export default function GetInvolvedPage() {
 
             {/* Additional Ways to Connect */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={false}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
               className="mt-16 text-center"
             >
               <h3 className="font-display text-2xl text-white mb-8">Follow Us on Social Media</h3>
