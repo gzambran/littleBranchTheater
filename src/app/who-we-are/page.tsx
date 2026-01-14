@@ -170,7 +170,7 @@ export default function WhoWeAre() {
 
       {/* Our Story Section */}
       <motion.section
-        className="py-16 bg-gray-900 relative"
+        className="py-16 bg-gray-950 relative"
         variants={fadeIn}
         initial="hidden"
         whileInView="visible"
@@ -189,7 +189,7 @@ export default function WhoWeAre() {
             </motion.h2>
             <motion.div
               variants={fadeIn}
-              className="p-8 rounded-lg border-l-2 border-r-2 border-accent/30 shadow-[0_5px_25px_rgba(217,119,6,0.15)] bg-gray-900/50 backdrop-blur-sm"
+              className="p-8 rounded-lg border-l-2 border-r-2 border-accent/30 shadow-[0_5px_25px_rgba(217,119,6,0.15)] bg-black-deep/50 backdrop-blur-sm"
             >
               {/* Visual timeline styling */}
               <div className="relative border-l-2 border-accent/20 pl-8 pb-6 mb-6">
@@ -279,7 +279,7 @@ export default function WhoWeAre() {
                     1
                   </div>
                 </div>
-                <div className="bg-gray-900/50 backdrop-blur-sm p-8 rounded-lg max-w-2xl mx-auto shadow-lg shadow-black/20">
+                <div className="bg-black-deep/50 backdrop-blur-sm p-8 rounded-lg max-w-2xl mx-auto shadow-lg shadow-black/20">
                   <h3 className="text-2xl font-display text-accent mb-4">
                     Community Building
                   </h3>
@@ -298,7 +298,7 @@ export default function WhoWeAre() {
                     2
                   </div>
                 </div>
-                <div className="bg-gray-900/50 backdrop-blur-sm p-8 rounded-lg max-w-2xl mx-auto shadow-lg shadow-black/20">
+                <div className="bg-black-deep/50 backdrop-blur-sm p-8 rounded-lg max-w-2xl mx-auto shadow-lg shadow-black/20">
                   <h3 className="text-2xl font-display text-accent mb-4">
                     Artist Development
                   </h3>
@@ -318,7 +318,7 @@ export default function WhoWeAre() {
                     3
                   </div>
                 </div>
-                <div className="bg-gray-900/50 backdrop-blur-sm p-8 rounded-lg max-w-2xl mx-auto shadow-lg shadow-black/20">
+                <div className="bg-black-deep/50 backdrop-blur-sm p-8 rounded-lg max-w-2xl mx-auto shadow-lg shadow-black/20">
                   <h3 className="text-2xl font-display text-accent mb-4">
                     Permanent Theater Home
                   </h3>
