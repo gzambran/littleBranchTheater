@@ -306,7 +306,7 @@ export default function HoneyBrownEyesPage() {
                 <h3 className="font-display text-2xl mb-6">
                   Performance Details
                 </h3>
-                <div className="bg-gray-900/50 p-8 rounded-lg shadow-lg shadow-black/20 backdrop-blur-sm">
+                <div className="bg-black-deep/50 p-8 rounded-lg shadow-lg shadow-black/20 backdrop-blur-sm">
                   {performanceDetailsContent}
                 </div>
               </motion.div>

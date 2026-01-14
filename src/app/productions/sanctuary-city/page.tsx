@@ -91,7 +91,7 @@ export default function SanctuaryCityPage() {
               viewport={{ once: true }}
             >
               <h3 className="font-display text-2xl mb-6">Production Details</h3>
-              <div className="bg-gray-900/50 p-8 rounded-lg shadow-lg shadow-black/20 backdrop-blur-sm">
+              <div className="bg-black-deep/50 p-8 rounded-lg shadow-lg shadow-black/20 backdrop-blur-sm">
                 {productionDetailsContent}
               </div>
             </motion.div>
