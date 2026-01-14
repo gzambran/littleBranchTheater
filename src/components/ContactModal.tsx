@@ -65,7 +65,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
           onClick={onClose}
         >
           <motion.div 
-            className="bg-gray-900/90 backdrop-blur-sm rounded-lg max-w-lg w-full p-6 md:p-8 relative shadow-[0_5px_25px_rgba(217,119,6,0.15)] border border-accent/20"
+            className="bg-black-deep/90 backdrop-blur-sm rounded-lg max-w-lg w-full p-6 md:p-8 relative shadow-[0_5px_25px_rgba(217,119,6,0.15)] border border-accent/20"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}

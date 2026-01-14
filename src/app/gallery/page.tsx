@@ -270,7 +270,7 @@ export default function GalleryPage() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="relative aspect-square overflow-hidden rounded-lg cursor-pointer group bg-gray-900"
+                className="relative aspect-square overflow-hidden rounded-lg cursor-pointer group bg-gray-950"
                 onClick={() => openLightbox(index)}
               >
                 <Image

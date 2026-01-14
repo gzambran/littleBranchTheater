@@ -15,7 +15,7 @@ interface TeamMemberProps {
 export default function TeamMember({ name, role, bio, headshot, index }: TeamMemberProps) {
   return (
     <motion.div 
-      className="bg-gray-900 p-6 rounded-lg"
+      className="bg-gray-950 p-6 rounded-lg"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: index * 0.1 }}

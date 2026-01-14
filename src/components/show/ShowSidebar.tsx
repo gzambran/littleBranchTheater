@@ -9,7 +9,7 @@ interface ShowSidebarProps {
 export default function ShowSidebar({ title, children }: ShowSidebarProps) {
   return (
     <motion.div 
-      className="bg-gray-900/50 p-8 rounded-lg sticky top-24 shadow-lg shadow-black/20 backdrop-blur-sm"
+      className="bg-black-deep/50 p-8 rounded-lg sticky top-24 shadow-lg shadow-black/20 backdrop-blur-sm"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: 0.3 }}
