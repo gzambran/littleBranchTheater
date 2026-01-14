@@ -1,5 +1,5 @@
 import React from 'react'
-import { Inter, Playfair_Display } from 'next/font/google'
+import { Source_Serif_4, Playfair_Display } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -7,7 +7,11 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import OrganizationStructuredData from '@/components/OrganizationStructuredData'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const sourceSerif = Source_Serif_4({
+  subsets: ['latin'],
+  variable: '--font-source-serif',
+  display: 'swap',
+})
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair-display' })
 
 export const metadata = {
@@ -33,8 +37,8 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <OrganizationStructuredData />
       </head>
-      <body className={`${inter.variable} ${playfair.variable} 
-        font-sans bg-black text-white min-h-screen`}>
+      <body className={`${sourceSerif.variable} ${playfair.variable}
+        font-sans bg-black-warm text-white min-h-screen`}>
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-black focus:text-white focus:border focus:border-white">
           Skip to main content
         </a>

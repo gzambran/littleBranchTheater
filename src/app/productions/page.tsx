@@ -8,9 +8,9 @@ import PageHeader, { SiteBlurb } from '@/components/PageHeader'
 
 export default function ProductionsPage() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black-warm">
       {/* Page Header with consistent pattern */}
-      <PageHeader>
+      <PageHeader variant="contextual">
         <h1 className="sr-only">Productions</h1>
         <SiteBlurb>
           Discover the <span className="text-accent font-normal">stories</span> we've shared—and the ones <span className="text-accent font-normal">ahead</span>.
@@ -18,7 +18,7 @@ export default function ProductionsPage() {
       </PageHeader>
 
       {/* Productions Grid - adjusted padding to pt-8 to match other pages */}
-      <section className="pt-8 pb-16 bg-black">
+      <section className="pt-8 pb-16 bg-black-warm">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             

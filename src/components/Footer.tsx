@@ -9,7 +9,7 @@ export default function Footer() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   
   return (
-    <footer className="bg-gray-900 py-2 md:pt-8 md:pb-4">
+    <footer className="bg-gray-950 py-2 md:pt-8 md:pb-4 border-t border-white/5">
       <div className="container mx-auto px-4">
         {/* Mobile Layout (Balanced) */}
         <div className="md:hidden">

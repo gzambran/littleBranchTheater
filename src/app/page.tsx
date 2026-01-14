@@ -10,11 +10,11 @@ export const revalidate = 3600;
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black-warm">
       {/* Page Header with Site Blurb */}
-      <PageHeader>
+      <PageHeader variant="statement">
         <h1 className="sr-only">Little Branch Theater</h1>
-        <SiteBlurb>
+        <SiteBlurb variant="large">
           Little Branch is a Boise-based theater company committed to creating{" "}
           <span className="text-accent font-normal">intimate</span>, emotionally{" "}
           <span className="text-accent font-normal">honest</span> work that
@@ -35,19 +35,20 @@ export default function Home() {
             className="relative max-w-5xl mx-auto"
           >
             <Link href="/productions/sanctuary-city" className="group block">
-              <div className="rounded-xl overflow-hidden shadow-[0_0_40px_rgba(166,226,46,0.15)] border border-accent/20 transition-all duration-300 group-hover:shadow-[0_0_50px_rgba(166,226,46,0.25)] group-hover:border-accent/30">
+              <div className="rounded-xl overflow-hidden shadow-dramatic border border-accent/20 transition-all duration-500 group-hover:shadow-glow-accent-strong group-hover:border-accent/40">
                 <div className="relative aspect-[16/9]">
                   <Image
                     src="/images/sanctuary-city-main.webp"
                     alt="Sanctuary City by Martyna Majok - May 2026"
                     fill
-                    className="object-contain transition-transform duration-300 group-hover:scale-105"
+                    className="object-contain transition-transform duration-500 group-hover:scale-105"
                     priority
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1280px"
                   />
 
-                  {/* Lighter Gradient Overlay for Text */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  {/* Enhanced gradient overlays for depth */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/10"></div>
+                  <div className="absolute inset-0 bg-gradient-vignette opacity-40"></div>
 
              {/* Production Info Overlay */}
                   <div className="absolute bottom-0 left-0 right-0 p-3 md:p-8">
@@ -78,13 +79,13 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="mt-8 max-w-4xl mx-auto"
+            className="mt-10 max-w-4xl mx-auto"
           >
-            <div className="bg-black/40 p-6 md:p-8 rounded-lg text-center">
-  <p className="text-gray-300 text-lg md:text-xl leading-relaxed italic mb-3">
+            <div className="bg-black-deep/60 p-8 md:p-10 rounded-lg shadow-elevated">
+              <p className="text-gray-200 text-lg md:text-xl lg:text-2xl leading-relaxed italic mb-4">
                 "Some of the things I'm exploring are the extent to which we help when we can, how much we are willing to care for and sacrifice for another person, and the cost of that, for both sides, particularly when coming from a world of limited means and guarantees."
               </p>
-              <p className="text-accent text-sm md:text-base font-medium">
+              <p className="text-accent text-base md:text-lg font-medium tracking-wide">
                 — Martyna Majok, Playwright
               </p>
             </div>
@@ -93,10 +94,10 @@ export default function Home() {
       </section>
 
       {/* Subtle divider */}
-      <div className="w-24 h-px bg-accent/30 mx-auto my-6"></div>
+      <div className="divider-theatrical my-8"></div>
 
       {/* Audition Announcement Section */}
-      <section className="py-12 bg-black">
+      <section className="py-12 bg-black-warm">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -105,25 +106,25 @@ export default function Home() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <div className="bg-gradient-to-br from-accent/10 to-black/30 p-8 md:p-12 rounded-lg border border-accent/30">
+            <div className="bg-gradient-to-br from-accent/10 to-black-deep/50 p-8 md:p-12 rounded-lg border border-accent/30 shadow-glow-accent">
               <div className="text-center">
-                <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
+                <h2 className="heading-2 text-white mb-6">
                   Auditions: February 15th, 2026
                 </h2>
-                
-                <div className="bg-black/30 p-6 rounded-lg mb-6 max-w-2xl mx-auto">
-                  <p className="text-gray-300 text-lg mb-3">
+
+                <div className="bg-black-deep/50 p-6 rounded-lg mb-8 max-w-2xl mx-auto shadow-inner-dark">
+                  <p className="text-gray-200 text-lg mb-3">
                     <strong className="text-white">When:</strong> Sunday, February 15th, 2026
                   </p>
-                  <p className="text-gray-300 text-lg mb-3">
+                  <p className="text-gray-200 text-lg mb-3">
                     <strong className="text-white">Where:</strong> Xanadu (5015 Bond St, Boise, Idaho 83706)
                   </p>
-                  <p className="text-gray-300 text-lg">
+                  <p className="text-gray-200 text-lg">
                     <strong className="text-white">Prepare:</strong> 60-90 second contemporary monologue
                   </p>
                 </div>
 
-                <p className="text-gray-300 text-base mb-6">
+                <p className="text-gray-300 text-base md:text-lg mb-6">
                   Casting for <em>Sanctuary City</em> and future Little Branch Theater productions.
                 </p>
 
@@ -131,7 +132,7 @@ export default function Home() {
                   href="https://www.signupgenius.com/go/10C044EA8AE23AAF8C16-61616113-sanctuary"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-accent hover:bg-accent/90 text-black font-bold py-3 px-8 rounded-full transition-all duration-200 transform hover:scale-105 shadow-lg shadow-accent/20 text-lg"
+                  className="inline-block bg-accent hover:bg-accent/90 text-black font-bold py-4 px-10 rounded-full transition-all duration-300 shadow-glow-accent-strong text-lg tracking-wide"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -148,12 +149,12 @@ export default function Home() {
       </section>
 
       {/* Subtle divider */}
-      <div className="w-24 h-px bg-accent/30 mx-auto my-6"></div>
+      <div className="divider-theatrical my-8"></div>
 
       {/* Mission Section */}
-      <section className="py-8 bg-black relative">
-        {/* Subtle gradient background */}
-        <div className="absolute inset-0 opacity-3 bg-gradient-to-b from-accent/5 to-transparent"></div>
+      <section className="py-12 bg-black-warm relative">
+        {/* Enhanced gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-transparent to-transparent opacity-60"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -163,11 +164,11 @@ export default function Home() {
             viewport={{ once: true }}
             className="flex flex-col items-center"
           >
-            <h2 className="font-display text-4xl mb-8 text-center">
+            <h2 className="heading-2 mb-10 text-center">
               Our Mission
             </h2>
-            <div className="bg-black/50 p-8 backdrop-blur-sm rounded-lg max-w-3xl mx-auto shadow-md shadow-black/10 border-l border-r border-accent/30 mb-10">
-              <p className="text-xl text-gray-300 text-center">
+            <div className="bg-black-deep/50 p-8 md:p-10 backdrop-blur-sm rounded-lg max-w-3xl mx-auto shadow-elevated border-l-2 border-r-2 border-accent/30 mb-12">
+              <p className="text-lg md:text-xl text-gray-200 text-center leading-relaxed">
                 Little Branch connects communities through bold storytelling and
                 the celebration of diverse voices. We are dedicated to providing
                 opportunities for local artists, engaging with underrepresented
@@ -186,7 +187,7 @@ export default function Home() {
       href="https://square.link/u/UO5LLWNE?src=embed"
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-block bg-accent hover:bg-accent/90 
+      className="inline-block bg-accent hover:bg-accent/90
   text-black font-bold px-8 py-3 rounded-full transition-all duration-200 text-lg shadow-lg shadow-accent/20"
     >
       Support Little Branch
@@ -199,7 +200,7 @@ export default function Home() {
   >
     <Link
   href="/who-we-are"
-  className="inline-block border-2 border-accent hover:bg-accent/10 
+  className="inline-block border-2 border-accent hover:bg-accent/10
     text-accent font-medium px-8 py-3 rounded-full transition-all duration-200 text-lg"
 >
   Who We Are

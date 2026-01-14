@@ -43,7 +43,7 @@ export default function SanctuaryCityPage() {
   );
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black-warm">
       <PageHeader>
         <SiteBlurb>
           An intimate story of friendship, identity, and the{" "}

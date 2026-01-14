@@ -70,7 +70,7 @@ export default function MobileNav() {
       </button>
 
       {isMounted && isOpen && (
-        <div className="fixed right-0 top-0 z-50 h-screen w-1/2 bg-black/90 border-l border-gray-800 md:hidden">
+        <div className="fixed right-0 top-0 z-50 h-screen w-1/2 bg-black-deep/95 backdrop-blur-md border-l border-white/10 md:hidden">
           <div className="pt-4 px-4">
             <div className="flex justify-end mb-2">
               <button 

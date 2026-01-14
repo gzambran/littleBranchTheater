@@ -6,13 +6,14 @@ interface ShowMediaSectionProps {
 
 export default function ShowMediaSection({ children }: ShowMediaSectionProps) {
   return (
-    <section className="relative flex flex-col items-center bg-black">
-      <div className="absolute inset-0 opacity-3 bg-gradient-to-b from-accent/5 to-transparent"></div>
-      
+    <section className="relative flex flex-col items-center bg-black-warm">
+      <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-transparent to-transparent opacity-60"></div>
+      <div className="absolute inset-0 bg-gradient-vignette opacity-20"></div>
+
       <div className="w-full max-w-6xl mx-auto relative z-10">
-        <div className="rounded-xl overflow-hidden shadow-[0_0_30px_rgba(217,119,6,0.2)] relative">
+        <div className="rounded-xl overflow-hidden shadow-dramatic relative">
           <div className="block relative">
-            <div className="relative w-full flex justify-center bg-black/30 py-8">
+            <div className="relative w-full flex justify-center bg-black-deep/30 py-8">
               <div className="w-full max-w-4xl mx-auto px-4">
                 {children}
               </div>

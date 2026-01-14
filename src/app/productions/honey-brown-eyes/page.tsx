@@ -182,7 +182,7 @@ export default function HoneyBrownEyesPage() {
         image="https://www.littlebranchtheater.org/images/honeybrowneyes.webp"
       />
 
-      <div className="min-h-screen bg-black">
+      <div className="min-h-screen bg-black-warm">
         {/* PageHeader Component with Show Description */}
         <PageHeader>
           <SiteBlurb>

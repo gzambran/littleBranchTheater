@@ -4,8 +4,8 @@
 
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
+  --background-start-rgb: 10, 10, 10;
+  --background-end-rgb: 10, 10, 10;
 }
 
 body {
@@ -18,30 +18,39 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-main {
-  position: relative;
-  min-height: calc(100vh - 64px - 200px); /* Adjust based on your header and footer height */
+/* Noise texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.025;
+  mix-blend-mode: overlay;
 }
 
-/* Ensure content doesn't shift during transitions */
+main {
+  position: relative;
+  min-height: calc(100vh - 64px - 200px);
+}
+
 main > div {
   width: 100%;
 }
 
 /* Base focus style */
 :focus-visible {
-  outline: 2px solid #ffb74d; /* Theater-appropriate accent color - adjust to match your brand */
+  outline: 2px solid #ffb74d;
   outline-offset: 3px;
 }
 
-/* For dark mode buttons or links where the outline might not be visible */
-.dark button:focus-visible, 
+.dark button:focus-visible,
 .dark a:focus-visible {
   outline-color: #ffb74d;
   box-shadow: 0 0 0 3px rgba(255, 183, 77, 0.4);
 }
 
-/* Ensure interactive elements have proper focus indication */
 .interactive-element:focus-visible {
   outline: 2px solid #ffb74d;
   outline-offset: 3px;
@@ -64,16 +73,39 @@ main > div {
   .container-padding {
     @apply px-4 md:px-6 lg:px-8;
   }
-  
+
+  /* Typography scale */
+  .heading-1 {
+    @apply font-display text-5xl md:text-6xl lg:text-7xl tracking-tight;
+  }
+
+  .heading-2 {
+    @apply font-display text-3xl md:text-4xl lg:text-5xl tracking-tight;
+  }
+
+  .heading-3 {
+    @apply font-display text-2xl md:text-3xl tracking-tight;
+  }
+
+  .body-large {
+    @apply text-lg md:text-xl leading-relaxed;
+  }
+
+  /* Legacy classes for backwards compatibility */
   .heading-primary {
     @apply font-display text-4xl md:text-5xl lg:text-6xl;
   }
-  
+
   .heading-secondary {
     @apply font-display text-2xl md:text-3xl lg:text-4xl;
   }
-  
+
   .text-body {
     @apply text-base md:text-lg text-gray-300;
+  }
+
+  /* Decorative divider */
+  .divider-theatrical {
+    @apply w-24 h-px mx-auto bg-gradient-to-r from-transparent via-accent/40 to-transparent;
   }
 }

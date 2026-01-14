@@ -35,7 +35,7 @@ export default function WhoWeAre() {
   const fadeIn = animations;
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black-warm">
       <PageHeader>
         <SiteBlurb>
   The <span className="text-accent font-normal">artists</span>, the <span className="text-accent font-normal">story</span>, and the <span className="text-accent font-normal">vision</span> behind Little Branch.

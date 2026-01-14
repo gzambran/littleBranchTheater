@@ -236,9 +236,9 @@ export default function GalleryPage() {
   }, [selectedImage]);
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black-warm">
       {/* Page Header */}
-      <PageHeader>
+      <PageHeader variant="contextual">
         <SiteBlurb>
           Witness the <span className="text-accent font-normal">moments</span>{" "}
           that shape our{" "}
@@ -247,7 +247,7 @@ export default function GalleryPage() {
       </PageHeader>
 
       {/* Gallery Section */}
-      <section className="py-8 bg-black">
+      <section className="py-8 bg-black-warm">
         <div className="container mx-auto px-4">
           {/* Production Title */}
           <motion.div

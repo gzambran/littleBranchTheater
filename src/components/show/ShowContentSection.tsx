@@ -8,16 +8,16 @@ interface ShowContentSectionProps {
   delay?: number
 }
 
-export default function ShowContentSection({ 
-  title, 
-  children, 
+export default function ShowContentSection({
+  title,
+  children,
   variant = 'default',
-  delay = 0 
+  delay = 0
 }: ShowContentSectionProps) {
-  
-  const containerClass = variant === 'gray' 
-    ? 'bg-gray-900/50 p-8 rounded-lg shadow-md shadow-black/20'
-    : 'bg-black/50 p-6 backdrop-blur-sm rounded-lg border-l border-accent/30 shadow-md shadow-black/10'
+
+  const containerClass = variant === 'gray'
+    ? 'bg-gray-950/50 p-8 rounded-lg shadow-elevated'
+    : 'bg-black-deep/50 p-6 md:p-8 backdrop-blur-sm rounded-lg border-l-2 border-accent/40 shadow-elevated'
 
   return (
     <motion.div
@@ -26,7 +26,7 @@ export default function ShowContentSection({
       transition={{ duration: 0.7, delay }}
       viewport={{ once: true }}
     >
-      <h2 className="font-display text-3xl mb-6">{title}</h2>
+      <h2 className="heading-3 mb-6">{title}</h2>
       <div className={containerClass}>
         {children}
       </div>

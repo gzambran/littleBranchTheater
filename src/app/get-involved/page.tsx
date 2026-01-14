@@ -8,28 +8,28 @@ import '@/components/newsletter/newsletter.css'
 
 export default function GetInvolvedPage() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black-warm">
       {/* Page Header - Reduced bottom padding */}
-      <PageHeader className="pb-8 md:pb-10">
+      <PageHeader variant="contextual" className="pb-8 md:pb-10">
         <SiteBlurb>
           Join the <span className="text-accent font-normal">journey</span> and be part of what&apos;s <span className="text-accent font-normal">next</span>.
         </SiteBlurb>
       </PageHeader>
 
       {/* Main Content - Reduced top padding */}
-      <section className="pt-4 pb-16 bg-black">
+      <section className="pt-4 pb-16 bg-black-warm">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            
+
             {/* Three Box Layout - 2 on top, 1 centered below */}
             <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              
+
               {/* Box 1: Collaborate With Us */}
               <motion.div
                 initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
-                className="bg-gradient-to-br from-gray-900/50 to-black/50 p-8 rounded-lg border border-gray-800 hover:border-accent/30 transition-all duration-300 flex flex-col group"
+                className="bg-gradient-to-br from-gray-950/80 to-black-deep/80 p-8 rounded-lg border border-white/5 hover:border-accent/30 transition-all duration-300 flex flex-col group shadow-elevated hover:shadow-glow-accent"
               >
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
@@ -39,17 +39,17 @@ export default function GetInvolvedPage() {
                   </div>
                   <h2 className="font-display text-2xl md:text-3xl text-white">Collaborate With Us</h2>
                 </div>
-                
+
                 <div className="flex-grow">
                   <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-6">
                     We're building a network of passionate artists and theater lovers. Whether you're interested in acting, directing, designing, or volunteering, we want to connect with you.
                   </p>
-                  
+
                   <p className="text-gray-300 mb-8">
                     Fill out our artist interest form and we'll keep you in the loop about upcoming opportunities that match your interests.
                   </p>
                 </div>
-                
+
                 <div className="text-center mt-auto">
                   <motion.a
                     href="https://docs.google.com/forms/d/e/1FAIpQLSfE2Abl5mHHJdjo1jflpapaJSyYC1gaoCC0pAJweyXuzoT6pg/viewform"
@@ -69,7 +69,7 @@ export default function GetInvolvedPage() {
                 initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
-                className="bg-gradient-to-br from-gray-900/30 to-black/30 p-8 rounded-lg border border-gray-800 hover:border-accent/30 transition-all duration-300 flex flex-col group"
+                className="bg-gradient-to-br from-gray-950/60 to-black-deep/60 p-8 rounded-lg border border-white/5 hover:border-accent/30 transition-all duration-300 flex flex-col group shadow-elevated hover:shadow-glow-accent"
               >
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
@@ -79,7 +79,7 @@ export default function GetInvolvedPage() {
                   </div>
                   <h3 className="font-display text-2xl md:text-3xl text-white">Stay Updated</h3>
                 </div>
-                
+
                 <div className="flex-grow">
                   <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-6">
                     Theater only comes alive when there's an audience. Little Branch is just beginning, bringing new productions and special events for our community.
@@ -99,7 +99,7 @@ export default function GetInvolvedPage() {
                 initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
-                className="md:col-span-2 md:max-w-[calc(50%-1rem)] md:mx-auto bg-gradient-to-br from-gray-900/50 to-black/50 p-8 rounded-lg border border-gray-800 hover:border-accent/30 transition-all duration-300 flex flex-col group"
+                className="md:col-span-2 md:max-w-[calc(50%-1rem)] md:mx-auto bg-gradient-to-br from-gray-950/80 to-black-deep/80 p-8 rounded-lg border border-white/5 hover:border-accent/30 transition-all duration-300 flex flex-col group shadow-elevated hover:shadow-glow-accent"
               >
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
@@ -109,17 +109,17 @@ export default function GetInvolvedPage() {
                   </div>
                   <h2 className="font-display text-2xl md:text-3xl text-white">Support Little Branch</h2>
                 </div>
-                
+
                 <div className="flex-grow">
                   <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-6">
                     Your support helps us bring bold, innovative theater to our community. Every contribution directly funds our productions, supports our artists, and keeps ticket prices accessible.
                   </p>
-                  
+
                   <p className="text-gray-300 mb-8">
                     With your help, we can continue creating meaningful theatrical experiences that inspire, challenge, and bring people together.
                   </p>
                 </div>
-                
+
                 <div className="text-center mt-auto">
                   <motion.a
                     href="https://square.link/u/UO5LLWNE?src=embed"
@@ -143,14 +143,14 @@ export default function GetInvolvedPage() {
               className="mt-16 text-center"
             >
               <h3 className="font-display text-2xl text-white mb-8">Follow Us on Social Media</h3>
-              
+
               <div className="grid md:grid-cols-2 gap-6 max-w-xl mx-auto">
                 {/* Instagram */}
                 <motion.a
                   href="https://www.instagram.com/littlebranchtheater"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gray-900/30 p-6 rounded-lg border border-gray-800 hover:border-accent/30 transition-all group"
+                  className="bg-black-deep/50 p-6 rounded-lg border border-white/5 hover:border-accent/30 transition-all group shadow-elevated hover:shadow-glow-accent"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -168,7 +168,7 @@ export default function GetInvolvedPage() {
                   href="https://www.facebook.com/LittleBranchTheater"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gray-900/30 p-6 rounded-lg border border-gray-800 hover:border-accent/30 transition-all group"
+                  className="bg-black-deep/50 p-6 rounded-lg border border-white/5 hover:border-accent/30 transition-all group shadow-elevated hover:shadow-glow-accent"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
