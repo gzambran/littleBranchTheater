@@ -23,6 +23,26 @@ export default function Home() {
         <h1 className="sr-only">Little Branch Theater</h1>
       </PageHeader>
 
+      {/* Announcement */}
+      <section className="relative z-10 pb-8">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+          >
+            {/* Date with flanking lines */}
+            <div className="flex items-center justify-center gap-4">
+              <div className="h-px w-12 bg-gradient-to-r from-transparent to-accent/40"></div>
+              <span className="text-accent/90 text-base tracking-[0.2em] uppercase">
+                Coming May 2026
+              </span>
+              <div className="h-px w-12 bg-gradient-to-l from-transparent to-accent/40"></div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Hero Section - Sanctuary City */}
       <section className="pt-0 pb-8 relative z-10">
         <div className="container mx-auto px-4">
@@ -45,29 +65,8 @@ export default function Home() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1280px"
                   />
 
-                  {/* Enhanced gradient overlays for depth */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/10"></div>
-                  <div className="absolute inset-0 bg-gradient-vignette opacity-40"></div>
-
-                  {/* Production Info Overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 p-3 md:p-8">
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.7, delay: 0.3 }}
-                      className="text-center"
-                    >
-                      <h2 className="font-display text-xl md:text-4xl text-white mb-1 md:mb-2 group-hover:text-accent transition-colors">
-                        Sanctuary City
-                      </h2>
-                      <p className="text-gray-300 text-sm md:text-lg italic mb-0.5 md:mb-2">
-                        by Martyna Majok
-                      </p>
-                      <p className="text-accent text-base md:text-xl font-medium">
-                        May 2026
-                      </p>
-                    </motion.div>
-                  </div>
+                  {/* Subtle vignette for depth */}
+                  <div className="absolute inset-0 bg-gradient-vignette opacity-20"></div>
                 </div>
               </SpotlightCard>
             </Link>
