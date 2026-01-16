@@ -1,7 +1,8 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { createPortal } from 'react-dom'
 
 type ContactModalProps = {
   isOpen: boolean;
@@ -54,18 +55,26 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     }
   };
 
-  return (
+ const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  return createPortal(
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+        className="fixed inset-0 bg-black/90 backdrop-blur-md z-[9999] flex items-center justify-center p-4 overflow-y-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
         >
           <motion.div 
-            className="bg-black-deep/90 backdrop-blur-sm rounded-lg max-w-lg w-full p-6 md:p-8 relative shadow-[0_5px_25px_rgba(217,119,6,0.15)] border border-accent/20"
+           className="bg-black-deep/95 backdrop-blur-sm rounded-lg max-w-lg w-full p-6 md:p-8 relative shadow-[0_10px_50px_rgba(166,226,46,0.3)] border border-accent/40 my-8"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
@@ -165,7 +174,8 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             )}
           </motion.div>
         </motion.div>
-      )}
-    </AnimatePresence>
+     )}
+    </AnimatePresence>,
+    document.body
   );
 }
