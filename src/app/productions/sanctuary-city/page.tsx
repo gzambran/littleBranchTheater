@@ -55,12 +55,12 @@ export default function SanctuaryCityPage() {
       </PageHeader>
 
       <ShowMediaSection>
-        <div className="relative aspect-[16/9] shadow-2xl">
+        <div className="relative aspect-[4/3] md:aspect-[16/9] shadow-2xl">
           <Image
             src="/images/sanctuary-city-main.webp"
             alt="Sanctuary City by Martyna Majok - May 2026"
             fill
-            className="object-contain drop-shadow-xl"
+            className="object-cover drop-shadow-xl"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1280px"
             priority
           />

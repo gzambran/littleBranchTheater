@@ -14,7 +14,7 @@ export default function ShowMediaSection({ children }: ShowMediaSectionProps) {
         <div className="rounded-xl overflow-hidden shadow-dramatic relative">
           <div className="block relative">
             <div className="relative w-full flex justify-center bg-black-deep/30 py-8">
-              <div className="w-full max-w-4xl mx-auto px-4">
+              <div className="w-full max-w-4xl mx-auto px-0 md:px-4">
                 {children}
               </div>
             </div>
