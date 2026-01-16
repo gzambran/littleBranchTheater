@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import PageHeader, { SiteBlurb } from "@/components/PageHeader";
+import SpotlightCard from "@/components/SpotlightCard";
 
 export const revalidate = 3600;
 
@@ -35,7 +36,7 @@ export default function Home() {
             className="relative max-w-5xl mx-auto"
           >
             <Link href="/productions/sanctuary-city" className="group block">
-              <div className="rounded-xl overflow-hidden shadow-dramatic border border-accent/20 transition-all duration-500 group-hover:shadow-glow-accent-strong group-hover:border-accent/40">
+              <SpotlightCard className="transition-all duration-500 hover:border-accent/40 shadow-dramatic group-hover:shadow-glow-accent-strong" spotlightColor="rgba(166, 226, 46, 0.25)">
                 <div className="relative aspect-[16/9]">
                   <Image
                     src="/images/sanctuary-city-main.webp"
@@ -50,7 +51,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/10"></div>
                   <div className="absolute inset-0 bg-gradient-vignette opacity-40"></div>
 
-             {/* Production Info Overlay */}
+                  {/* Production Info Overlay */}
                   <div className="absolute bottom-0 left-0 right-0 p-3 md:p-8">
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
@@ -70,7 +71,7 @@ export default function Home() {
                     </motion.div>
                   </div>
                 </div>
-              </div>
+              </SpotlightCard>
             </Link>
           </motion.div>
 
@@ -179,34 +180,34 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-  <motion.div
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-  >
-    <Link
-      href="https://square.link/u/UO5LLWNE?src=embed"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-block bg-accent hover:bg-accent/90
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
+                  href="https://square.link/u/UO5LLWNE?src=embed"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-accent hover:bg-accent/90
   text-black font-bold px-8 py-3 rounded-full transition-all duration-200 text-lg shadow-lg shadow-accent/20"
-    >
-      Support Little Branch
-    </Link>
-  </motion.div>
+                >
+                  Support Little Branch
+                </Link>
+              </motion.div>
 
-  <motion.div
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-  >
-    <Link
-  href="/who-we-are"
-  className="inline-block border-2 border-accent hover:bg-accent/10
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
+                  href="/who-we-are"
+                  className="inline-block border-2 border-accent hover:bg-accent/10
     text-accent font-medium px-8 py-3 rounded-full transition-all duration-200 text-lg"
->
-  Who We Are
-</Link>
-  </motion.div>
-</div>
+                >
+                  Who We Are
+                </Link>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
