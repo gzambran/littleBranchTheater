@@ -10,12 +10,12 @@ export default function Header() {
       <nav className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
           <Link href="/" className="inline-block">
-            <div className="flex flex-col">
-              <span className="font-display text-2xl font-bold tracking-wide text-white drop-shadow-sm">
+           <div className="flex flex-col">
+              <span className="font-display text-3xl md:text-4xl font-bold tracking-wide text-white drop-shadow-sm">
                 Little Branch
               </span>
               <span
-                className="font-display text-sm text-accent -mt-1"
+                className="font-display text-base md:text-lg text-accent -mt-1"
                 style={{
                   letterSpacing: '0.15em',
                   fontStretch: 'expanded',

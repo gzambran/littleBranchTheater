@@ -7,27 +7,24 @@ import { motion } from "framer-motion";
 import PageHeader, { SiteBlurb } from "@/components/PageHeader";
 import SpotlightCard from "@/components/SpotlightCard";
 import AuditionCallout from "@/components/AuditionCallout";
+import AmbientBackground from "@/components/AmbientBackground";
 
 export const revalidate = 3600;
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-black-warm">
-      {/* Page Header with Site Blurb */}
-      <PageHeader variant="statement">
+     {/* Extended Ambient Background Layer - Covers header and hero only */}
+      <div className="absolute top-0 left-0 right-0 h-[100vh] pointer-events-none z-0">
+        <AmbientBackground />
+      </div>
+     {/* Page Header - Animation only, no blurb */}
+      <PageHeader variant="immersive" className="pt-12 md:pt-16">
         <h1 className="sr-only">Little Branch Theater</h1>
-        <SiteBlurb variant="large">
-          Little Branch is a Boise-based theater company committed to creating{" "}
-          <span className="text-accent font-normal">intimate</span>, emotionally{" "}
-          <span className="text-accent font-normal">honest</span> work that
-          embraces <span className="text-accent font-normal">curiosity</span>,{" "}
-          <span className="text-accent font-normal">risk</span>, and{" "}
-          <span className="text-accent font-normal">connection</span>.
-        </SiteBlurb>
       </PageHeader>
 
       {/* Hero Section - Sanctuary City */}
-      <section className="pt-8 pb-8">
+      <section className="pt-0 pb-8 relative z-10">
         <div className="container mx-auto px-4">
           {/* Hero Image */}
           <motion.div
