@@ -67,7 +67,7 @@ export default function WhoWeAre() {
               className="flex flex-col md:flex-row items-start gap-8 mb-20"
               variants={fadeIn}
             >
-              <div className="w-64 h-64 relative overflow-hidden flex-shrink-0 border border-accent/30 shadow-lg shadow-black/20">
+              <div className="w-64 h-64 relative overflow-hidden flex-shrink-0 border border-accent/30 shadow-lg shadow-black/20 self-start md:self-auto">
                 <Image
                   src="/images/ensemble/karadza.webp"
                   alt="Amela - Artistic Director"
@@ -118,7 +118,7 @@ export default function WhoWeAre() {
               className="flex flex-col md:flex-row-reverse items-start gap-8"
               variants={fadeIn}
             >
-              <div className="w-64 h-64 relative overflow-hidden flex-shrink-0 border border-accent/30 shadow-lg shadow-black/20">
+              <div className="w-64 h-64 relative overflow-hidden flex-shrink-0 border border-accent/30 shadow-lg shadow-black/20 self-end md:self-auto">
                 <Image
                   src="/images/ensemble/zambrano.jpg"
                   alt="Jovani - Artistic Director"
