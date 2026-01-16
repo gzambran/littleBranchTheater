@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import PageHeader, { SiteBlurb } from "@/components/PageHeader";
 import SpotlightCard from "@/components/SpotlightCard";
+import AuditionCallout from "@/components/AuditionCallout";
 
 export const revalidate = 3600;
 
@@ -105,46 +106,8 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
           >
-            <div className="bg-gradient-to-br from-accent/10 to-black-deep/50 p-8 md:p-12 rounded-lg border border-accent/30 shadow-glow-accent">
-              <div className="text-center">
-                <h2 className="heading-2 text-white mb-6">
-                  Auditions: February 15th, 2026
-                </h2>
-
-                <div className="bg-black-deep/50 p-6 rounded-lg mb-8 max-w-2xl mx-auto shadow-inner-dark">
-                  <p className="text-gray-200 text-lg mb-3">
-                    <strong className="text-white">When:</strong> Sunday, February 15th, 2026
-                  </p>
-                  <p className="text-gray-200 text-lg mb-3">
-                    <strong className="text-white">Where:</strong> Xanadu (5015 Bond St, Boise, Idaho 83706)
-                  </p>
-                  <p className="text-gray-200 text-lg">
-                    <strong className="text-white">Prepare:</strong> 60-90 second contemporary monologue
-                  </p>
-                </div>
-
-                <p className="text-gray-300 text-base md:text-lg mb-6">
-                  Casting for <em>Sanctuary City</em> and future Little Branch Theater productions.
-                </p>
-
-                <motion.a
-                  href="https://www.signupgenius.com/go/10C044EA8AE23AAF8C16-61616113-sanctuary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-accent hover:bg-accent/90 text-black font-bold py-4 px-10 rounded-full transition-all duration-300 shadow-glow-accent-strong text-lg tracking-wide"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Sign Up for Auditions
-                </motion.a>
-
-                <p className="text-gray-400 text-sm mt-4">
-                  Questions? <a href="mailto:info@littlebranchtheater.org" className="text-accent hover:underline">info@littlebranchtheater.org</a>
-                </p>
-              </div>
-            </div>
+            <AuditionCallout />
           </motion.div>
         </div>
       </section>
