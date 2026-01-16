@@ -45,7 +45,7 @@ export default function Home() {
 
       {/* Hero Section - Sanctuary City */}
       <section className="pt-0 pb-8 relative z-10">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-0 md:px-4">
           {/* Hero Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -55,12 +55,12 @@ export default function Home() {
           >
             <Link href="/productions/sanctuary-city" className="group block">
               <SpotlightCard className="transition-all duration-500 hover:border-accent/40 shadow-dramatic group-hover:shadow-glow-accent-strong" spotlightColor="rgba(166, 226, 46, 0.25)">
-                <div className="relative aspect-[16/9]">
+                <div className="relative aspect-[4/3] md:aspect-[16/9]">
                   <Image
                     src="/images/sanctuary-city-main.webp"
                     alt="Sanctuary City by Martyna Majok - May 2026"
                     fill
-                    className="object-contain transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                     priority
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1280px"
                   />
