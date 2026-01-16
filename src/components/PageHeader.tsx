@@ -2,6 +2,7 @@
 
 import React, { ReactNode } from 'react'
 import { motion } from 'framer-motion'
+import AmbientBackground from './AmbientBackground'
 
 type PageHeaderVariant = 'statement' | 'contextual' | 'immersive' | 'narrative'
 
@@ -50,6 +51,10 @@ export default function PageHeader({
     >
       {/* Subtle gradient background */}
       <div className="absolute inset-0 opacity-60 bg-gradient-to-b from-accent/5 via-transparent to-transparent"></div>
+
+      {/* Ambient particles for all headers */}
+      <AmbientBackground />
+
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div

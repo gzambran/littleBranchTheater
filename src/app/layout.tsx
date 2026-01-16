@@ -44,7 +44,7 @@ export default function RootLayout({
         </a>
         <Header />
         <main id="main-content" className="pt-16">
-            {children}
+          {children}
         </main>
         <Footer />
         <Analytics />
