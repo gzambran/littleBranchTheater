@@ -168,9 +168,9 @@ export default function WhoWeAre() {
         <div className="w-24 h-px bg-accent/30 mx-auto mt-20"></div>
       </motion.section>
 
-      {/* Our Story Section */}
+     {/* Our Story Section */}
       <motion.section
-        className="py-16 bg-gray-950 relative"
+        className="py-16 bg-[#0a1628]/40 backdrop-blur-lg relative"
         variants={fadeIn}
         initial="hidden"
         whileInView="visible"
