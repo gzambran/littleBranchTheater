@@ -6,7 +6,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import PageHeader, { SiteBlurb } from "@/components/PageHeader";
 import SpotlightCard from "@/components/SpotlightCard";
-import AuditionCallout from "@/components/AuditionCallout";
 import AmbientBackground from "@/components/AmbientBackground";
 
 export const revalidate = 3600;
@@ -91,25 +90,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Subtle divider */}
-      <div className="divider-theatrical my-8"></div>
-
-      {/* Audition Announcement Section */}
-      <section className="py-12 bg-black-warm">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-          >
-            <AuditionCallout />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Subtle divider */}
-      <div className="divider-theatrical my-8"></div>
+    
 
       {/* Mission Section */}
       <section className="py-12 bg-black-warm relative">

@@ -10,7 +10,6 @@ import ShowContentSection from "@/components/show/ShowContentSection";
 import ShowSidebar from "@/components/show/ShowSidebar";
 import SocialShare from "@/components/show/SocialShare";
 import SpotlightCard from "@/components/SpotlightCard";
-import AuditionCallout from "@/components/AuditionCallout";
 
 export const revalidate = 3600;
 
@@ -101,10 +100,14 @@ export default function SanctuaryCityPage() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
+              transition={{ duration: 0.7, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <AuditionCallout />
+              <div className="bg-black-deep/30 backdrop-blur-sm rounded-lg p-6 shadow-elevated">
+                <p className="text-2xl text-white text-center italic font-light tracking-wide leading-relaxed">
+                  Casting for <span className="text-accent font-normal">Sanctuary City</span> Coming Soon
+                </p>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -129,7 +132,11 @@ export default function SanctuaryCityPage() {
                 transition={{ duration: 0.7, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <AuditionCallout />
+                <div className="bg-black-deep/30 backdrop-blur-sm rounded-lg p-6 shadow-elevated">
+                  <p className="text-2xl text-white text-center italic font-light tracking-wide leading-relaxed">
+                    Casting for <span className="text-accent font-normal">Sanctuary City</span> Coming Soon
+                  </p>
+                </div>
               </motion.div>
             </div>
 
