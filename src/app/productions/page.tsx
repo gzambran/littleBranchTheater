@@ -34,7 +34,7 @@ export default function ProductionsPage() {
                   <div className="p-4">
                     <div className="relative aspect-[16/9] bg-black rounded-lg overflow-hidden group-hover:scale-[1.02] transition-transform duration-500 shadow-lg">
                       <Image
-                        src="/images/sanctuary-city-main.webp"
+                        src="/images/sanctuary-city-poster-crop.webp"
                         alt="Sanctuary City by Martyna Majok"
                         fill
                         className="object-contain"
@@ -49,7 +49,7 @@ export default function ProductionsPage() {
                       </h2>
                       <p className="text-gray-400 text-sm mb-1">by Martyna Majok</p>
                       <p className="text-gray-400 text-sm mb-3">
-                        Directed by Amela Karadža and Jovani Zambrano
+                        Directed by Amela Karadža
                       </p>
                       <p className="text-accent text-lg font-medium inline-block border-b border-accent/30 pb-1">
                         May 7<sup className="text-xs">th</sup> - May 17<sup className="text-xs">th</sup> 2026

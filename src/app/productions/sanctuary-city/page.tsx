@@ -9,7 +9,6 @@ import ShowDateVenue from "@/components/show/ShowDateVenue";
 import ShowContentSection from "@/components/show/ShowContentSection";
 import ShowSidebar from "@/components/show/ShowSidebar";
 import SocialShare from "@/components/show/SocialShare";
-import SpotlightCard from "@/components/SpotlightCard";
 
 export const revalidate = 3600;
 
@@ -23,17 +22,18 @@ export default function SanctuaryCityPage() {
       </div>
       <div>
         <h4 className="font-medium mb-2">Performance Dates</h4>
-        <p className="text-lg font-medium text-white">May 2026</p>
-        <p className="text-sm mt-1">Dates and times to be announced</p>
+        <p className="text-sm text-white">May 7, 8, 9, 14, 15, 16 at 7:30pm</p>
+        <p className="text-sm text-white">May 17 at 2pm</p>
+        <p className="text-xs text-gray-400 mt-1">Door opens 1 hour before start of show</p>
       </div>
       <div>
         <h4 className="font-medium mb-2">Directors</h4>
         <p>Amela Karadža</p>
-        <p>Jovani Zambrano</p>
       </div>
       <div>
         <h4 className="font-medium mb-2">Venue</h4>
-        <p>To be announced</p>
+        <p className="font-medium text-white">The Lounge</p>
+        <p className="text-sm text-gray-400">2417 Bank Dr, Boise, ID 83705</p>
       </div>
 
       <SocialShare
@@ -56,10 +56,10 @@ export default function SanctuaryCityPage() {
       <ShowMediaSection>
         <div className="relative aspect-[4/3] md:aspect-[16/9] shadow-2xl">
           <Image
-            src="/images/sanctuary-city-main.webp"
+            src="/images/sanctuary-city-poster-crop.webp"
             alt="Sanctuary City by Martyna Majok - May 2026"
             fill
-            className="object-cover drop-shadow-xl"
+            className="object-contain drop-shadow-xl"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1280px"
             priority
           />
@@ -67,9 +67,25 @@ export default function SanctuaryCityPage() {
       </ShowMediaSection>
 
       <ShowDateVenue
-        dates="May 7th - May 17th, 2026"
-        venue="Venue TBD"
+        dates="May 7 - 17, 2026"
+        venue="The Lounge, Boise"
       />
+
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="flex justify-center mt-6"
+      >
+        <a
+          href="https://littlebranchtheater.ludus.com/200526657"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-accent hover:bg-accent/90 text-black font-bold px-8 py-3 rounded-full transition-all duration-200 text-base shadow-lg shadow-accent/20"
+        >
+          Get Tickets
+        </a>
+      </motion.div>
 
       <div className="w-24 h-px bg-accent/30 mx-auto my-6"></div>
 
