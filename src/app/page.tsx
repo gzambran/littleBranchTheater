@@ -7,8 +7,6 @@ import { motion } from "framer-motion";
 import PageHeader, { SiteBlurb } from "@/components/PageHeader";
 import AmbientBackground from "@/components/AmbientBackground";
 
-export const revalidate = 3600;
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-black-warm">
@@ -45,10 +43,12 @@ export default function Home() {
                 {/* Subtle vignette for depth */}
                 <div className="absolute inset-0 bg-gradient-vignette opacity-20"></div>
 
-                {/* Photo Credit */}
-                <p className="absolute bottom-2 right-3 text-sm text-gray-400 italic">Artwork by Aspyn Peak</p>
+                {/* Photo Credit - desktop overlay */}
+                <p className="hidden md:block absolute bottom-2 right-3 text-sm text-gray-400 italic">Artwork by Aspyn Peak</p>
               </div>
             </Link>
+            {/* Photo Credit - mobile below image */}
+            <p className="block md:hidden text-xs text-gray-400 italic text-right mt-1 px-1">Artwork by Aspyn Peak</p>
           </motion.div>
 
           {/* Get Tickets */}

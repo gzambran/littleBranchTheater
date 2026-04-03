@@ -10,8 +10,6 @@ import ShowContentSection from "@/components/show/ShowContentSection";
 import ShowSidebar from "@/components/show/ShowSidebar";
 import SocialShare from "@/components/show/SocialShare";
 
-export const revalidate = 3600;
-
 export default function SanctuaryCityPage() {
   const productionDetailsContent = (
     <div className="space-y-6 text-gray-300">
