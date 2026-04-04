@@ -40,7 +40,7 @@ export default function AmbientBackground() {
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
-          className="absolute rounded-full bg-accent" // Removed /20 opacity
+          className="absolute rounded-full bg-accent"
           style={{
             left: `${particle.x}%`,
             top: `${particle.y}%`,

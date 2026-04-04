@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import PageHeader, { SiteBlurb } from "@/components/PageHeader";
 
-// Animation variants
 const animations = {
   fadeIn: {
     hidden: { opacity: 0, scale: 0.95 },
@@ -42,7 +41,6 @@ export default function WhoWeAre() {
 </SiteBlurb>
       </PageHeader>
 
-      {/* Founders Section */}
       <motion.section
         className="pt-2 pb-16 bg-black relative"
         variants={fadeIn}
@@ -50,7 +48,6 @@ export default function WhoWeAre() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {/* Subtle gradient background */}
         <div className="absolute inset-0 opacity-3 bg-gradient-to-b from-accent/5 to-transparent"></div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -62,7 +59,6 @@ export default function WhoWeAre() {
           </motion.h2>
 
           <div className="max-w-6xl mx-auto">
-            {/* Amela */}
             <motion.div
               className="flex flex-col md:flex-row items-start gap-8 mb-20"
               variants={fadeIn}
@@ -76,7 +72,6 @@ export default function WhoWeAre() {
                   sizes="(max-width: 768px) 100vw, 256px"
                   className="object-cover"
                 />
-                {/* Gradient overlay at the bottom of the image */}
                 <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/80 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-2">
                   <h3 className="font-display text-xl mb-0 text-white">
@@ -113,7 +108,6 @@ export default function WhoWeAre() {
               </div>
             </motion.div>
 
-            {/* Jovani */}
             <motion.div
               className="flex flex-col md:flex-row-reverse items-start gap-8"
               variants={fadeIn}
@@ -125,7 +119,6 @@ export default function WhoWeAre() {
                   fill
                   className="object-cover"
                 />
-                {/* Gradient overlay at the bottom of the image */}
                 <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/80 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-2">
                   <h3 className="font-display text-xl mb-0 text-white">
@@ -164,11 +157,9 @@ export default function WhoWeAre() {
           </div>
         </div>
 
-        {/* Subtle divider */}
         <div className="w-24 h-px bg-accent/30 mx-auto mt-20"></div>
       </motion.section>
 
-     {/* Our Story Section */}
       <motion.section
         className="py-16 bg-[#0a1628]/40 backdrop-blur-lg relative"
         variants={fadeIn}
@@ -176,7 +167,6 @@ export default function WhoWeAre() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {/* Subtle background texture */}
         <div className="absolute inset-0 opacity-5 bg-gradient-to-br from-gray-800/20 to-transparent"></div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -245,11 +235,9 @@ export default function WhoWeAre() {
           </div>
         </div>
 
-        {/* Subtle divider */}
         <div className="w-24 h-px bg-accent/30 mx-auto mt-16"></div>
       </motion.section>
 
-      {/* Future Vision Section */}
       <motion.section
         className="py-16 bg-black relative overflow-hidden"
         variants={fadeIn}
@@ -269,10 +257,8 @@ export default function WhoWeAre() {
 
           <div className="max-w-5xl mx-auto">
             <div className="relative">
-              {/* Timeline Line */}
               <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-accent/30 transform -translate-x-1/2 z-0"></div>
 
-              {/* Timeline Item 1 */}
               <motion.div className="relative z-10 mb-16" variants={fadeIn}>
                 <div className="flex items-center justify-center mb-6">
                   <div className="w-16 h-16 rounded-full bg-black border-2 border-accent flex items-center justify-center text-accent font-serif text-xl shadow-[0_0_15px_rgba(217,119,6,0.2)]">
@@ -291,7 +277,6 @@ export default function WhoWeAre() {
                 </div>
               </motion.div>
 
-              {/* Timeline Item 2 */}
               <motion.div className="relative z-10 mb-16" variants={fadeIn}>
                 <div className="flex items-center justify-center mb-6">
                   <div className="w-16 h-16 rounded-full bg-black border-2 border-accent flex items-center justify-center text-accent font-serif text-xl shadow-[0_0_15px_rgba(217,119,6,0.2)]">
@@ -311,7 +296,6 @@ export default function WhoWeAre() {
                 </div>
               </motion.div>
 
-              {/* Timeline Item 3 */}
               <motion.div className="relative z-10" variants={fadeIn}>
                 <div className="flex items-center justify-center mb-6">
                   <div className="w-16 h-16 rounded-full bg-black border-2 border-accent flex items-center justify-center text-accent font-serif text-xl shadow-[0_0_15px_rgba(217,119,6,0.2)]">

@@ -10,19 +10,15 @@ import AmbientBackground from "@/components/AmbientBackground";
 export default function Home() {
   return (
     <div className="min-h-screen bg-black-warm">
-     {/* Extended Ambient Background Layer - Covers header and hero only */}
       <div className="absolute top-0 left-0 right-0 h-[100vh] pointer-events-none z-0">
         <AmbientBackground />
       </div>
-     {/* Page Header - Animation only, no blurb */}
       <PageHeader variant="immersive" className="pt-12 md:pt-16">
         <h1 className="sr-only">Little Branch Theater</h1>
       </PageHeader>
 
-      {/* Hero Section - Sanctuary City */}
       <section className="pt-0 pb-8 relative z-10">
         <div className="container mx-auto px-0 md:px-4">
-          {/* Hero Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -41,18 +37,14 @@ export default function Home() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1280px"
                 />
 
-                {/* Subtle vignette for depth */}
                 <div className="absolute inset-0 bg-gradient-vignette opacity-20"></div>
 
-                {/* Photo Credit - desktop overlay */}
                 <p className="hidden md:block absolute bottom-2 right-3 text-sm text-gray-400 italic">Artwork by Aspyn Peak</p>
               </div>
             </Link>
-            {/* Photo Credit - mobile below image */}
             <p className="block md:hidden text-xs text-gray-400 italic text-right mt-1 px-1">Artwork by Aspyn Peak</p>
           </motion.div>
 
-          {/* Get Tickets */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -79,7 +71,6 @@ export default function Home() {
 
           <div className="w-24 h-px bg-accent/30 mx-auto my-6"></div>
 
-          {/* Playwright Quote */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -98,9 +89,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mission Section */}
       <section className="py-12 bg-black-warm relative">
-        {/* Enhanced gradient background */}
         <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-transparent to-transparent opacity-60"></div>
 
         <div className="container mx-auto px-4 relative z-10">

@@ -10,7 +10,6 @@ import SpotlightCard from '@/components/SpotlightCard'
 export default function ProductionsPage() {
   return (
     <div className="min-h-screen bg-black-warm">
-      {/* Page Header with consistent pattern */}
       <PageHeader variant="contextual">
         <h1 className="sr-only">Productions</h1>
         <SiteBlurb>
@@ -18,12 +17,10 @@ export default function ProductionsPage() {
         </SiteBlurb>
       </PageHeader>
 
-      {/* Productions Grid - adjusted padding to pt-8 to match other pages */}
       <section className="pt-2 pb-16 bg-black-warm">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
 
-            {/* Sanctuary City Card */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -42,7 +39,6 @@ export default function ProductionsPage() {
                       />
                     </div>
 
-                    {/* Card Content */}
                     <div className="mt-6 text-center">
                       <h2 className="text-white text-2xl font-display mb-2 group-hover:text-accent transition-colors">
                         Sanctuary City
@@ -60,7 +56,6 @@ export default function ProductionsPage() {
               </Link>
             </motion.div>
 
-            {/* Honey Brown Eyes Card */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -79,7 +74,6 @@ export default function ProductionsPage() {
                       />
                     </div>
 
-                    {/* Card Content */}
                     <div className="mt-6 text-center">
                       <h2 className="text-white text-2xl font-display mb-2 group-hover:text-accent transition-colors">
                         Honey Brown Eyes

@@ -10,7 +10,6 @@ export default function GalleryPage() {
   const [imageLoading, setImageLoading] = useState(false);
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
 
-  // Gallery images data with captions
   const galleryImages = [
     {
       id: 1,
@@ -237,7 +236,6 @@ export default function GalleryPage() {
 
   return (
     <div className="min-h-screen bg-black-warm">
-      {/* Page Header */}
       <PageHeader variant="contextual">
         <SiteBlurb>
           Witness the <span className="text-accent font-normal">moments</span>{" "}
@@ -246,10 +244,8 @@ export default function GalleryPage() {
         </SiteBlurb>
       </PageHeader>
 
-      {/* Gallery Section */}
       <section className="pt-2 pb-8 bg-black-warm">
         <div className="container mx-auto px-4">
-          {/* Production Title */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -262,7 +258,6 @@ export default function GalleryPage() {
             <p className="text-gray-400 text-lg">2025 Production</p>
           </motion.div>
 
-          {/* Gallery Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {galleryImages.map((image, index) => (
               <motion.div
@@ -290,7 +285,6 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Lightbox Modal */}
       <AnimatePresence>
         {selectedImage !== null && (
           <motion.div
@@ -300,7 +294,6 @@ export default function GalleryPage() {
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/95"
             onClick={closeLightbox}
           >
-            {/* Close button */}
             <button
               onClick={closeLightbox}
               className="absolute top-4 right-4 text-white/80 hover:text-white z-50 p-2"
@@ -322,7 +315,6 @@ export default function GalleryPage() {
               </svg>
             </button>
 
-            {/* Previous button */}
             <button
               onClick={(e) => {
                 e.stopPropagation();
@@ -347,7 +339,6 @@ export default function GalleryPage() {
               </svg>
             </button>
 
-            {/* Next button */}
             <button
               onClick={(e) => {
                 e.stopPropagation();
@@ -372,7 +363,6 @@ export default function GalleryPage() {
               </svg>
             </button>
 
-            {/* Image Container */}
             <motion.div
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
@@ -380,9 +370,7 @@ export default function GalleryPage() {
               className="relative max-w-[90vw] max-h-[90vh] flex flex-col items-center"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Loading State & Image Container */}
               <div className="relative flex items-center justify-center min-h-[400px] min-w-[600px]">
-                {/* Show blurred thumbnail immediately while loading */}
                 {imageLoading && (
                   <div className="absolute inset-0 flex items-center justify-center">
                     <Image
@@ -396,7 +384,6 @@ export default function GalleryPage() {
                   </div>
                 )}
 
-                {/* Full resolution image */}
                 <Image
                   src={galleryImages[selectedImage].src}
                   alt={galleryImages[selectedImage].alt}
@@ -410,7 +397,6 @@ export default function GalleryPage() {
                 />
               </div>
 
-              {/* Caption and Credit - Always visible */}
               <div className="mt-4 text-center max-w-2xl px-4">
                 <p className="text-white text-lg mb-1">
                   {galleryImages[selectedImage].caption}
@@ -420,7 +406,6 @@ export default function GalleryPage() {
                 </p>
               </div>
 
-              {/* Image counter */}
               <div className="mt-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm">
                 {selectedImage + 1} / {galleryImages.length}
               </div>

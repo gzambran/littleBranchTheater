@@ -183,7 +183,6 @@ export default function HoneyBrownEyesPage() {
       />
 
       <div className="min-h-screen bg-black-warm">
-        {/* PageHeader Component with Show Description */}
         <PageHeader variant="immersive">
           <SiteBlurb>
             Experience the{" "}
@@ -194,7 +193,6 @@ export default function HoneyBrownEyesPage() {
           </SiteBlurb>
         </PageHeader>
 
-        {/* Trailer Section */}
         <ShowMediaSection>
           <YouTubeEmbed
             videoId="MSlH4x8vMTM"
@@ -208,10 +206,8 @@ export default function HoneyBrownEyesPage() {
           venue="Visual Arts Collective, Garden City"
         />
 
-        {/* Subtle divider */}
         <div className="w-24 h-px bg-accent/30 mx-auto my-6"></div>
 
-        {/* MOBILE LAYOUT */}
         <section className="py-16 bg-black md:hidden">
           <div className="container mx-auto px-4">
             <div className="space-y-12">
@@ -296,7 +292,6 @@ export default function HoneyBrownEyesPage() {
                 {castCrewContent}
               </ShowContentSection>
 
-              {/* Performance Details - Mobile */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -311,7 +306,6 @@ export default function HoneyBrownEyesPage() {
                 </div>
               </motion.div>
 
-              {/* Our Supporters - Mobile */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -325,16 +319,12 @@ export default function HoneyBrownEyesPage() {
           </div>
         </section>
 
-        {/* DESKTOP LAYOUT */}
         <section className="py-16 bg-black hidden md:block">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-12">
-              {/* Main Content - Left 2 Columns */}
               <div className="md:col-span-2 space-y-16">
-                {/* DESKTOP LAYOUT - Reviews Section */}
                 <ShowContentSection title="Reviews" variant="gray">
                   <div className="space-y-6">
-                    {/* Theater Community Quotes - with attribution */}
                     <div className="text-center">
                       <p className="text-gray-300 italic text-lg mb-2">
                         "The feeling of the play is of an atomic explosion at

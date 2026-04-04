@@ -6,15 +6,12 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false)
-  // Add a hydration check
   const [isMounted, setIsMounted] = useState(false)
 
-  // Set isMounted to true after component mounts
   useEffect(() => {
     setIsMounted(true)
   }, [])
 
-  // Close menu when ESC key is pressed
   useEffect(() => {
     const handleEsc = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -28,7 +25,6 @@ export default function MobileNav() {
     }
   }, [])
 
-  // Force close if window resizes to desktop size
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) { // md breakpoint
@@ -59,7 +55,6 @@ export default function MobileNav() {
 
   return (
     <div>
-      {/* Hamburger button */}
       <button
         onClick={toggleMenu}
         className="text-white p-2 focus:outline-none"
