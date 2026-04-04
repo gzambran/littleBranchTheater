@@ -1,19 +1,19 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Coming Soon | Little Branch Theater',
-  description: 'Little Branch Theater is preparing for its next production, set to premiere in Spring 2026. Stay updated on auditions, show announcements, and ticket sales.',
+  title: 'Sanctuary City | Little Branch Theater',
+  description: 'Little Branch Theater presents Sanctuary City by Martyna Majok. May 7-17, 2026 at The Lounge in Boise, Idaho. An intimate story of friendship, identity, and the fight for the future you deserve.',
   openGraph: {
-    title: 'Coming Soon | Little Branch Theater',
-    description: 'Little Branch Theater is preparing for its next production, set to premiere in Spring 2026. Stay updated on auditions, show announcements, and ticket sales.',
-    url: 'https://www.littlebranchtheater.org/productions/coming-soon',
+    title: 'Sanctuary City | Little Branch Theater',
+    description: 'Little Branch Theater presents Sanctuary City by Martyna Majok. May 7-17, 2026 at The Lounge in Boise, Idaho. An intimate story of friendship, identity, and the fight for the future you deserve.',
+    url: 'https://www.littlebranchtheater.org/productions/sanctuary-city',
     siteName: 'Little Branch Theater',
     images: [
       {
-        url: 'https://www.littlebranchtheater.org/images/comingsoon.png',
+        url: 'https://www.littlebranchtheater.org/images/sanctuary-city-poster-crop.webp',
         width: 1200,
         height: 630,
-        alt: 'Little Branch Theater - Coming Soon',
+        alt: 'Sanctuary City - Little Branch Theater',
       },
     ],
     locale: 'en_US',
@@ -21,22 +21,21 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Coming Soon | Little Branch Theater',
-    description: 'Little Branch Theater is preparing for its next production, set to premiere in Spring 2026. Stay updated on auditions, show announcements, and ticket sales.',
-    images: ['https://www.littlebranchtheater.org/images/comingsoon.png'],
+    title: 'Sanctuary City | Little Branch Theater',
+    description: 'Little Branch Theater presents Sanctuary City by Martyna Majok. May 7-17, 2026 at The Lounge in Boise, Idaho. An intimate story of friendship, identity, and the fight for the future you deserve.',
+    images: ['https://www.littlebranchtheater.org/images/sanctuary-city-poster-crop.webp'],
   },
   keywords: [
-    'Little Branch Theater',
-    'upcoming production',
-    'Spring 2026',
-    'theater auditions',
+    'Sanctuary City',
+    'Martyna Majok',
     'Amela Karadža',
-    'Jovani Zambrano',
-    'community theater',
-    'diverse voices',
-    'theater newsletter'
+    'Little Branch Theater',
+    'Boise theater',
+    'Idaho theater',
+    'The Lounge Boise',
+    'contemporary theater',
   ],
   alternates: {
-    canonical: 'https://www.littlebranchtheater.org/productions/coming-soon',
+    canonical: 'https://www.littlebranchtheater.org/productions/sanctuary-city',
   },
 };

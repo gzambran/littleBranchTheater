@@ -19,7 +19,7 @@ export default function ProductionsPage() {
       </PageHeader>
 
       {/* Productions Grid - adjusted padding to pt-8 to match other pages */}
-      <section className="pt-8 pb-16 bg-black-warm">
+      <section className="pt-2 pb-16 bg-black-warm">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
 
@@ -32,9 +32,9 @@ export default function ProductionsPage() {
               <Link href="/productions/sanctuary-city" className="block h-full">
                 <SpotlightCard className="h-full group transition-all duration-500 hover:border-accent/30" spotlightColor="rgba(166, 226, 46, 0.2)">
                   <div className="p-4">
-                    <div className="relative aspect-[16/9] bg-black rounded-lg overflow-hidden group-hover:scale-[1.02] transition-transform duration-500 shadow-lg">
+                    <div className="relative aspect-square bg-black rounded-lg overflow-hidden group-hover:scale-[1.02] transition-transform duration-500 shadow-lg">
                       <Image
-                        src="/images/sanctuary-city-main.webp"
+                        src="/images/sanctuary-city-poster-crop.webp"
                         alt="Sanctuary City by Martyna Majok"
                         fill
                         className="object-contain"
@@ -49,7 +49,7 @@ export default function ProductionsPage() {
                       </h2>
                       <p className="text-gray-400 text-sm mb-1">by Martyna Majok</p>
                       <p className="text-gray-400 text-sm mb-3">
-                        Directed by Amela Karadža and Jovani Zambrano
+                        Directed by Amela Karadža
                       </p>
                       <p className="text-accent text-lg font-medium inline-block border-b border-accent/30 pb-1">
                         May 7<sup className="text-xs">th</sup> - May 17<sup className="text-xs">th</sup> 2026
@@ -69,7 +69,7 @@ export default function ProductionsPage() {
               <Link href="/productions/honey-brown-eyes" className="block h-full">
                 <SpotlightCard className="h-full group transition-all duration-500 hover:border-accent/30" spotlightColor="rgba(166, 226, 46, 0.2)">
                   <div className="p-4">
-                    <div className="relative aspect-[16/9] bg-black rounded-lg overflow-hidden group-hover:scale-[1.02] transition-transform duration-500 shadow-lg">
+                    <div className="relative aspect-square bg-black rounded-lg overflow-hidden group-hover:scale-[1.02] transition-transform duration-500 shadow-lg">
                       <Image
                         src="/images/honeybrowneyes.webp"
                         alt="Honey Brown Eyes"

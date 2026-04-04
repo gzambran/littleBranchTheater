@@ -247,7 +247,7 @@ export default function GalleryPage() {
       </PageHeader>
 
       {/* Gallery Section */}
-      <section className="py-8 bg-black-warm">
+      <section className="pt-2 pb-8 bg-black-warm">
         <div className="container mx-auto px-4">
           {/* Production Title */}
           <motion.div

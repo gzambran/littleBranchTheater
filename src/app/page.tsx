@@ -5,10 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import PageHeader, { SiteBlurb } from "@/components/PageHeader";
-import SpotlightCard from "@/components/SpotlightCard";
 import AmbientBackground from "@/components/AmbientBackground";
-
-export const revalidate = 3600;
 
 export default function Home() {
   return (
@@ -22,26 +19,6 @@ export default function Home() {
         <h1 className="sr-only">Little Branch Theater</h1>
       </PageHeader>
 
-      {/* Announcement */}
-      <section className="relative z-10 pb-8">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-          >
-            {/* Date with flanking lines */}
-            <div className="flex items-center justify-center gap-4">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent to-accent/40"></div>
-              <span className="text-accent/90 text-base tracking-[0.2em] uppercase">
-                Coming May 2026
-              </span>
-              <div className="h-px w-12 bg-gradient-to-l from-transparent to-accent/40"></div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Hero Section - Sanctuary City */}
       <section className="pt-0 pb-8 relative z-10">
         <div className="container mx-auto px-0 md:px-4">
@@ -50,33 +27,64 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="relative max-w-5xl mx-auto"
+            className="relative max-w-2xl mx-auto"
           >
             <Link href="/productions/sanctuary-city" className="group block">
-              <SpotlightCard className="transition-all duration-500 hover:border-accent/40 shadow-dramatic group-hover:shadow-glow-accent-strong" spotlightColor="rgba(166, 226, 46, 0.25)">
-                <div className="relative aspect-[4/3] md:aspect-[16/9]">
-                  <Image
-                    src="/images/sanctuary-city-main.webp"
-                    alt="Sanctuary City by Martyna Majok - May 2026"
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    priority
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1280px"
-                  />
+              <div className="relative aspect-square">
+                <Image
+                  src="/images/sanctuary-city-poster-crop.webp"
+                  alt="Sanctuary City by Martyna Majok - May 2026"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  style={{ objectPosition: 'center top' }}
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1280px"
+                />
 
-                  {/* Subtle vignette for depth */}
-                  <div className="absolute inset-0 bg-gradient-vignette opacity-20"></div>
-                </div>
-              </SpotlightCard>
+                {/* Subtle vignette for depth */}
+                <div className="absolute inset-0 bg-gradient-vignette opacity-20"></div>
+
+                {/* Photo Credit - desktop overlay */}
+                <p className="hidden md:block absolute bottom-2 right-3 text-sm text-gray-400 italic">Artwork by Aspyn Peak</p>
+              </div>
             </Link>
+            {/* Photo Credit - mobile below image */}
+            <p className="block md:hidden text-xs text-gray-400 italic text-right mt-1 px-1">Artwork by Aspyn Peak</p>
           </motion.div>
+
+          {/* Get Tickets */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="mt-8 max-w-4xl mx-auto px-4 text-center"
+          >
+            <div className="text-accent text-lg mb-1">
+              May 7 &ndash; 17, 2026
+            </div>
+            <div className="text-white text-base mb-6">
+              The Lounge &mdash; 2417 Bank Dr, Boise, ID 83705
+            </div>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Link
+                href="https://littlebranchtheater.ludus.com/200526657"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-accent hover:bg-accent/90 text-black font-bold px-10 py-4 rounded-full transition-all duration-200 text-lg shadow-lg shadow-accent/20"
+              >
+                Get Tickets
+              </Link>
+            </motion.div>
+          </motion.div>
+
+          <div className="w-24 h-px bg-accent/30 mx-auto my-6"></div>
 
           {/* Playwright Quote */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="mt-10 max-w-4xl mx-auto"
+            className="mt-10 max-w-4xl mx-auto px-4"
           >
             <div className="bg-black-deep/60 p-8 md:p-10 rounded-lg shadow-elevated">
               <p className="text-gray-200 text-lg md:text-xl lg:text-2xl leading-relaxed italic mb-4">
@@ -89,8 +97,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
-    
 
       {/* Mission Section */}
       <section className="py-12 bg-black-warm relative">
