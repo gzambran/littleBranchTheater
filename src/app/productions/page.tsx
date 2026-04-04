@@ -19,7 +19,7 @@ export default function ProductionsPage() {
       </PageHeader>
 
       {/* Productions Grid - adjusted padding to pt-8 to match other pages */}
-      <section className="pt-8 pb-16 bg-black-warm">
+      <section className="pt-2 pb-16 bg-black-warm">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
 
@@ -32,7 +32,7 @@ export default function ProductionsPage() {
               <Link href="/productions/sanctuary-city" className="block h-full">
                 <SpotlightCard className="h-full group transition-all duration-500 hover:border-accent/30" spotlightColor="rgba(166, 226, 46, 0.2)">
                   <div className="p-4">
-                    <div className="relative aspect-[16/9] bg-black rounded-lg overflow-hidden group-hover:scale-[1.02] transition-transform duration-500 shadow-lg">
+                    <div className="relative aspect-square bg-black rounded-lg overflow-hidden group-hover:scale-[1.02] transition-transform duration-500 shadow-lg">
                       <Image
                         src="/images/sanctuary-city-poster-crop.webp"
                         alt="Sanctuary City by Martyna Majok"
@@ -69,7 +69,7 @@ export default function ProductionsPage() {
               <Link href="/productions/honey-brown-eyes" className="block h-full">
                 <SpotlightCard className="h-full group transition-all duration-500 hover:border-accent/30" spotlightColor="rgba(166, 226, 46, 0.2)">
                   <div className="p-4">
-                    <div className="relative aspect-[16/9] bg-black rounded-lg overflow-hidden group-hover:scale-[1.02] transition-transform duration-500 shadow-lg">
+                    <div className="relative aspect-square bg-black rounded-lg overflow-hidden group-hover:scale-[1.02] transition-transform duration-500 shadow-lg">
                       <Image
                         src="/images/honeybrowneyes.webp"
                         alt="Honey Brown Eyes"

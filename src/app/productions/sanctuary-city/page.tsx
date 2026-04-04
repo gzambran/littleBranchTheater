@@ -43,7 +43,7 @@ export default function SanctuaryCityPage() {
 
   return (
     <div className="min-h-screen bg-black-warm">
-      <PageHeader>
+      <PageHeader variant="immersive">
         <SiteBlurb>
           An intimate story of friendship, identity, and the{" "}
           <span className="text-accent font-normal">courage</span> it takes to{" "}
@@ -52,15 +52,18 @@ export default function SanctuaryCityPage() {
       </PageHeader>
 
       <ShowMediaSection>
-        <div className="relative aspect-[4/3] md:aspect-[16/9] shadow-2xl">
+        <div className="max-w-2xl mx-auto">
+        <div className="relative aspect-square shadow-2xl">
           <Image
             src="/images/sanctuary-city-poster-crop.webp"
             alt="Sanctuary City by Martyna Majok - May 2026"
             fill
-            className="object-contain drop-shadow-xl"
+            className="object-cover drop-shadow-xl"
+            style={{ objectPosition: 'center top' }}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1280px"
             priority
           />
+        </div>
         </div>
       </ShowMediaSection>
 

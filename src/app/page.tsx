@@ -27,15 +27,16 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="relative max-w-5xl mx-auto"
+            className="relative max-w-2xl mx-auto"
           >
             <Link href="/productions/sanctuary-city" className="group block">
-              <div className="relative aspect-[4/3] md:aspect-[16/9]">
+              <div className="relative aspect-square">
                 <Image
                   src="/images/sanctuary-city-poster-crop.webp"
                   alt="Sanctuary City by Martyna Majok - May 2026"
                   fill
-                  className="object-contain transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  style={{ objectPosition: 'center top' }}
                   priority
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1280px"
                 />

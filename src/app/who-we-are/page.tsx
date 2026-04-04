@@ -44,7 +44,7 @@ export default function WhoWeAre() {
 
       {/* Founders Section */}
       <motion.section
-        className="pt-8 pb-16 bg-black relative"
+        className="pt-2 pb-16 bg-black relative"
         variants={fadeIn}
         initial="hidden"
         whileInView="visible"

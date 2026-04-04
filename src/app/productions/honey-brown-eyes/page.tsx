@@ -184,7 +184,7 @@ export default function HoneyBrownEyesPage() {
 
       <div className="min-h-screen bg-black-warm">
         {/* PageHeader Component with Show Description */}
-        <PageHeader>
+        <PageHeader variant="immersive">
           <SiteBlurb>
             Experience the{" "}
             <span className="text-accent font-normal">powerful</span> story of
