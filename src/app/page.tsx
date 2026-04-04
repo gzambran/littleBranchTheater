@@ -44,12 +44,10 @@ export default function Home() {
                 {/* Subtle vignette for depth */}
                 <div className="absolute inset-0 bg-gradient-vignette opacity-20"></div>
 
-                {/* Photo Credit - desktop overlay */}
-                <p className="hidden md:block absolute bottom-2 right-3 text-sm text-gray-400 italic">Artwork by Aspyn Peak</p>
+                {/* Photo Credit */}
+                <p className="absolute bottom-2 right-2 md:bottom-3 md:right-3 text-xs md:text-sm text-gray-400 italic">Artwork by Aspyn Peak</p>
               </div>
             </Link>
-            {/* Photo Credit - mobile below image */}
-            <p className="block md:hidden text-xs text-gray-400 italic text-right mt-1 px-1">Artwork by Aspyn Peak</p>
           </motion.div>
 
           {/* Get Tickets */}
