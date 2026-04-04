@@ -63,6 +63,8 @@ export default function SanctuaryCityPage() {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1280px"
             priority
           />
+          {/* Photo Credit */}
+          <p className="absolute bottom-2 right-2 md:bottom-3 md:right-3 text-xs md:text-sm text-gray-400 italic">Artwork by Aspyn Peak</p>
         </div>
         </div>
       </ShowMediaSection>
