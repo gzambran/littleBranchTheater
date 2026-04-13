@@ -11,6 +11,46 @@ import ShowSidebar from "@/components/show/ShowSidebar";
 import SocialShare from "@/components/show/SocialShare";
 
 export default function SanctuaryCityPage() {
+  const castCrewContent = (
+    <div className="space-y-4 text-gray-300">
+      <div className="grid gap-3">
+        <div>
+          <span className="font-medium">Neekey Habibi</span> - G
+        </div>
+        <div>
+          <span className="font-medium">Jovani Andrés Zambrano</span> - B
+        </div>
+        <div>
+          <span className="font-medium">Evencio Bahena</span> - Henry
+        </div>
+        <div>
+          <span className="font-medium">Natalia Vasquez</span> - G (Understudy)
+        </div>
+        <div>
+          <span className="font-medium">Amela Karadža</span> - Director/Set
+        </div>
+        <div>
+          <span className="font-medium">Katy Weyland</span> - Stage Manager
+        </div>
+        <div>
+          <span className="font-medium">Amber Ellis</span> - Scenic Artist
+        </div>
+        <div>
+          <span className="font-medium">Chad Shohet</span> - Sound Designer
+        </div>
+        <div>
+          <span className="font-medium">Chaz Genty</span> - Lighting Designer
+        </div>
+        <div>
+          <span className="font-medium">Kayla Keller</span> - Costume Designer
+        </div>
+        <div>
+          <span className="font-medium">Nate Pohl</span> - Technical Designer
+        </div>
+      </div>
+    </div>
+  );
+
   const productionDetailsContent = (
     <div className="space-y-6 text-gray-300">
       <div>
@@ -104,6 +144,10 @@ export default function SanctuaryCityPage() {
               </p>
             </ShowContentSection>
 
+            <ShowContentSection title="Cast & Crew">
+              {castCrewContent}
+            </ShowContentSection>
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -113,19 +157,6 @@ export default function SanctuaryCityPage() {
               <h3 className="font-display text-2xl mb-6">Production Details</h3>
               <div className="bg-black-deep/50 p-8 rounded-lg shadow-lg shadow-black/20 backdrop-blur-sm">
                 {productionDetailsContent}
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-black-deep/30 backdrop-blur-sm rounded-lg p-6 shadow-elevated">
-                <p className="text-2xl text-white text-center italic font-light tracking-wide leading-relaxed">
-                  Casting for <span className="text-accent font-normal">Sanctuary City</span> Coming Soon
-                </p>
               </div>
             </motion.div>
           </div>
@@ -145,18 +176,9 @@ export default function SanctuaryCityPage() {
                 </p>
               </ShowContentSection>
 
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <div className="bg-black-deep/30 backdrop-blur-sm rounded-lg p-6 shadow-elevated">
-                  <p className="text-2xl text-white text-center italic font-light tracking-wide leading-relaxed">
-                    Casting for <span className="text-accent font-normal">Sanctuary City</span> Coming Soon
-                  </p>
-                </div>
-              </motion.div>
+              <ShowContentSection title="Cast & Crew" delay={0.2}>
+                {castCrewContent}
+              </ShowContentSection>
             </div>
 
             <div>
