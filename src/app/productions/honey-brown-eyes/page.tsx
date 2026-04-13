@@ -161,6 +161,18 @@ export default function HoneyBrownEyesPage() {
         <div>
           <span className="font-medium">Sabina Selimović</span> - Singer
         </div>
+        <div>
+          <span className="font-medium">Chaz Gentry</span> - Lighting Designer
+        </div>
+        <div>
+          <span className="font-medium">Jessica Nebeker</span> - Set Designer
+        </div>
+        <div>
+          <span className="font-medium">Wendy Fox</span> - Costume Designer
+        </div>
+        <div>
+          <span className="font-medium">Blake Green</span> - Sound Engineer
+        </div>
       </div>
     </div>
   );
