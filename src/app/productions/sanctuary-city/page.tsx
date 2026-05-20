@@ -51,6 +51,25 @@ export default function SanctuaryCityPage() {
     </div>
   );
 
+  const sponsorsGrid = (
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <a
+        href="https://www.acluidaho.org"
+        target="_blank"
+        rel="noopener"
+        className="flex items-center justify-center h-32 bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-colors duration-300 shadow-md shadow-black/20"
+      >
+        <Image
+          src="/images/sponsors/aclu-idaho-logo.webp"
+          alt="ACLU Idaho"
+          width={200}
+          height={100}
+          className="max-w-full max-h-full object-contain"
+        />
+      </a>
+    </div>
+  );
+
   const productionDetailsContent = (
     <div className="space-y-6 text-gray-300">
       <div>
@@ -120,14 +139,6 @@ export default function SanctuaryCityPage() {
         transition={{ duration: 0.6, delay: 0.3 }}
         className="flex justify-center mt-6"
       >
-        <a
-          href="https://littlebranchtheater.ludus.com/200526657"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-accent hover:bg-accent/90 text-black font-bold px-8 py-3 rounded-full transition-all duration-200 text-base shadow-lg shadow-accent/20"
-        >
-          Get Tickets
-        </a>
       </motion.div>
 
       <div className="w-24 h-px bg-accent/30 mx-auto my-6"></div>
@@ -147,6 +158,16 @@ export default function SanctuaryCityPage() {
             <ShowContentSection title="Cast & Crew">
               {castCrewContent}
             </ShowContentSection>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="font-display text-3xl mb-6">Our Supporters</h2>
+              {sponsorsGrid}
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -179,6 +200,16 @@ export default function SanctuaryCityPage() {
               <ShowContentSection title="Cast & Crew" delay={0.2}>
                 {castCrewContent}
               </ShowContentSection>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="font-display text-3xl mb-6">Our Supporters</h2>
+                {sponsorsGrid}
+              </motion.div>
             </div>
 
             <div>

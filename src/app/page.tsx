@@ -57,14 +57,6 @@ export default function Home() {
               The Lounge &mdash; 2417 Bank Dr, Boise, ID 83705
             </div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Link
-                href="https://littlebranchtheater.ludus.com/200526657"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-accent hover:bg-accent/90 text-black font-bold px-10 py-4 rounded-full transition-all duration-200 text-lg shadow-lg shadow-accent/20"
-              >
-                Get Tickets
-              </Link>
             </motion.div>
           </motion.div>
 
