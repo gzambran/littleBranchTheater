@@ -28,8 +28,8 @@ export default function Home() {
             <Link href="/productions/sanctuary-city" className="group block">
               <div className="relative aspect-square">
                 <Image
-                  src="/images/sanctuary-city-poster-crop.webp"
-                  alt="Sanctuary City by Martyna Majok - May 2026"
+                  src="/images/sc-herophoto.webp"
+                  alt="Sanctuary City production photo - Little Branch Theater 2026"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   style={{ objectPosition: 'center top' }}
@@ -39,7 +39,7 @@ export default function Home() {
 
                 <div className="absolute inset-0 bg-gradient-vignette opacity-20"></div>
 
-                <p className="absolute bottom-2 right-2 md:bottom-3 md:right-3 text-xs md:text-sm text-gray-400 italic">Artwork by Aspyn Peak</p>
+                <p className="absolute bottom-2 right-2 md:bottom-3 md:right-3 text-xs md:text-sm text-gray-400 italic">Photo: Chaz Gentry</p>
               </div>
             </Link>
           </motion.div>
@@ -50,14 +50,10 @@ export default function Home() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-8 max-w-4xl mx-auto px-4 text-center"
           >
-            <div className="text-accent text-lg mb-1">
-              May 7 &ndash; 17, 2026
+            <div className="text-accent text-lg mb-6">
+              Our second production is complete. Thank you all for joining us and helping us tell this important story.
             </div>
-            <div className="text-white text-base mb-6">
-              The Lounge &mdash; 2417 Bank Dr, Boise, ID 83705
-            </div>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            </motion.div>
+
           </motion.div>
 
           <div className="w-24 h-px bg-accent/30 mx-auto my-6"></div>
