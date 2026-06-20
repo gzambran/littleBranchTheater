@@ -53,8 +53,7 @@ export default function Home() {
             <div className="text-accent text-lg mb-6">
               Our second production is complete. Thank you all for joining us and helping us tell this important story.
             </div>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            </motion.div>
+
           </motion.div>
 
           <div className="w-24 h-px bg-accent/30 mx-auto my-6"></div>

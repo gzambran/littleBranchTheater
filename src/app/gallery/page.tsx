@@ -5,13 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import PageHeader, { SiteBlurb } from "@/components/PageHeader";
 
-export default function GalleryPage() {
-  const [selectedHBE, setSelectedHBE] = useState<number | null>(null);
-  const [selectedSC, setSelectedSC] = useState<number | null>(null);
-  const [imageLoading, setImageLoading] = useState(false);
-  const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
-
-  const hbeImages = [
+const hbeImages = [
     {
       id: 1,
       thumb: "/images/gallery/thumbs/hbe-01-thumb.webp",
@@ -157,9 +151,9 @@ export default function GalleryPage() {
       caption: "Set Design by Jessica Nebeker",
       credit: "Photo Credit: Chaz Gentry",
     },
-  ];
+];
 
-  const scImages = [
+const scImages = [
     {
       id: 1,
       thumb: "/images/gallery/sc-01.webp",
@@ -256,7 +250,13 @@ export default function GalleryPage() {
       caption: "Left to Right: Jovani Zambrano and Neekey Habibi",
       credit: "Photo Credit: Chaz Gentry",
     },
-  ];
+];
+
+export default function GalleryPage() {
+  const [selectedHBE, setSelectedHBE] = useState<number | null>(null);
+  const [selectedSC, setSelectedSC] = useState<number | null>(null);
+  const [imageLoading, setImageLoading] = useState(false);
+  const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
 
   const preloadHBEImage = useCallback(
     (index: number) => {
@@ -265,7 +265,7 @@ export default function GalleryPage() {
         img.src = hbeImages[index].src;
       }
     },
-    [hbeImages]
+    []
   );
 
   const preloadSCImage = useCallback(
@@ -275,7 +275,7 @@ export default function GalleryPage() {
         img.src = scImages[index].src;
       }
     },
-    [scImages]
+    []
   );
 
   const openHBELightbox = (index: number) => {
@@ -363,7 +363,7 @@ export default function GalleryPage() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [selectedHBE, selectedSC]);
+  }, [selectedHBE, selectedSC, loadedImages]);
 
   return (
     <div className="min-h-screen bg-black-warm">
@@ -380,8 +380,9 @@ export default function GalleryPage() {
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
             className="text-center mb-8"
           >
             <h2 className="font-display text-3xl md:text-4xl text-white mb-2">
@@ -395,8 +396,9 @@ export default function GalleryPage() {
               <motion.div
                 key={image.id}
                 initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
+                viewport={{ once: true }}
                 className="relative aspect-square overflow-hidden rounded-lg cursor-pointer group bg-gray-950"
                 onClick={() => openSCLightbox(index)}
               >
@@ -422,8 +424,9 @@ export default function GalleryPage() {
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
             className="text-center mb-8"
           >
             <h2 className="font-display text-3xl md:text-4xl text-white mb-2">
@@ -437,8 +440,9 @@ export default function GalleryPage() {
               <motion.div
                 key={image.id}
                 initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
+                viewport={{ once: true }}
                 className="relative aspect-square overflow-hidden rounded-lg cursor-pointer group bg-gray-950"
                 onClick={() => openHBELightbox(index)}
               >
@@ -470,7 +474,7 @@ export default function GalleryPage() {
             onClick={closeLightbox}
           >
             <button
-              onClick={closeLightbox}
+              onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
               className="absolute top-4 right-4 text-white/80 hover:text-white z-50 p-2"
               aria-label="Close gallery"
             >
@@ -600,7 +604,7 @@ export default function GalleryPage() {
             onClick={closeLightbox}
           >
             <button
-              onClick={closeLightbox}
+              onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
               className="absolute top-4 right-4 text-white/80 hover:text-white z-50 p-2"
               aria-label="Close gallery"
             >
