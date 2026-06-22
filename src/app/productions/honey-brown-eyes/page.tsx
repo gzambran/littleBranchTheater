@@ -223,7 +223,7 @@ export default function HoneyBrownEyesPage() {
         <section className="py-16 bg-black md:hidden">
           <div className="container mx-auto px-4">
             <div className="space-y-12">
-              <ShowContentSection title="Reviews" variant="gray">
+              <ShowContentSection title="What Audiences Are Saying" variant="gray">
                 <div className="space-y-6">
                   <div className="text-center">
                     <p className="text-gray-300 italic text-lg mb-2">
@@ -241,6 +241,8 @@ export default function HoneyBrownEyesPage() {
                     </p>
                   </div>
 
+                  <div className="w-16 h-px bg-accent/30 mx-auto"></div>
+
                   <div className="text-center">
                     <p className="text-gray-300 italic text-lg mb-2">
                       "An explosive entrance for Little Branch."
@@ -248,33 +250,37 @@ export default function HoneyBrownEyesPage() {
                     <p className="text-accent text-sm">— The Spot</p>
                   </div>
 
+                  <div className="w-16 h-px bg-accent/30 mx-auto"></div>
+
                   <div className="text-center">
                     <p className="text-gray-300 italic text-lg mb-2">
                       "It was an incredible show."
                     </p>
                     <p className="text-accent text-sm">— Stagecoach Theatre</p>
                   </div>
-                  <div className="pt-2">
-                    <div className="text-center">
-                      <p className="text-gray-300 italic text-lg mb-2">
-                        "Unpredictable and completely satisfying."
-                      </p>
-                      <p className="text-accent text-sm">— From Our Audience</p>
-                    </div>
+
+                  <div className="w-16 h-px bg-accent/30 mx-auto"></div>
+
+                  <div className="text-center">
+                    <p className="text-gray-300 italic text-lg mb-2">
+                      "Unpredictable and completely satisfying."
+                    </p>
                   </div>
+
+                  <div className="w-16 h-px bg-accent/30 mx-auto"></div>
 
                   <div className="text-center">
                     <p className="text-gray-300 italic text-lg mb-2">
                       "A beautiful, heart-wrenching production."
                     </p>
-                    <p className="text-accent text-sm">— From Our Audience</p>
                   </div>
+
+                  <div className="w-16 h-px bg-accent/30 mx-auto"></div>
 
                   <div className="text-center">
                     <p className="text-gray-300 italic text-lg mb-2">
                       "Such an amazing play–could not stop talking about it."
                     </p>
-                    <p className="text-accent text-sm">— From Our Audience</p>
                   </div>
                 </div>
               </ShowContentSection>
@@ -335,7 +341,7 @@ export default function HoneyBrownEyesPage() {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-12">
               <div className="md:col-span-2 space-y-16">
-                <ShowContentSection title="Reviews" variant="gray">
+                <ShowContentSection title="What Audiences Are Saying" variant="gray">
                   <div className="space-y-6">
                     <div className="text-center">
                       <p className="text-gray-300 italic text-lg mb-2">
@@ -353,12 +359,16 @@ export default function HoneyBrownEyesPage() {
                       </p>
                     </div>
 
+                    <div className="w-16 h-px bg-accent/30 mx-auto"></div>
+
                     <div className="text-center">
                       <p className="text-gray-300 italic text-lg mb-2">
                         "An explosive entrance for Little Branch."
                       </p>
                       <p className="text-accent text-sm">— The Spot</p>
                     </div>
+
+                    <div className="w-16 h-px bg-accent/30 mx-auto"></div>
 
                     <div className="text-center">
                       <p className="text-gray-300 italic text-lg mb-2">
@@ -369,29 +379,28 @@ export default function HoneyBrownEyesPage() {
                       </p>
                     </div>
 
-                    <div className="pt-2">
-                      <div className="text-center">
-                        <p className="text-gray-300 italic text-lg mb-2">
-                          "Unpredictable and completely satisfying."
-                        </p>
-                        <p className="text-accent text-sm">
-                          — From Our Audience
-                        </p>
-                      </div>
+                    <div className="w-16 h-px bg-accent/30 mx-auto"></div>
+
+                    <div className="text-center">
+                      <p className="text-gray-300 italic text-lg mb-2">
+                        "Unpredictable and completely satisfying."
+                      </p>
                     </div>
+
+                    <div className="w-16 h-px bg-accent/30 mx-auto"></div>
 
                     <div className="text-center">
                       <p className="text-gray-300 italic text-lg mb-2">
                         "A beautiful, heart-wrenching production."
                       </p>
-                      <p className="text-accent text-sm">— From Our Audience</p>
                     </div>
+
+                    <div className="w-16 h-px bg-accent/30 mx-auto"></div>
 
                     <div className="text-center">
                       <p className="text-gray-300 italic text-lg mb-2">
                         "Such an amazing play–could not stop talking about it."
                       </p>
-                      <p className="text-accent text-sm">— From Our Audience</p>
                     </div>
                   </div>
                 </ShowContentSection>
