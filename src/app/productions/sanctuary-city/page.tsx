@@ -146,6 +146,57 @@ export default function SanctuaryCityPage() {
       <section className="py-16 bg-black md:hidden">
         <div className="container mx-auto px-4">
           <div className="space-y-12">
+            <ShowContentSection title="What Audiences Are Saying" variant="gray">
+              <div className="space-y-6">
+                <div className="text-center">
+                  <p className="text-gray-300 italic text-lg mb-2">
+                    "A beautiful play, beautifully executed. It haunts you afterward."
+                  </p>                </div>
+
+                <div className="w-16 h-px bg-accent/30 mx-auto"></div>
+
+                <div className="text-center">
+                  <p className="text-gray-300 italic text-lg mb-2">
+                    "This was my first time ever attending a performance like this, and what an incredible first experience it was. The show shed light on the challenges and experiences that so many immigrants face, delivering a message that was both powerful and meaningful. The actors did a wonderful job drawing the audience in, making it feel as though you were witnessing real life experiences unfold before you. Truly unforgettable."
+                  </p>                </div>
+
+                <div className="w-16 h-px bg-accent/30 mx-auto"></div>
+
+                <div className="text-center">
+                  <p className="text-gray-300 italic text-lg mb-2">
+                    "So refreshing to see a scrappy, low-budget show with all the torque and quality of a much larger production. Every bit of space was utilized. The actors were phenomenal. Sound and lights worked in conjunction to take us to a place we've all known. The impossible web of storytelling was weaved masterfully."
+                  </p>                </div>
+
+                <div className="w-16 h-px bg-accent/30 mx-auto"></div>
+
+                <div className="text-center">
+                  <p className="text-gray-300 italic text-lg mb-2">
+                    "Great show. Impressive talent all around."
+                  </p>                </div>
+
+                <div className="w-16 h-px bg-accent/30 mx-auto"></div>
+
+                <div className="text-center">
+                  <p className="text-gray-300 italic text-lg mb-2">
+                    "Beautifully done. So very important and relevant."
+                  </p>                </div>
+
+                <div className="w-16 h-px bg-accent/30 mx-auto"></div>
+
+                <div className="text-center">
+                  <p className="text-gray-300 italic text-lg mb-2">
+                    "Such a powerful show. I can't wait to see what Little Branch does next."
+                  </p>                </div>
+
+                <div className="w-16 h-px bg-accent/30 mx-auto"></div>
+
+                <div className="text-center">
+                  <p className="text-gray-300 italic text-lg mb-2">
+                    "All three actors were intensely sincere, and that's what sticks with me most — they clearly all want the best for each other, but are compromised by the inherent contradictions of the system they live in. The set was magical."
+                  </p>                </div>
+              </div>
+            </ShowContentSection>
+
             <ShowContentSection title="About Sanctuary City">
               <p className="text-gray-300 text-lg leading-relaxed mb-4">
                 In post-9/11 Newark, NJ, two teenagers who were brought to America as children become one another's sanctuaries from harsh circumstances. When G becomes naturalized, she and B hatch a plan so that he may legally remain in the country and pursue the future he imagines for his life. But as time hurtles on and complications mount, the young friends find that this plan challenges and fractures the closest relationship either has ever had.
@@ -188,7 +239,58 @@ export default function SanctuaryCityPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-12">
             <div className="md:col-span-2 space-y-16">
-              <ShowContentSection title="About Sanctuary City">
+              <ShowContentSection title="What Audiences Are Saying" variant="gray">
+                <div className="space-y-6">
+                  <div className="text-center">
+                    <p className="text-gray-300 italic text-lg mb-2">
+                      "A beautiful play, beautifully executed. It haunts you afterward."
+                    </p>                  </div>
+
+                  <div className="w-16 h-px bg-accent/30 mx-auto"></div>
+
+                  <div className="text-center">
+                    <p className="text-gray-300 italic text-lg mb-2">
+                      "This was my first time ever attending a performance like this, and what an incredible first experience it was. The show shed light on the challenges and experiences that so many immigrants face, delivering a message that was both powerful and meaningful. The actors did a wonderful job drawing the audience in, making it feel as though you were witnessing real life experiences unfold before you. Truly unforgettable."
+                    </p>                  </div>
+
+                  <div className="w-16 h-px bg-accent/30 mx-auto"></div>
+
+                  <div className="text-center">
+                    <p className="text-gray-300 italic text-lg mb-2">
+                      "So refreshing to see a scrappy, low-budget show with all the torque and quality of a much larger production. Every bit of space was utilized. The actors were phenomenal. Sound and lights worked in conjunction to take us to a place we've all known. The impossible web of storytelling was weaved masterfully."
+                    </p>                  </div>
+
+                  <div className="w-16 h-px bg-accent/30 mx-auto"></div>
+
+                  <div className="text-center">
+                    <p className="text-gray-300 italic text-lg mb-2">
+                      "Great show. Impressive talent all around."
+                    </p>                  </div>
+
+                  <div className="w-16 h-px bg-accent/30 mx-auto"></div>
+
+                  <div className="text-center">
+                    <p className="text-gray-300 italic text-lg mb-2">
+                      "Beautifully done. So very important and relevant."
+                    </p>                  </div>
+
+                  <div className="w-16 h-px bg-accent/30 mx-auto"></div>
+
+                  <div className="text-center">
+                    <p className="text-gray-300 italic text-lg mb-2">
+                      "Such a powerful show. I can't wait to see what Little Branch does next."
+                    </p>                  </div>
+
+                  <div className="w-16 h-px bg-accent/30 mx-auto"></div>
+
+                  <div className="text-center">
+                    <p className="text-gray-300 italic text-lg mb-2">
+                      "All three actors were intensely sincere, and that's what sticks with me most — they clearly all want the best for each other, but are compromised by the inherent contradictions of the system they live in. The set was magical."
+                    </p>                  </div>
+                </div>
+              </ShowContentSection>
+
+              <ShowContentSection title="About Sanctuary City" delay={0.2}>
                 <p className="text-gray-300 text-lg leading-relaxed mb-4">
                   In post-9/11 Newark, NJ, two teenagers who were brought to America as children become one another's sanctuaries from harsh circumstances. When G becomes naturalized, she and B hatch a plan so that he may legally remain in the country and pursue the future he imagines for his life. But as time hurtles on and complications mount, the young friends find that this plan challenges and fractures the closest relationship either has ever had.
                 </p>
